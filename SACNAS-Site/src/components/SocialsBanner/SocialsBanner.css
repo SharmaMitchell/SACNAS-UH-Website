@@ -1,0 +1,25 @@
+.SocialsBanner{
+    background-color: var(--primary);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.SocialsBanner .socials-container{
+    max-width: 1200px;
+    height: 180px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.SocialsBanner .socials-container img{
+    width: 85px;
+    max-width: 12vw;
+    margin: 15px;
+    transition: 0.3s ease transform;
+}
+.SocialsBanner .socials-container .social-item:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 10px white;
+    border-radius: 100%;
+}
