@@ -1,0 +1,18 @@
+:root{
+  --background: white;
+  --text-primary: black;
+  --text-highlight: #c8102e;
+  --primary: #c8102e;
+  --secondary: #960C22;
+  --pink: #FFA1A1;
+;
+}
+[data-theme='dark']{
+  --background: #121212;
+  --text-primary: white;
+}
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
