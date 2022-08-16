@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Events from './pages/Events';
 import Research from './pages/Research';
 import Leadership from './pages/Leadership';
+import Footer from './components/Footer/Footer';
 import './App.css';
 
 function App() {
@@ -27,7 +28,8 @@ function App() {
             <Route path='/research' element={<Research/>} />
             <Route path='/leadership' element={<Leadership/>} />
           </Routes>
-        </Router>
+        <Footer />
+      </Router>
     </div>
   );
 }
