@@ -1,6 +1,7 @@
 import React from 'react'
 import './Hero.css'; 
 import SacnasLogo from '../../assets/SACNASUH-Crop.png';
+
 function Hero() {
   return (
     <>

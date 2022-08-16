@@ -1,9 +1,12 @@
 import React from 'react'
+import Banner from '../components/Banner/Banner'
+import EventsContent from '../components/EventsContent/EventsContent'
 
 function Events() {
   return (
     <>
-        <h1>Events</h1>
+        <Banner />
+        <EventsContent />
     </>
   )
 }

@@ -62,7 +62,7 @@ a{
 
 .dark-toggle{
   height: 44px;
-  width: 100px;
+  width: 80px;
   border-radius: 44px;
   margin: 0 10px;
   background: transparent;
@@ -87,7 +87,7 @@ a{
   filter: invert(0%);
   background-image: none;
   box-shadow: inset 12px 0px midnightblue, inset 12px 0px 1px 2px midnightblue;
-  transform: translate(50px, 0);
+  transform: translate(30px, 0) rotate(-25deg);
 }
 
 .sidebar .nav-list{
