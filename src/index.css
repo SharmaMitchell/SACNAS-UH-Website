@@ -5,6 +5,9 @@
   --primary: #c8102e;
   --secondary: #960C22;
   --pink: #FFA1A1;
+  --teal: #00B388;
+  --gold: #F6BE00;
+  --blue: #3CA1FF;
 ;
 }
 [data-theme='dark']{

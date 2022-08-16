@@ -1,5 +1,6 @@
 import React from 'react'
 import './Footer.css'
+import MailAndMoney from '../MailAndMoney/MailAndMoney'
 
 function Footer() {
   return (
@@ -12,7 +13,7 @@ function Footer() {
                 <p>Society for the Advancement of Chicanos/Hispanics and Native Americans in Science</p>
                 <p>University of Houston Chapter</p>
             </div>
-            
+            <MailAndMoney />
         </div>
     </div>
   )
