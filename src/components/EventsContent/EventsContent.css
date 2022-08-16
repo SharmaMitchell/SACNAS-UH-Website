@@ -1,0 +1,26 @@
+.events{
+    display: flex;
+    align-items: center;
+	justify-content: center;
+}
+.events-container{
+    max-width: 1200px;
+    margin: 40px 40px;
+    display: flex;
+    flex-direction: column;
+}
+.events-container h2{
+    text-align: left;
+    font-size: 2.5rem;
+    margin-bottom: 0;
+}
+.events-upcoming, .events-previous{
+    display: flex;
+    flex-direction: column;
+}
+.event-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
