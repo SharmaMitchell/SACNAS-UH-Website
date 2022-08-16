@@ -31,6 +31,9 @@ a{
 #navbar .spam{
   display: none;
 }
+#navbar .lhs{
+  display: flex;
+}
 #navbar .nav-list{
   display: none;
 }
@@ -58,18 +61,18 @@ a{
 }
 
 .dark-toggle{
-  height: 50px;
+  height: 44px;
   width: 100px;
-  border-radius: 50px;
-  margin: auto;
+  border-radius: 44px;
+  margin: 0 10px;
   background: transparent;
   border: 3px solid white;
   position: relative;
   cursor: pointer;
 }
 .dark-toggle .notch{
-  height: 40px;
-  width: 40px;
+  height: 35px;
+  width: 35px;
   border-radius: 50%;
   background-image: url(../../assets/sun-icon.png);
   background-size: contain;

@@ -1,0 +1,32 @@
+.mnm{
+    display: flex;
+    justify-content: center;
+}
+.mnm-container{
+    flex-direction: row;
+    margin: 0 10px;
+}
+.mnm-container img{
+    margin: 0 15px;
+    width: 50px;
+    transition: 0.3s ease all;
+}
+.mnm .mnm-container .mnm-item{
+    border-radius: 100%;
+}
+.mnm .mnm-container .mnm-item.list{
+    border-radius: 0%;
+}
+.mnm .mnm-container .mnm-item:hover{
+    transform: scale(1.05);
+}
+.mnm .mnm-container .mnm-item.email:hover{
+    background: var(--blue);
+}
+.mnm .mnm-container .mnm-item.list:hover{
+    background-image: radial-gradient(circle at 40px 10px, var(--gold) 18%, transparent 19%),
+    radial-gradient(circle at center, var(--gold) 56%, transparent 57%);
+}
+.mnm .mnm-container .mnm-item.donate:hover{
+    background: var(--teal);
+}

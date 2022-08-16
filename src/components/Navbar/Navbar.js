@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import './Navbar.css'; // Style sheet
 import navBarImg from '../../assets/fa_bars.png'
 
+import MailAndMoney from '../MailAndMoney/MailAndMoney';
+
 function Navbar(props) {
   const [sidebar, setSidebar] = useState(false);
 
@@ -15,14 +17,15 @@ function Navbar(props) {
               <Link to='#' class='menu-bars'>
                 <img src={navBarImg} onClick={showSidebar} />
               </Link>
-              <div>
+              <div class="lhs">
                 <div onClick={props.dark} className={`dark-toggle${props.theme === 'dark' ? " dark" : ""}`}>
                   <div class="notch"></div>
                 </div>
+                <div class="spam">
+                  <MailAndMoney />
+                </div>
               </div>
-              <div class="spam">
-                <h2>Spam</h2>
-              </div>
+              
               <div class="brand">
                 <a><h1>SACNAS UH</h1></a>
               </div>
