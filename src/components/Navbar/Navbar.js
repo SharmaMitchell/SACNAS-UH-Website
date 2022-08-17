@@ -33,11 +33,11 @@ function Navbar(props) {
               </div>
               <div class="nav-list">
                 <ul>
-                  <li><a class={location==="/" ? "cu-page" : ""} href="/">Home</a></li>
-                  <li><a class={location==="/events" ? "cu-page" : ""} href="/events">Events</a></li>
-                  <li><a class={location==="/research" ? "cu-page" : ""} href="/research">Research</a></li>
-                  <li><a class={location==="/leadership" ? "cu-page" : ""} href="/leadership">Leadership</a></li>
-                  { /*<li><a class={location==="/advisors" ? "cu-page" : ""} href="/advisors">Advisors</a></li> */ }
+                  <li><a class={location==="/" ? "cu-page" : ""}><Link to="/">Home</Link></a></li>
+                  <li><a class={location==="/events" ? "cu-page" : ""}><Link to="/events">Events</Link></a></li>
+                  <li><a class={location==="/research" ? "cu-page" : ""}><Link to="/research">Research</Link></a></li>
+                  <li><a class={location==="/leadership" ? "cu-page" : ""}><Link to="/leadership">Leadership</Link></a></li>
+                  { /*<li><a class={location==="/advisors" ? "cu-page" : ""}><Link to="/advisors">Advisors</Link></a></li> */ }
                 </ul>
               </div>
             </div>
@@ -46,11 +46,11 @@ function Navbar(props) {
         <nav class={sidebar ? 'sidebar active' : 'sidebar'}>
           <div class="nav-list">
             <ul class="nav-list-items" onClick={showSidebar}>
-              <li><a class={location==="/" ? "cu-page" : ""} href="/">Home</a></li>
-              <li><a class={location==="/events" ? "cu-page" : ""} href="/events">Events</a></li>
-              <li><a class={location==="/research" ? "cu-page" : ""} href="/research">Research</a></li>
-              <li><a class={location==="/leadership" ? "cu-page" : ""} href="/leadership">Leadership</a></li>
-              { /*<li><a href="#advisors">Advisors</a></li> */ }
+            <li><a class={location==="/" ? "cu-page" : ""}><Link to="/">Home</Link></a></li>
+                  <li><a class={location==="/events" ? "cu-page" : ""}><Link to="/events">Events</Link></a></li>
+                  <li><a class={location==="/research" ? "cu-page" : ""}><Link to="/research">Research</Link></a></li>
+                  <li><a class={location==="/leadership" ? "cu-page" : ""}><Link to="/leadership">Leadership</Link></a></li>
+                  { /*<li><a class={location==="/advisors" ? "cu-page" : ""}><Link to="/advisors">Advisors</Link></a></li> */ }
             </ul>
           </div>
         </nav>
