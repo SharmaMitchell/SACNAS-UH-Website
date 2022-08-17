@@ -46,6 +46,7 @@
     border-radius: 75px;
     margin: 10px 0;
     margin-top: 40px;
+    box-shadow: 0 0 5px var(--blue);
 }
 .research-advice .email-icon img{
     width: 75px;
