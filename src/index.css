@@ -8,11 +8,15 @@
   --teal: #00B388;
   --gold: #F6BE00;
   --blue: #3CA1FF;
+
+  --url: var(--primary);
 ;
 }
 [data-theme='dark']{
   --background: #121212;
   --text-primary: white;
+
+  --url: var(--pink);
 }
 body {
   margin: 0;

@@ -1,0 +1,95 @@
+.research{
+    display: flex;
+    align-items: center;
+	justify-content: center;
+}
+.research-container{
+    max-width: 1200px;
+    margin: 40px 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+}
+.research-text{
+    width: 100%;
+}
+.research-title h1{
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+    display: none; /* Hiding til I figure out styling */
+}
+.research-text h2{
+    font-size: 2rem;
+    font-weight: 300;
+    font-style: normal;
+    margin: 0;
+    margin-block-start: 0.83em
+}
+.research-text p{
+    font-size: 1.2rem;
+    text-align: justify;
+    margin-block-start: 0.5em;
+}
+.research-text a{
+    color: var(--url);
+}
+.research-advice{
+    display: flex;
+    flex-direction: row;
+    max-width: 600px;
+    height: 75px;
+    background-color: var(--blue);
+    border-radius: 75px;
+    margin: 10px 0;
+    margin-top: 40px;
+}
+.research-advice .email-icon img{
+    width: 75px;
+    height: 75px;
+    transition: 0.2s ease transform;
+}
+.research-advice .email-icon:hover img{
+    transform: scale(1.05);
+    box-shadow: 0 0 10px white;
+    border-radius: 100%;
+}
+.research-advice .email-blurb{
+    display: flex;
+    align-items: center;
+}
+.research-advice .email-blurb p{
+    width: 95%;
+    margin: 0 10px;
+    color: white;
+}
+.research-advice .email-blurb a{
+    font-weight: 600;
+    color: white;
+}
+/* Mobile M and lower*/
+@media only screen and (max-width: 425px){
+    .research-advice{
+        height: 100%;
+        align-items: center;
+    }
+    .research-advice .email-blurb{
+        padding: 10px;
+        padding-left: 0;
+        padding-right: 20px;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px){
+	.research-container{
+        width: 90%;
+    }
+}
+/* Desktop */
+@media only screen and (min-width: 1200px){
+    
+}
