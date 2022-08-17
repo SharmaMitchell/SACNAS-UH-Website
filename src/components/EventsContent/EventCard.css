@@ -3,8 +3,10 @@
     align-items: center;
     justify-content: center;
     width: 350px;
+    max-width: 95vw;
     background-color: var(--pink);
     margin: 20px 0;
+    
 }
 .event-card-container{
     display: flex;
@@ -12,6 +14,7 @@
 }
 .event-card-container .event-img img{
     width: 315px;
+    max-width: 90vw;
     margin: 15px;
 }
 .event-card-container .event-text{
@@ -27,4 +30,14 @@
     text-align: justify;
     margin: 0;
     margin-top: 8px;
+}
+/* Tablet */
+@media only screen and (min-width: 768px){
+	.event-card{
+        margin-right: 40px;
+    }
+}
+/* Desktop */
+@media only screen and (min-width: 1200px){
+
 }
