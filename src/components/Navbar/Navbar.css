@@ -118,7 +118,8 @@ a{
   text-decoration: none;
   color: white;
   text-transform: uppercase;
-  padding: 20px 10px;
+  /* Note: Padding doubled due to using both <Link> and <a> (needed <a> for class) */
+  padding: 10px 5px; 
   display: block;
   text-align: left;
 }
@@ -208,7 +209,8 @@ a{
     text-decoration: none;
     color: white;
     text-transform: uppercase;
-    padding: 10px;
+    /* Note: Padding doubled due to using both <Link> and <a> (needed <a> for class) */
+    padding: 5px;
     display: block;
   }
   #navbar .nav-list ul li:hover a {
