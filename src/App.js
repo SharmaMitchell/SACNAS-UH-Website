@@ -9,6 +9,7 @@ import Research from './pages/Research';
 import Leadership from './pages/Leadership';
 import SocialsBanner from './components/SocialsBanner/SocialsBanner'
 import Footer from './components/Footer/Footer';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import './App.css';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
   return (
     <div className="App" data-theme={theme}>
       <Router>
+        <ScrollToTop />
         <Navbar dark={switchTheme} theme={theme}/>
         <Banner />
         <Routes> 
