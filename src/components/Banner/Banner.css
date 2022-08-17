@@ -27,6 +27,15 @@
 	justify-content: center;
 	align-items: center;
 }
+#banner .banner-container.home{
+	min-height: 100vh;
+	padding: 0 50px;
+	display: flex;
+	flex-direction: column-reverse;
+	max-width: 1200px;
+	margin: 0 auto;
+	justify-content: flex-end;
+}
 #banner .banner-logo{
 	max-width: 400px;
     margin-bottom: 20px;
@@ -34,9 +43,17 @@
 	align-items: center;
 	justify-content: center;
 }
+#banner .banner-container.home .banner-logo{
+	padding-top: calc(8vh + 80px);
+	margin-bottom: 20px;
+}
 #banner .banner-logo img{
 	/*display: none; /* hidden on mobile for now, maybe fix with flex-dir later */
     max-width: max(220px, 60vw);
+}
+#banner .banner-container.home .banner-logo img{
+	width: 400px;
+	max-width: 70vw;
 }
 #banner .banner-text{
 	color: white;
@@ -47,6 +64,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+#banner .banner-container.home .banner-text{
+	color: white;
+	font-size: 1.6rem;
+  	letter-spacing: 0.15rem;
+	text-transform: uppercase;
+	text-align: -webkit-center;
+	display: flex;
+	align-items: center;
 }
 #banner .banner-text h1{
 	text-shadow: 6px 6px 4px rgb(0, 0, 0, 0.75);
@@ -73,6 +99,9 @@
         max-width: 50vw;
 		text-align: left;
     }
+	#banner .banner-container.home .banner-text{
+		max-width: 80vw;
+	}
     #banner .banner-text h1{
 		font-size: 2.5rem;
 	}
@@ -80,8 +109,16 @@
 		font-size: 1.5rem;
 		width: 80%;
 	}
+	#banner .banner-container.home .banner-text h2{
+		font-size: 2rem;
+		width: 80%;
+	}
 	#banner .banner-logo{
 		justify-content: inherit;
+		margin: 0;
+	}
+	#banner .banner-container.home .banner-logo{
+		justify-content: center;
 	}
     #banner .banner-logo img{
         display: flex;
@@ -93,13 +130,25 @@
 	#banner{
         background-position-y: 25%;
     }
+	.banner.home{
+		background-position: top center !important;
+	}
     #banner .banner-logo img{
 		width: 400px;
+	}
+	#banner .banner-container.home .banner-logo img{
+		width: 500px;
 	}
 	#banner .banner-text h1{
 		font-size: 3.5rem;
 	}
+	#banner .banner-container.home .banner-text h1{
+		font-size: 4.5rem;
+	}
 	#banner .banner-text h2{
 		font-size: 2rem;
+	}
+	#banner .banner-container.home .banner-text h2{
+		font-size: 2.5rem;
 	}
 }
