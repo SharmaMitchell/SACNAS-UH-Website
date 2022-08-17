@@ -122,6 +122,11 @@ a{
   display: block;
   text-align: left;
 }
+.sidebar .nav-list .cu-page{
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 12px;
+}
 .sidebar{
   background-color: var(--secondary);
   width: 80vw;
@@ -231,6 +236,9 @@ a{
   #navbar .nav-list ul li a:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
+  }
+  #navbar .nav-list .cu-page:after{
+    transform: scaleX(1);
   }
   .sidebar{
     left: -100%;
