@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import useLocalStorage from 'use-local-storage'
 import Navbar from './components/Navbar/Navbar';
+import Banner from './components/Banner/Banner';
 import Home from './pages/Home';
 import Events from './pages/Events';
 import Research from './pages/Research';
@@ -22,12 +23,13 @@ function App() {
     <div className="App" data-theme={theme}>
       <Router>
         <Navbar dark={switchTheme} theme={theme}/>
-          <Routes> 
-            <Route path='/' element={<Home/>} />
-            <Route path='/events' element={<Events/>} />
-            <Route path='/research' element={<Research/>} />
-            <Route path='/leadership' element={<Leadership/>} />
-          </Routes>
+        <Banner />
+        <Routes> 
+          <Route path='/' element={<Home/>} />
+          <Route path='/events' element={<Events/>} />
+          <Route path='/research' element={<Research/>} />
+          <Route path='/leadership' element={<Leadership/>} />
+        </Routes>
         <Footer />
       </Router>
     </div>
