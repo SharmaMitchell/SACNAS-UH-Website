@@ -13,10 +13,10 @@ function Row(props) {
     <div class="row">
         <div class="row-text">
             <div class="row-title">
-                <h2>{props.title}</h2>
+                {props.title}
             </div>
             <div class="row-paragraph">
-                <p>{props.paragraph}</p>
+                {props.paragraph}
             </div>
         </div>
         <div class= {!props.imgborder ? "row-image" : "row-image border"}>

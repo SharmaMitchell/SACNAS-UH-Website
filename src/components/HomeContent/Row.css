@@ -23,6 +23,9 @@
     text-align: left;
     margin-block-start: 0em;
 }
+.row .row-paragraph a{
+    color: var(--url);
+}
 .row-image{
     margin-top: 10px;
 }
