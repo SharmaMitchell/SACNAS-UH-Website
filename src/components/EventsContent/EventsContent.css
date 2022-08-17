@@ -20,7 +20,22 @@
 }
 .event-list{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px){
+	.events-container{
+        margin-right: 0; /* card margin makes up for in on tablet/desktop */
+    }
+    .event-list{
+        justify-content: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+/* Desktop */
+@media only screen and (min-width: 1200px){
+    
 }
