@@ -21,25 +21,29 @@
     padding-top: calc(8vh + 40px);
     padding-bottom: 50px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     max-width: 1200px;
 	margin: 0 auto;
-	justify-content: flex-start;
+	justify-content: center;
+	align-items: center;
 }
 #banner .banner-logo{
 	max-width: 400px;
     margin-bottom: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 #banner .banner-logo img{
-	display: none; /* hidden on mobile for now, maybe fix with flex-dir later */
-    max-width: 40vw;
+	/*display: none; /* hidden on mobile for now, maybe fix with flex-dir later */
+    max-width: max(220px, 60vw);
 }
 #banner .banner-text{
 	color: white;
 	font-size: 1.6rem;
   	letter-spacing: 0.15rem;
 	text-transform: uppercase;
-	text-align: left;
+	text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -60,11 +64,14 @@
 /* Tablet */
 @media only screen and (min-width: 768px){
 	#banner .banner-container{
-        padding-left: 50px;
+        flex-direction: row;
+		padding-left: 50px;
         padding-right: 50px;
+		justify-content: flex-start;
     }
     #banner .banner-text{
         max-width: 50vw;
+		text-align: left;
     }
     #banner .banner-text h1{
 		font-size: 2.5rem;
@@ -73,8 +80,12 @@
 		font-size: 1.5rem;
 		width: 80%;
 	}
+	#banner .banner-logo{
+		justify-content: inherit;
+	}
     #banner .banner-logo img{
         display: flex;
+		max-width: 40vw;
     }
 }
 /* Desktop */
