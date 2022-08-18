@@ -32,7 +32,7 @@ a{
   display: none;
 }
 #navbar .lhs{
-  display: flex;
+  display: none;
 }
 #navbar .nav-list{
   display: none;
@@ -128,6 +128,30 @@ a{
   text-decoration-thickness: 4px;
   text-underline-offset: 12px;
 }
+.sidebar .sidebar-dark{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 34px;
+  background-color: var(--primary);
+  border-radius: 25px;
+  width: 195px;
+}
+.sidebar-dark .dark-toggle{
+  margin-left: 0;
+}
+.sidebar-dark .dark-label{
+  font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    color: white;
+    text-transform: uppercase;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
 .sidebar{
   background-color: var(--secondary);
   width: 80vw;
@@ -176,6 +200,9 @@ a{
   }
   #navbar .brand{
     font-size: 1.2rem;
+  }
+  #navbar .lhs{
+    display: flex;
   }
   #navbar .spam{
     display: flex;

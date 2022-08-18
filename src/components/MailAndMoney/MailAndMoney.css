@@ -116,3 +116,56 @@
 .mnm-wrapper.donate{
     margin-left: 12px;
 }
+
+/* Tablet & Mobile */
+@media only screen and (max-width: 1200px){
+    .mnm-container{
+        flex-direction: column;
+        align-items: center;
+        margin-left: 34px;
+    }
+    .mnm .mnm-container .mnm-item.email{
+        background: var(--blue);
+    }
+    .mnm .mnm-container .mnm-item.list{
+        background-image: radial-gradient(circle at 40px 10px, var(--purple) 18%, transparent 19%),
+        radial-gradient(circle at center, var(--purple) 56%, transparent 57%);
+    }
+    .mnm .mnm-container .mnm-item.donate{
+        background: var(--teal);
+    }
+
+    .mnm-wrapper{
+        min-width: 195px;
+        margin-top: 20px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .mnm-wrapper.list .mnm-label a{
+        margin-left: 0;
+    }
+    .mnm-wrapper.list{
+        margin-top: 20px;
+    }
+
+    .mnm-wrapper.email{
+        background-color: var(--blue);
+    }
+    .mnm-wrapper.list{
+        background-color: var(--purple);
+    }
+    .mnm-wrapper.donate{
+        background-color: var(--teal);
+        margin-bottom: 20px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .mnm-wrapper .mnm-label{
+        display: flex;
+        align-items: center;
+        width: auto;
+        height: 100%;
+    }
+}
