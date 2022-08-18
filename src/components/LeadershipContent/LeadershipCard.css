@@ -1,0 +1,125 @@
+.leadership-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: 5px;
+}
+.leadership-card-container{
+    width: 525px;
+    max-width: 90vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(180deg, transparent 79px, var(--card-background) 80px);
+    margin: 5px;
+    border-radius: 20px;
+}
+.leadership-card-container.m{
+    width: 250px;
+    max-width: 90vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(180deg, transparent 79px, var(--card-background) 80px);
+    margin: 5px;
+    border-radius: 20px;
+}
+.leadership-card-img-background{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 50px;
+    background: var(--card-background);
+    border-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-top: 60px;
+    /*transition: 0.3s ease all;*/
+}
+.leadership-card-img{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border-radius: 100%;
+    border: 5px solid var(--background);
+    margin-top: 80px;
+    transition: all 0.3s ease;
+}
+.leadership-card-img img{
+    position: relative;
+    object-fit: cover;
+    object-position: top;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    transition: all 0.3s ease;
+}
+.leadership-card-img .no-link{
+    display: none;
+}
+.leadership-card-img .card-img-top{
+    position: absolute;
+    left: 0;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+.leadership-card-img .card-img-top .linkedin-logo{
+    width: 60%;
+    height: 60%;
+}
+.leadership-card-img:hover .card-img-top{
+    opacity: 1;
+}
+.leadership-card-img:hover .officer-pic{
+    transform: scale(1.05);
+    filter: blur(1px) brightness(.8);
+}
+.leadership-card-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+.leadership-card-text .leadership-card-title h3{
+    margin: 0;
+    text-align: center;
+}
+.leadership-card-text .leadership-card-paragraph{
+    text-align: justify;
+    margin: 10px;
+}
+.leadership-card-container.m .leadership-card-text .leadership-card-paragraph{
+    text-align: center;
+}
+.leadership-card-text .leadership-card-paragraph p{
+    margin: 0;
+}
+.leadership-email-hide{
+    display: none;
+}
+.leadership-email img{
+    height: 50px;
+    width: 50px;
+}
+.leadership-email{
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+.leadership-card-red{
+    height: 30px;
+    width: 100%;
+    background-color: var(--primary);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-top: auto;
+}
