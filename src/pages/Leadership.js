@@ -1,9 +1,10 @@
 import React from 'react'
+import LeadershipContent from '../components/LeadershipContent/LeadershipContent'
 
 function Leadership() {
   return (
     <>
-        <h1>Leadership</h1>
+        <LeadershipContent />
     </>
   )
 }

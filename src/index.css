@@ -10,6 +10,8 @@
   --blue: #3CA1FF;
 
   --url: var(--primary);
+
+  --card-background: rgb(220,220,220);
 ;
 }
 [data-theme='dark']{
@@ -17,6 +19,8 @@
   --text-primary: white;
 
   --url: var(--pink);
+
+  --card-background: rgb(55, 55, 55);
 }
 body {
   margin: 0;
