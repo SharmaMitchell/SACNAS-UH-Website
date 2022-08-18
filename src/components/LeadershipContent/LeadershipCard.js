@@ -35,6 +35,9 @@ function LeadershipCard(props) {
             <a href={props.email}>
                 <img src={SACNASEmail}/>
             </a>
+            <div class="leadership-email-label">
+                <a href={props.email}>Email Me</a>
+            </div>
         </div>
         <div class="leadership-card-red"></div>
       </div>
