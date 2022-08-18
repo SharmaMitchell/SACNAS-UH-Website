@@ -110,10 +110,65 @@
 .leadership-email img{
     height: 50px;
     width: 50px;
+    position: relative;
+    z-index: 1;
+    transition: 0.3s ease all;
+    transform: scale(1.02);
 }
 .leadership-email{
     margin-top: -10px;
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 25px;
+    background-color: transparent;
+    height: 50px;
+    width: 50px;
+    transition: width 0.15s ease-in;
+    z-index: 1;
+    background-color: rgb(55, 55, 55);
+}
+.leadership-email:hover{
+    background-color: var(--primary);
+    width: 180px;;
+}
+.leadership-email:hover img{
+    transform: scale(1.05);
+}
+.leadership-email-label{
+    display: flex;
+    align-items: center;
+
+    width: 0;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    transition: width 0.1s ease-in;
+
+    z-index: 0;
+    height: 100%;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+.leadership-email:hover .leadership-email-label{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.leadership-email-label a{
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    color: white;
+    text-transform: uppercase;
+    padding: 0 10px;
+    padding-right: 15px;
+    white-space: nowrap;
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 .leadership-card-red{
     height: 30px;
