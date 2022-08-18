@@ -124,13 +124,15 @@
     background-color: transparent;
     height: 50px;
     width: 50px;
-    transition: width 0.15s ease-in;
+    transition: all 0.15s ease-in;
     z-index: 1;
     background-color: rgb(55, 55, 55);
 }
 .leadership-email:hover{
     background-color: var(--primary);
-    width: 180px;;
+    width: 180px;
+    box-shadow: 0px 0px 5px var(--text-primary);
+    transform: scale(1.05);
 }
 .leadership-email:hover img{
     transform: scale(1.05);
@@ -177,4 +179,21 @@
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     margin-top: auto;
+}
+
+/* Expand email label on devices without hover */
+@media(hover: none){
+    .leadership-email{
+        background-color: var(--primary);
+        width: 180px;;
+    }
+    .leadership-email img{
+        transform: scale(1.05);
+    }
+    .leadership-email .leadership-email-label{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
 }

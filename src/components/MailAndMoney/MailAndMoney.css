@@ -40,12 +40,14 @@
     background-color: transparent;
     height: 50px;
     width: 50px;
-    transition: width 0.1s ease-out;
+    transition: all 0.1s ease-out;
     z-index: 1;
 }
 .mnm-wrapper:hover{
     width: 100%;
-    transition: width .15s ease-in;
+    transition: all .15s ease-in;
+    box-shadow: 0px 0px 5px white;
+    transform: scale(1.05);
 }
 .mnm-wrapper.list{
     margin-top: 4px;
