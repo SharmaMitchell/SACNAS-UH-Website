@@ -40,6 +40,20 @@
     align-items: stretch;
     justify-content: space-evenly;
 }
+.leadership-alumni-blurb{
+    margin-left: 20px;
+    width: 100%;
+}
+.leadership-alumni-blurb p{
+    text-align: left;
+}
+.leadership-alumni{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    margin-left: 20px;
+}
 @media only screen and (min-width: 1200px){
     .leadership-container h2{
         font-size: 2.5rem;

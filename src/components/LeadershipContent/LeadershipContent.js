@@ -8,6 +8,7 @@ import { SupportOfficers } from './LeadershipData/SupportOfficers'
 import { AlumniAdvisors } from "./LeadershipData/AlumniAdvisors";
 import { CoAdvisors } from './LeadershipData/CoAdvisors'
 import { FoundingAdvisor } from "./LeadershipData/FoundingAdvisor";
+import { SACNASAlumni } from "./LeadershipData/SACNASAlumni";
 
 function LeadershipContent() {
   return (
@@ -106,6 +107,30 @@ function LeadershipContent() {
                 )
             })}
           </div>
+          <div class="leadership-section-title"><h2>SACNAS UH Alumni</h2></div>
+          <div class="leadership-alumni-blurb">
+            <p>Our chapter at UH was founded in 2018-2019 and began with an undergraduate student base.
+Below are SACNAS-UH alumni.</p>
+          </div>
+          <div class="leadership-alumni">
+            {SACNASAlumni.map((item) => {
+                return(
+                    <div class="leadership-alumlist">
+                    <h3>{item.title}</h3>
+                    {(() => {
+                        const alumlist = [];
+
+                        for(let i = 0; i < item.list.length; i++){
+                            alumlist.push(<p>{item.list[i]}</p>);
+                        }
+
+                        return alumlist;
+                    })()}
+                    </div>
+                )
+            })}
+          </div>
+            
         </div>
       </div>
     </>
