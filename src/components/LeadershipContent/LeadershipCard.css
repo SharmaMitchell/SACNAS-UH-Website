@@ -18,7 +18,7 @@
 }
 .leadership-card-container.m{
     width: 250px;
-    max-width: 90vw;
+    /*flex-basis: auto;*/
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -102,6 +102,7 @@
 .leadership-card-text .leadership-card-title h3{
     margin: 0;
     text-align: center;
+    font-size: 1.05rem;
 }
 .leadership-card-text .leadership-card-paragraph{
     text-align: justify;
@@ -112,6 +113,7 @@
 }
 .leadership-card-text .leadership-card-paragraph p{
     margin: 0;
+    font-size: 0.9rem;
 }
 .leadership-email-hide{
     display: none;
@@ -194,7 +196,8 @@
 @media(hover: none){
     .leadership-email{
         background-color: var(--primary);
-        width: 180px;;
+        width: 180px;
+        
     }
     .leadership-email img{
         transform: scale(1.05);
@@ -204,5 +207,14 @@
         align-items: center;
         width: 100%;
         height: 100%;
+        white-space: nowrap;
+        justify-content: flex-start;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px){
+    .leadership-card-container{
+        max-width: 42vw;
     }
 }
