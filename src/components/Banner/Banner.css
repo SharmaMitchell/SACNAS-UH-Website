@@ -29,7 +29,9 @@
 }
 #banner .banner-container.home{
 	min-height: 100vh;
-	padding: 0 50px;
+	padding: 0 10px;
+    padding-top: calc(8vh + 40px);
+    padding-bottom: 50px;
 	display: flex;
 	flex-direction: column-reverse;
 	max-width: 1200px;
@@ -44,7 +46,7 @@
 	justify-content: center;
 }
 #banner .banner-container.home .banner-logo{
-	padding-top: calc(8vh + 80px);
+	padding-top: 40px;
 	margin-bottom: 20px;
 }
 #banner .banner-logo img{

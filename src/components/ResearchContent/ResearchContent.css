@@ -68,8 +68,9 @@
     color: white;
 }
 .research-advice .email-blurb a{
-    font-weight: 600;
+    /*font-weight: 600;*/
     color: white;
+    text-decoration: underline;
 }
 /* Mobile M and lower*/
 @media only screen and (max-width: 425px){
