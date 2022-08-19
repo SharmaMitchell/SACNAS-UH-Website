@@ -21,15 +21,18 @@ function LeadershipCard(props) {
       <div class={`leadership-card-container ${props.width}`}>
         <div class="leadership-card-img-background">
           <div class="leadership-card-img">
-            <img class={props.link === "" ? "static-pic" : "officer-pic"} src={props.img} />
-            <a class={props.link === "" ? "no-link" : "card-img-top"} href={props.link}>
+            <img class={props.link === "" || props.link === undefined ? "static-pic" : "officer-pic"} src={props.img} />
+            <a class={props.link === "" || props.link === undefined ? "no-link" : "card-img-top"} href={props.link}>
               <img class="linkedin-logo" src={SACNASLinkedIn} />
             </a>
           </div>
         </div>
+        <div class="leadership-card-bottom">
+
+        
         <div class="leadership-card-text">
-          <div class="leadership-card-title">{props.title}</div>
-          <div class="leadership-card-paragraph">{props.paragraph}</div>
+          <div class="leadership-card-title"><h3>{props.title}</h3></div>
+          <div class="leadership-card-paragraph"><p>{props.paragraph}</p></div>
         </div>
         <div class={props.email === undefined ? "leadership-email-hide" : "leadership-email"}>
             <a href={props.email}>
@@ -38,6 +41,7 @@ function LeadershipCard(props) {
             <div class="leadership-email-label">
                 <a href={props.email}>Email Me</a>
             </div>
+        </div>
         </div>
         <div class="leadership-card-red"></div>
       </div>

@@ -84,6 +84,15 @@
     transform: scale(1.05);
     filter: blur(1px) brightness(.8);
 }
+.leadership-card-bottom{
+    /* This keeps the email buttons at the bottom of the faculty cards */
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between; /* <-- Most Important */
+    height: 55%;
+}
 .leadership-card-text{
     display: flex;
     flex-direction: column;

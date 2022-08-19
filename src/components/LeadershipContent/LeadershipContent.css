@@ -25,6 +25,7 @@
     margin-block-start: 0.83em
 }
 .leadership-officers{
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
