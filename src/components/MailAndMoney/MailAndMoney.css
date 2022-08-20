@@ -118,7 +118,7 @@
 }
 
 /* Tablet & Mobile */
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: 1199px){
     .mnm-container{
         flex-direction: column;
         align-items: center;
@@ -170,7 +170,7 @@
     }
 }
 /* Tablet only */
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 768px) and (max-width: 1199px){
     .mnm{
         justify-content: flex-start;
     }
