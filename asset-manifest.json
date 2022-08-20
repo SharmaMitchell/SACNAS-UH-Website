@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.eecec4ee.css",
-    "main.js": "/static/js/main.3f4e08a7.js",
+    "main.css": "/static/css/main.a58a0519.css",
+    "main.js": "/static/js/main.b94a588d.js",
     "static/media/nasa-Q1p7bh3SHj8-unsplash.jpg": "/static/media/nasa-Q1p7bh3SHj8-unsplash.de5659898d3bfc5eb8ea.jpg",
     "static/media/greg.png": "/static/media/greg.a810072cdfc72e34f5bf.png",
     "static/media/jake.png": "/static/media/jake.06d92a0c3083469e8d10.png",
@@ -35,11 +35,11 @@
     "static/media/Sater.jpg": "/static/media/Sater.8c7ef4b10c3f17ca4e4c.jpg",
     "static/media/tony.jpg": "/static/media/tony.028967c605beb9d2f1a3.jpg",
     "index.html": "/index.html",
-    "main.eecec4ee.css.map": "/static/css/main.eecec4ee.css.map",
-    "main.3f4e08a7.js.map": "/static/js/main.3f4e08a7.js.map"
+    "main.a58a0519.css.map": "/static/css/main.a58a0519.css.map",
+    "main.b94a588d.js.map": "/static/js/main.b94a588d.js.map"
   },
   "entrypoints": [
-    "static/css/main.eecec4ee.css",
-    "static/js/main.3f4e08a7.js"
+    "static/css/main.a58a0519.css",
+    "static/js/main.b94a588d.js"
   ]
 }
