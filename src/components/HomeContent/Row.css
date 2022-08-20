@@ -1,7 +1,7 @@
 .row{
     flex-direction: column-reverse;
     text-align: left;
-    padding: 20px;
+    margin: 20px;
     display: flex;
     align-items: center;
 }
