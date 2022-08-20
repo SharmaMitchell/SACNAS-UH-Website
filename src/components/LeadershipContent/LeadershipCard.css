@@ -91,7 +91,7 @@
     align-content: center;
     align-items: center;
     justify-content: space-between; /* <-- Most Important */
-    height: 55%;
+    height: 60%; /* <-- Second Most Important */
 }
 .leadership-card-text{
     display: flex;
