@@ -169,3 +169,13 @@
         height: 100%;
     }
 }
+/* Tablet only */
+@media only screen and (min-width: 768px){
+    .mnm{
+        justify-content: flex-start;
+    }
+    .mnm-container{
+        margin-left: 68px;
+    }
+
+}

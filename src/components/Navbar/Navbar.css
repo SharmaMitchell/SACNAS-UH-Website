@@ -203,6 +203,9 @@ a{
   .sidebar .nav-list ul li a {
     font-size: 1.8rem;
   }
+  .sidebar .sidebar-dark{
+    margin-left: 68px;
+  }
 }
 
 /* Desktop */
