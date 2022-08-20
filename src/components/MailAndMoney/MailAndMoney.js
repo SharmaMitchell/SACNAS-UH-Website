@@ -26,11 +26,11 @@ function MailAndMoney() {
           </div>
         </div>
         <div class="mnm-wrapper donate">
-          <a href="https://www.paypal.com/donate?token=iCBTsPT1wiq46YSnMTHP32dWC5ReQzcEekkuCXQ_llQC1yHkdxzsW5ycjYgGPPYavfm945p4x1k2gsVs">
+          <a href="https://paypal.me/SACNASUH?country.x=US&locale.x=en_US">
             <img class="mnm-item donate" src={SACNASDonate} />
           </a>
           <div class="mnm-label">
-            <a href="https://www.paypal.com/donate?token=iCBTsPT1wiq46YSnMTHP32dWC5ReQzcEekkuCXQ_llQC1yHkdxzsW5ycjYgGPPYavfm945p4x1k2gsVs">Donate</a>
+            <a href="https://paypal.me/SACNASUH?country.x=US&locale.x=en_US">Donate</a>
           </div>
         </div>
       </div>

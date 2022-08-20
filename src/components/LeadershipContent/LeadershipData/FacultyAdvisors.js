@@ -1,6 +1,6 @@
 import React from "react";
 import ricardo from '../../../assets/leadership/ricardo.jpg'
-import greg from '../../../assets/leadership/greg.jpg'
+import greg from '../../../assets/leadership/greg.png'
 import martin from '../../../assets/leadership/martin.jpg'
 
 export const FacultyAdvisors = [

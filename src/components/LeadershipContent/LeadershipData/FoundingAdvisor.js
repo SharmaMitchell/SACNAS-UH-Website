@@ -9,6 +9,6 @@ export const FoundingAdvisor = [
         College of Natural Sciences and Mathematics at UH
         Current: Associate Vice Provost for Student Success and Dean of Undergraduate Studies,
         University of North Carolina at Greensboro`,
-        email: "mailto:UH.sacnas@gmail.com"
+        /*email: "mailto:UH.sacnas@gmail.com"*/
     },
 ]
