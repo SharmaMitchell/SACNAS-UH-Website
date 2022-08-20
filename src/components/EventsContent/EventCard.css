@@ -11,6 +11,7 @@
 .event-card-container{
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 .event-card-container .event-img img{
     width: 315px;
