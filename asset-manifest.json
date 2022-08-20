@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.9eead426.css",
-    "main.js": "/static/js/main.05556360.js",
+    "main.css": "/static/css/main.09b71d16.css",
+    "main.js": "/static/js/main.3f4e08a7.js",
     "static/media/nasa-Q1p7bh3SHj8-unsplash.jpg": "/static/media/nasa-Q1p7bh3SHj8-unsplash.de5659898d3bfc5eb8ea.jpg",
+    "static/media/greg.png": "/static/media/greg.a810072cdfc72e34f5bf.png",
     "static/media/jake.png": "/static/media/jake.06d92a0c3083469e8d10.png",
     "static/media/alejandro.jpg": "/static/media/alejandro.7a5f3787c07ba3620d0a.jpg",
     "static/media/friendsgiving.png": "/static/media/friendsgiving.3415a3b1616e07588f54.png",
@@ -29,17 +30,16 @@
     "static/media/ricardo.jpg": "/static/media/ricardo.c393ae84a5c9c3ec45aa.jpg",
     "static/media/SACNAS-Mail-List.png": "/static/media/SACNAS-Mail-List.eaeab13a378c92bb052e.png",
     "static/media/SACNAS-Insta.png": "/static/media/SACNAS-Insta.297361b91c57e7d328b9.png",
-    "static/media/greg.jpg": "/static/media/greg.06eabd838fd462bafbb1.jpg",
     "static/media/SACNAS-Donate-Alt.png": "/static/media/SACNAS-Donate-Alt.333a61445b4c3fbd9cba.png",
     "static/media/martin.jpg": "/static/media/martin.de85799ea9e0e8123e4a.jpg",
     "static/media/Sater.jpg": "/static/media/Sater.8c7ef4b10c3f17ca4e4c.jpg",
     "static/media/tony.jpg": "/static/media/tony.028967c605beb9d2f1a3.jpg",
     "index.html": "/index.html",
-    "main.9eead426.css.map": "/static/css/main.9eead426.css.map",
-    "main.05556360.js.map": "/static/js/main.05556360.js.map"
+    "main.09b71d16.css.map": "/static/css/main.09b71d16.css.map",
+    "main.3f4e08a7.js.map": "/static/js/main.3f4e08a7.js.map"
   },
   "entrypoints": [
-    "static/css/main.9eead426.css",
-    "static/js/main.05556360.js"
+    "static/css/main.09b71d16.css",
+    "static/js/main.3f4e08a7.js"
   ]
 }
