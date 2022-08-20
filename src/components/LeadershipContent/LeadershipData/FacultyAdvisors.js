@@ -8,18 +8,18 @@ export const FacultyAdvisors = [
         img: ricardo,
         title: "Ricardo Azevedo, PhD",
         paragraph: "Professor, \nDepartment of Biology & Biochemistry",
-        email: "mailto:UH.sacnas@gmail.com"
+        email: "mailto:razevedo@uh.edu"
     },
     {
         img: greg,
         title: "Greg Morrison, PhD",
         paragraph: "Assistant Professor,\nDepartment of Physics",
-        email: "mailto:UH.sacnas@gmail.com"
+        email: "mailto:gcmorris@central.uh.edu"
     },
     {
         img: martin,
         title: "Martin Nuñez, PhD",
         paragraph: "Associate Professor,\nDepartment of Biology and Biochemistry",
-        email: "mailto:UH.sacnas@gmail.com"
+        email: "mailto:nunezm@uh.edu"
     },
 ]

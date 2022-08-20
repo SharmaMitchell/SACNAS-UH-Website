@@ -28,7 +28,7 @@
 	align-items: center;
 }
 #banner .banner-container.home{
-	min-height: 100vh;
+	min-height: 84vh;
 	padding: 0 10px;
     padding-top: calc(8vh + 40px);
     padding-bottom: 50px;
