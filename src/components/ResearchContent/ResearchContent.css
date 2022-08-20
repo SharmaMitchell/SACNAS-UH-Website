@@ -23,7 +23,7 @@
     display: none; /* Hiding til I figure out styling */
 }
 .research-text h2{
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: 300;
     font-style: normal;
     margin: 0;
@@ -74,14 +74,19 @@
 }
 /* Mobile M and lower*/
 @media only screen and (max-width: 425px){
+    .research-text p{
+        text-align: left;
+    }
     .research-advice{
         height: 100%;
         align-items: center;
+        border-radius: 25px;
+        flex-direction: column;
+        padding-top: 10px;
     }
     .research-advice .email-blurb{
-        padding: 10px;
-        padding-left: 0;
-        padding-right: 20px;
+        padding: 10px 0;
+        text-align: center;
     }
 }
 
@@ -93,5 +98,7 @@
 }
 /* Desktop */
 @media only screen and (min-width: 1200px){
-    
+    .research-text h2{
+        font-size: 2.5rem;
+    }
 }

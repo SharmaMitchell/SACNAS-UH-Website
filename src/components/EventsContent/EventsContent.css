@@ -11,7 +11,12 @@
 }
 .events-container h2{
     text-align: left;
-    font-size: 2.5rem;
+    font-size: 1.75rem;
+    font-weight: 300;
+    font-style: normal;
+    text-transform: uppercase;
+    margin-block-start: 10px;
+    margin-block-end: 0.2em;
     margin-bottom: 0;
 }
 .events-upcoming, .events-previous{
@@ -37,5 +42,7 @@
 }
 /* Desktop */
 @media only screen and (min-width: 1200px){
-    
+    .events-container h2{
+        font-size: 2.5rem;
+    }
 }
