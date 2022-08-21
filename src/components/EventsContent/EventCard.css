@@ -35,10 +35,30 @@
 /* Tablet */
 @media only screen and (min-width: 768px){
 	.event-card{
-        margin-right: 40px;
+        margin: 15px 0;
+        margin-right: 30px;
+        max-width: 28vw;
+    }
+    .event-card-container .event-img img{
+        max-width: calc(28vw - 30px);
+        margin: 10px
+    }
+    .event-card-container .event-text{
+        margin: 10px;
+        margin-top: 0;
     }
 }
 /* Desktop */
 @media only screen and (min-width: 1200px){
-
+    .event-card{
+        margin: 20px 0;
+        margin-right: 40px;
+    }
+    .event-card-container .event-img img{
+        margin: 15px
+    }
+    .event-card-container .event-text{
+        margin: 15px;
+        margin-top: 0;
+    }
 }
