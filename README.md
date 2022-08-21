@@ -27,6 +27,8 @@ One of the most (if not **the** most) anticipated features of this website was t
 
 By using React's `localStorage` hook, I was able to create a 'theme' variable that would be saved in the browser storage for next time a user visited our website. I was then able to create a short function to switch the theme, and pass it to an `onClick` parameter on a 'theme' button. After that, all I needed to do was define a color palette for the dark theme in `index.css`, and pass the current theme to a div surrounding our single page app. And *just like that* we have dark mode!
 
+Additionally, I used the `window.matchMedia` method to check if the user has adjusted their settings to prefer dark themes. If they have, the site loads in dark mode by default.
+
 ## Original Site Comparison
 ### 'About' Section (Home page)
 ![About-Old-vs-New](https://user-images.githubusercontent.com/90817905/185774336-a7b7215d-a3ac-42df-a2ae-9ad2f4bc8485.png)
