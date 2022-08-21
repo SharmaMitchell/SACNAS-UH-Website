@@ -1,12 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.a58a0519.css",
-    "main.js": "/static/js/main.b94a588d.js",
+    "main.css": "/static/css/main.122a17d9.css",
+    "main.js": "/static/js/main.277e04b5.js",
     "static/media/nasa-Q1p7bh3SHj8-unsplash.jpg": "/static/media/nasa-Q1p7bh3SHj8-unsplash.de5659898d3bfc5eb8ea.jpg",
     "static/media/greg.png": "/static/media/greg.a810072cdfc72e34f5bf.png",
     "static/media/jake.png": "/static/media/jake.06d92a0c3083469e8d10.png",
     "static/media/alejandro.jpg": "/static/media/alejandro.7a5f3787c07ba3620d0a.jpg",
-    "static/media/friendsgiving.png": "/static/media/friendsgiving.3415a3b1616e07588f54.png",
     "static/media/rosh.png": "/static/media/rosh.a309cceb81d906c04401.png",
     "static/media/steven.png": "/static/media/steven.d923d4c25300ac2a3dbe.png",
     "static/media/sara.jpg": "/static/media/sara.4fee5339b43c43435b72.jpg",
@@ -35,11 +34,11 @@
     "static/media/Sater.jpg": "/static/media/Sater.8c7ef4b10c3f17ca4e4c.jpg",
     "static/media/tony.jpg": "/static/media/tony.028967c605beb9d2f1a3.jpg",
     "index.html": "/index.html",
-    "main.a58a0519.css.map": "/static/css/main.a58a0519.css.map",
-    "main.b94a588d.js.map": "/static/js/main.b94a588d.js.map"
+    "main.122a17d9.css.map": "/static/css/main.122a17d9.css.map",
+    "main.277e04b5.js.map": "/static/js/main.277e04b5.js.map"
   },
   "entrypoints": [
-    "static/css/main.a58a0519.css",
-    "static/js/main.b94a588d.js"
+    "static/css/main.122a17d9.css",
+    "static/js/main.277e04b5.js"
   ]
 }
