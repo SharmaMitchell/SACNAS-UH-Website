@@ -198,14 +198,20 @@ a{
   #navbar .nav-bar{
     padding-top: 0;
   }
+  .sidebar{
+    /*min-width: 40vw;*/
+    width: fit-content;
+  }
   .sidebar .nav-list ul {
     padding-left: 58px;
+    padding-right: 68px;
   }
   .sidebar .nav-list ul li a {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   .sidebar .sidebar-dark{
     margin-left: 68px;
+    margin-right: 68px;
   }
 }
 
