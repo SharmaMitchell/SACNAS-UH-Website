@@ -46,7 +46,7 @@ function EventsContent() {
           <h2>Upcoming Events</h2>
           <div class="event-list">
             
-            {uLoading ? <Spinner /> : upcoming.map((event) => {
+            {uLoading ? <Spinner /> : upcoming?.map((event) => {
               return(<EventCard title={event[0]} description={event[1]} img={event[5]}/>)
             })}
             
@@ -55,7 +55,7 @@ function EventsContent() {
         <div class="events-previous">
           <h2>Previous Events</h2>
           <div class="event-list">
-            {pLoading ? <Spinner /> : previous.map((event) => {
+            {pLoading ? <Spinner /> : previous?.map((event) => {
               return(<EventCard title={event[0]} description={event[1]} img={event[5]}/>)
             })}
           </div>
