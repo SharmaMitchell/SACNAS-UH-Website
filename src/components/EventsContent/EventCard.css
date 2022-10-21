@@ -6,7 +6,7 @@
     max-width: 95vw;
     background-color: var(--pink);
     margin: 20px 0;
-    
+    /*border-radius: 20px;*/
 }
 .event-card-container{
     display: flex;
@@ -27,10 +27,29 @@
     text-align: center;
     margin: 0;
 }
-.event-card-container .event-text p{
+.event-card-container .event-text .event-description{
     text-align: justify;
     margin: 0;
     margin-top: 8px;
+}
+.event-card-container .event-links a{
+    color: black;
+    font-weight: 600;
+    text-decoration: underline;
+    margin: 5px;
+    display: block;
+}
+.event-card-container .event-links{
+    margin-bottom: 5px;
+}
+.event-card-container .event-datetime p{
+    display: inline-block;
+    margin: 3px;
+    color: black;
+}
+.event-card-container .event-location p{
+    color: black;
+    margin: 3px;
 }
 /* Tablet */
 @media only screen and (min-width: 768px){
