@@ -21,7 +21,7 @@ a{
   /*padding: 0 10px;*/
 }
 #navbar .navbar-container {
-  min-height: 8vh;
+  height: 8vh;
   max-height: 80px;
   width: 100%;
   display: flex;
@@ -164,11 +164,11 @@ a{
 .sidebar{
   background-color: var(--secondary);
   width: 80vw;
-  height: 92vh;
+  height: max(92vh, 100vh - 80px);
   display: flex;
   justify-content: flex-start;
   position: fixed;
-  top: 8vh;
+  top: min(8vh, 80px);
   left: -100%;
   transition: 350ms;
   z-index: 2;
@@ -180,6 +180,7 @@ a{
   box-shadow: 0px 0px 10px black;
 }
 .side-blur{ /* Not really a blur but whatever */
+  /* TODO: Make this work on tablet */
   background-color: transparent;
   opacity: 0;
   width: 20vw;
