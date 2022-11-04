@@ -72,7 +72,7 @@
 	font-size: 1.6rem;
   	letter-spacing: 0.15rem;
 	text-transform: uppercase;
-	text-align: -webkit-center;
+	text-align: center;
 	display: flex;
 	align-items: center;
 }
