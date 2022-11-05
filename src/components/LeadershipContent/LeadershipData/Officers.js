@@ -1,6 +1,5 @@
 import React from "react";
-import lorissa from '../../../assets/leadership/lorissa.jpg'
-import alejandro from '../../../assets/leadership/alejandro.jpg'
+import lorissa from '../../../assets/leadership/lorissa-crop.jpg'
 import jake from '../../../assets/leadership/jake.png'
 import marcela from '../../../assets/leadership/marcela.jpg'
 import an from '../../../assets/leadership/an.jpg'
@@ -17,9 +16,9 @@ export const Officers = [
         link: ""
     },
     {
-        img: alejandro,
-        title: "Alejandro Ramirez: Vice President",
-        paragraph: "Alejandro is a fourth year graduate student working towards a PhD in experimental astroparticle physics. Working under Dr. Andrew Renshaw, his research involves developing and surveying particle detector technologies for DarkSide 20k, a dark matter experiment searching for Weakly Interacting Massive Particles. Alejandro is a co-founder of the SACNAS UH chapter and aims to help students of all backgrounds find a fulfilling research experience.",
+        img: marcela,
+        title: "Marcela Strane: Vice President",
+        paragraph: "Marcela is a second year PhD student in Environmental Engineering researching under Dr. Devin Shaffer. Her research focuses on microplastics pollution from biosolids leaving waste water treatments plants applied to agrosystems and their fate and transport into wetlands. Marcela is dedicated to making STEAM a more diverse and inclusive space by directly volunteering in K-12 outreach in the Houston area. She loves bringing awareness to some of the issues the gulf coast faces and how people can be citizen scientists. She recently joined the SACNAS UH Chapter the summer of 2022",
         link: ""
     },
     {
@@ -28,12 +27,7 @@ export const Officers = [
         paragraph: "Jake is a third year graduate student in the department of Biology and Biochemistry and is pursuing a PhD in Biochemistry. He received his BS in Biochemistry from Florida Gulf Coast University. Jake is currently a member of Dr. Yuhong Wang’s lab at UH and his primary research project focuses on understanding ribosomal translocation during mRNA translation. Jake has been a SACNAS officer since the Fall of 2020 and strives to further the diversification of STEM related disciplines.",
         link: ""
     },
-    {
-        img: marcela,
-        title: "Marcela Strane: Graduate Provisional Officer",
-        paragraph: "Marcela is a second year PhD student in Environmental Engineering researching under Dr. Devin Shaffer. Her research focuses on microplastics pollution from biosolids leaving waste water treatments plants applied to agrosystems and their fate and transport into wetlands. Marcela is dedicated to making STEAM a more diverse and inclusive space by directly volunteering in K-12 outreach in the Houston area. She loves bringing awareness to some of the issues the gulf coast faces and how people can be citizen scientists. She recently joined the SACNAS UH Chapter the summer of 2022",
-        link: ""
-    },
+    
     {
         img: an,
         title: "An Bui: Undergraduate Financial Officer",

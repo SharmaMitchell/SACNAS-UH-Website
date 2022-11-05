@@ -3,7 +3,7 @@ import React from "react"
 export const SACNASAlumni = [
     {
         title: "2021-2022",
-        list: ["Steven Nguyen", "Jennifer Ruiz"]
+        list: ["Steven Nguyen", "Jennifer Ruiz, Daniel Palacios"]
     },
     {
         title: "2019-2020",
