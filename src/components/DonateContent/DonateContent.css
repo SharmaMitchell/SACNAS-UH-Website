@@ -100,7 +100,7 @@
     .donate-image{
         margin: auto 0;
     }
-    img{
+    .donate-image img{
         width: 300px;
     }
     .donate-thanks{
@@ -119,7 +119,7 @@
     .donate-container .donate-title h2{
         font-size: 2.5rem;
     }
-    img{
+    .donate-image img{
         width: 390px;
     }
     .donate-thanks{
