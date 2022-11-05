@@ -6,7 +6,8 @@ import an from '../../../assets/leadership/an.jpg'
 import caycel from '../../../assets/leadership/caycel.jpg'
 import mia from '../../../assets/leadership/mia.jpg'
 import peanut from '../../../assets/leadership/peanut.jpg'
-
+import brayan from '../../../assets/leadership/brayan.jpg'
+import yuni from '../../../assets/leadership/yuni-crop.jpg'
 
 export const Officers = [
     {
@@ -27,7 +28,12 @@ export const Officers = [
         paragraph: "Jake is a third year graduate student in the department of Biology and Biochemistry and is pursuing a PhD in Biochemistry. He received his BS in Biochemistry from Florida Gulf Coast University. Jake is currently a member of Dr. Yuhong Wang’s lab at UH and his primary research project focuses on understanding ribosomal translocation during mRNA translation. Jake has been a SACNAS officer since the Fall of 2020 and strives to further the diversification of STEM related disciplines.",
         link: ""
     },
-    
+    {
+        img: yuni,
+        title: "Yunuen Avila Martinez: Graduate Officer",
+        paragraph: "Yunuen is a second year graduate student in the department of chemistry and is pursuing her PhD working under Dr. Brad Carrow. Her research focuses on synthesizing sustainable polymers and in up-cycling existing plastics. Yunuen recently joined SACNAS because she enjoyed the atmosphere of the group and felt supported by the friends she made here. Her goal now is to provide an environment where STEM grads and undergrads of all backgrounds can feel comfortable and encouraged in their journey through college. She also hopes to influence interactions between different STEM fields to diversify our points of view.",
+        link: ""
+    },
     {
         img: an,
         title: "An Bui: Undergraduate Financial Officer",
@@ -50,6 +56,12 @@ export const Officers = [
         img: peanut,
         title: "Vuong (Peanut) Vu: Undergraduate Provisional Officer",
         paragraph: "Vuong (Peanut) Vu is a sophomore at the University of Houston majoring in Psychology with a Biology minor. He is currently interested in pursuing an MD in hopes of becoming an anesthesiologist or radiologist. As of late, he is working with houseflies in Dr. Richard Meisel’s laboratory studying polygenic sex determination. He joined SACNAS in hopes of increasing minorities in STEM and to give them opportunities to excel in life.",
+        link: ""
+    },
+    {
+        img: brayan,
+        title: "Brayan Gutierrez: Undergraduate Provisional Officer",
+        paragraph: "Brayan Gutierrez is a Junior at the University of Houston majoring in Mathematics and Data Science and is a second-year Jack Kent Cooke Foundation Undergraduate Transfer Scholar. They plan on pursuing an MS/MSDS program and eventually go for a PhD program in Statistics in the future. They are currently broadly interested in the Data Science/Statistics field, but ultimately want to contribute to cancer research as they are a bone cancer survivor. They joined SACNAS to increase minority awareness in STEM and help fellow first-generation students who lack the academic support/guidance at home.",
         link: ""
     },
 ]
