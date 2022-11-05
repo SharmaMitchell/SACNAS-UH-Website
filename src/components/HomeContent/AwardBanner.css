@@ -56,7 +56,7 @@
 }
 .award-banner .quote-label h3{
     font-size: 1rem;
-    text-align: center;
+    text-align: right;
 }
 
 .award-banner .award-banner-text{
@@ -207,6 +207,9 @@
 
         padding-top: 0px;
         margin-top:  0px;
+    }
+    .award-banner .quote-label h3{
+        text-align: center;
     }
     .award-banner .award-banner-title h2{
         font-size: 1.75rem;
