@@ -192,6 +192,9 @@
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
     }
+    .award-banner .award-banner-paragraph p{
+        font-size: 1rem;
+    }
     .award-banner .quote-label{
         width: 100%;
         height: 100%;
