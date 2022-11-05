@@ -3,7 +3,7 @@ import lorissa from '../../../assets/leadership/lorissa-crop.jpg'
 import jake from '../../../assets/leadership/jake.png'
 import marcela from '../../../assets/leadership/marcela.jpg'
 import an from '../../../assets/leadership/an.jpg'
-import caycel from '../../../assets/leadership/caycel.jpg'
+import sara from '../../../assets/leadership/sara.jpg'
 import mia from '../../../assets/leadership/mia.jpg'
 import peanut from '../../../assets/leadership/peanut.jpg'
 import brayan from '../../../assets/leadership/brayan.jpg'
@@ -41,12 +41,6 @@ export const Officers = [
         link: ""
     },
     {
-        img: caycel,
-        title: "Caycel Desales: Undergraduate Officer",
-        paragraph: "Caycel Desales is a Junior majoring in Biotechnology and minoring in Computer Science at the University of Houston. He is broadly interested in computational biology and use of computers to solve biological problems. He is currently interested in pursuing MD, PhD, or MD-PhD programs to become a medical scientist and implement his research into medical practice. Caycel is currently an intern at Medtronic where he is a part of the Cardiac Rhythm and Heart Failure service team, working on pacemakers to help patients with various arrhythmias.Through SACNAS he hopes to be able to bring awareness to minority representation in STEM.",
-        link: ""
-    },
-    {
         img: mia,
         title: "Mia Borrego: Undergraduate Officer",
         paragraph: "Mia is a Senior Biotechnology major. The COVID-19 pandemic has fueled her interest in vaccine development, so that she can apply her knowledge of science to help others live a longer, healthier life. She is also a third year member of the Spirit of Houston and plays the saxophone. Through SACNAS, Mia wants to continue to expand our community so that others always feel like they have a place where they belong, regardless of their physical appearance. Mia also works in Dr. Amy Sater’s lab to understand the processes by which ectodermal cells become committed to form epidermis, neurons, or glia during embryonic development of the African Clawed Frog, Xenopus laevis.",
@@ -56,6 +50,12 @@ export const Officers = [
         img: peanut,
         title: "Vuong (Peanut) Vu: Undergraduate Officer - Secretary",
         paragraph: "Vuong (Peanut) Vu is a sophomore at the University of Houston majoring in Psychology with a Biology minor. He is currently interested in pursuing an MD in hopes of becoming an anesthesiologist or radiologist. As of late, he is working with houseflies in Dr. Richard Meisel’s laboratory studying polygenic sex determination. He joined SACNAS in hopes of increasing minorities in STEM and to give them opportunities to excel in life.",
+        link: ""
+    },
+    {
+        img: sara,
+        title: "Sara Rashid: Undergraduate Officer",
+        paragraph: "Sara is a senior majoring in Biochemistry with a Spanish Language minor at the University of Houston, who is currently hoping to pursue a PhD in Biochemistry. Her interests include molecular medicine and drug discovery, and has always carried a passion for medical advocacy, particularly for women of color. Initially drawn to SACNAS for its active community and professional resources, Sara now seeks to aid others of minority backgrounds in their own pursuits in science. Additionally, she wishes to assist in spreading the organization’s messages of the importance of diversity and inclusivity in STEM.",
         link: ""
     },
     {
