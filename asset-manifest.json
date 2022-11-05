@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.678aa08a.css",
-    "main.js": "/static/js/main.dd7435b7.js",
+    "main.js": "/static/js/main.0a5df9f4.js",
     "static/media/SACNAS-Group.jpg": "/static/media/SACNAS-Group.5714489a602b6a46e523.jpg",
     "static/media/2022-Diversity-Award-crop2.jpg": "/static/media/2022-Diversity-Award-crop2.9583c9f7b76b1e9cb919.jpg",
     "static/media/nasa-Q1p7bh3SHj8-unsplash.jpg": "/static/media/nasa-Q1p7bh3SHj8-unsplash.de5659898d3bfc5eb8ea.jpg",
@@ -39,10 +39,10 @@
     "static/media/tony.jpg": "/static/media/tony.028967c605beb9d2f1a3.jpg",
     "index.html": "/index.html",
     "main.678aa08a.css.map": "/static/css/main.678aa08a.css.map",
-    "main.dd7435b7.js.map": "/static/js/main.dd7435b7.js.map"
+    "main.0a5df9f4.js.map": "/static/js/main.0a5df9f4.js.map"
   },
   "entrypoints": [
     "static/css/main.678aa08a.css",
-    "static/js/main.dd7435b7.js"
+    "static/js/main.0a5df9f4.js"
   ]
 }
