@@ -1,22 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.8d6f06fe.css",
-    "main.js": "/static/js/main.f26a882d.js",
+    "main.css": "/static/css/main.678aa08a.css",
+    "main.js": "/static/js/main.dd7435b7.js",
+    "static/media/SACNAS-Group.jpg": "/static/media/SACNAS-Group.5714489a602b6a46e523.jpg",
+    "static/media/2022-Diversity-Award-crop2.jpg": "/static/media/2022-Diversity-Award-crop2.9583c9f7b76b1e9cb919.jpg",
     "static/media/nasa-Q1p7bh3SHj8-unsplash.jpg": "/static/media/nasa-Q1p7bh3SHj8-unsplash.de5659898d3bfc5eb8ea.jpg",
     "static/media/greg.png": "/static/media/greg.a810072cdfc72e34f5bf.png",
     "static/media/jake.png": "/static/media/jake.06d92a0c3083469e8d10.png",
     "static/media/alejandro.jpg": "/static/media/alejandro.7a5f3787c07ba3620d0a.jpg",
-    "static/media/alex.png": "/static/media/alex.d3476cb0a72806dd6cc9.png",
+    "static/media/brayan.jpg": "/static/media/brayan.225419ef9b31c8e4d50f.jpg",
     "static/media/rosh.png": "/static/media/rosh.a309cceb81d906c04401.png",
+    "static/media/lorissa-crop.jpg": "/static/media/lorissa-crop.2d2366d34d372c9c09b3.jpg",
     "static/media/steven.png": "/static/media/steven.d923d4c25300ac2a3dbe.png",
     "static/media/sara.jpg": "/static/media/sara.4fee5339b43c43435b72.jpg",
     "static/media/houaztec.jpg": "/static/media/houaztec.09628355de5dde9074cc.jpg",
     "static/media/SACNAS-Email.png": "/static/media/SACNAS-Email.8b2998ca9faeee3b601b.png",
-    "static/media/SACNASUH.png": "/static/media/SACNASUH.289c44e9923178a6637c.png",
     "static/media/outreach_navarro.jpg": "/static/media/outreach_navarro.2abd77d19bd5eeea1cb1.jpg",
     "static/media/caycel.jpg": "/static/media/caycel.cd5ae7550a4dce1094ce.jpg",
     "static/media/SACNASUH-Crop.png": "/static/media/SACNASUH-Crop.a58dd6cd6659aedd659a.png",
-    "static/media/lorissa.jpg": "/static/media/lorissa.9a484670f47904d7cbc4.jpg",
+    "static/media/yuni-crop.jpg": "/static/media/yuni-crop.dca15a3c991c8e69baac.jpg",
     "static/media/an.jpg": "/static/media/an.9b8c38dd827276b0dc0d.jpg",
     "static/media/marcela.jpg": "/static/media/marcela.ef24eddf68d88b0381cd.jpg",
     "static/media/SACNAS-Twitter.png": "/static/media/SACNAS-Twitter.091422da8bf151c11706.png",
@@ -31,15 +33,16 @@
     "static/media/SACNAS-Mail-List.png": "/static/media/SACNAS-Mail-List.eaeab13a378c92bb052e.png",
     "static/media/SACNAS-Insta.png": "/static/media/SACNAS-Insta.297361b91c57e7d328b9.png",
     "static/media/SACNAS-Donate-Alt.png": "/static/media/SACNAS-Donate-Alt.333a61445b4c3fbd9cba.png",
+    "static/media/paypal-donate-button-black-crop.png": "/static/media/paypal-donate-button-black-crop.3b31b9cc651999ed9a38.png",
     "static/media/martin.jpg": "/static/media/martin.de85799ea9e0e8123e4a.jpg",
     "static/media/Sater.jpg": "/static/media/Sater.8c7ef4b10c3f17ca4e4c.jpg",
     "static/media/tony.jpg": "/static/media/tony.028967c605beb9d2f1a3.jpg",
     "index.html": "/index.html",
-    "main.8d6f06fe.css.map": "/static/css/main.8d6f06fe.css.map",
-    "main.f26a882d.js.map": "/static/js/main.f26a882d.js.map"
+    "main.678aa08a.css.map": "/static/css/main.678aa08a.css.map",
+    "main.dd7435b7.js.map": "/static/js/main.dd7435b7.js.map"
   },
   "entrypoints": [
-    "static/css/main.8d6f06fe.css",
-    "static/js/main.f26a882d.js"
+    "static/css/main.678aa08a.css",
+    "static/js/main.dd7435b7.js"
   ]
 }
