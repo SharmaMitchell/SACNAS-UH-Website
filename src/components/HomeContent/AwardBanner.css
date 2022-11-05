@@ -1,0 +1,178 @@
+.award-banner{
+    /* flex-direction: column-reverse; */
+    min-width: 100%;
+    text-align: left;
+    margin-top: 40px;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+}
+.award-banner-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 1200px;
+}
+.award-banner .award-banner-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    z-index: 2;
+
+    flex-basis: 20%;
+}
+.award-banner .quote-image{
+    height: 120px;
+    width: 120px;
+    position: relative;
+    border-radius: 100%;
+    border: 6px solid var(--primary);
+    background-color: var(--primary);
+    /* overflow: hidden; */
+}
+.award-banner .quote-image img{
+    position: relative;
+    object-fit: cover;
+    object-position: top;
+    height: 120px;
+    width: 120px;
+    border-radius: 100%;
+}
+
+.award-banner .quote-label{
+    background-color: var(--card-background);
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    align-items: flex-end;
+    text-align: center;
+    padding: 0 15px;
+}
+.award-banner .quote-label h3{
+    font-size: 1rem;
+    text-align: center;
+}
+
+.award-banner .award-banner-text{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 0px 15px;
+
+    flex-basis: 75%;
+}
+.award-banner .award-banner-title h2{
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-style: italic;
+    margin-block-start: 0;
+    margin-block-end: 0;
+
+    padding-block-start: 15px;
+    padding-block-end: 0.2em;
+}
+
+.award-banner .award-banner-paragraph{
+    background-color: var(--card-background);
+    padding: 15px;
+    padding-right: 25px;
+    padding-left: 108px;
+    margin-left: -108px;
+
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.award-banner .award-banner-paragraph p{
+    font-size: 1.2rem;
+    text-align: left;
+    font-style: italic;
+    margin-block-start: 0em;
+    margin-block-end: 15px;
+}
+.award-banner .learn-more{
+    display: flex;
+    justify-content: flex-end;
+}
+.award-banner .award-banner-paragraph a{
+    color: var(--url);
+    text-decoration: underline;
+    font-size: 1.2rem;
+}
+.award-banner-image{
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+
+    flex-basis: 0;
+    
+}
+.award-banner-image img{
+    max-height: 500px;
+    max-width: 90vw;
+    flex-basis: 0;
+}
+.award-banner-image.border{
+    transition: all 0.3s ease;
+    border: 6px solid var(--card-background);
+    border-radius: 20px;
+    background-color: var(--card-background);
+    height: 100%;
+    width: 100%;
+    font-size: 0;
+}
+.award-banner-image.border img{
+    transform: scale(1.01);
+    border-radius: 20px;
+    padding: 1px;
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px){
+    .award-banner-container{
+        flex-direction: row;
+        /* align-items: flex-start; */
+    }
+    .award-banner .award-banner-text{
+        margin: 0 20px;
+    }
+    .award-banner .award-banner-paragraph p{
+        text-align: justify;
+    }
+    .award-banner-image{
+        margin: 0;
+        margin-top: auto;
+    }
+    img{
+        width: 300px;
+    }
+}
+/* DeskTop */
+@media only screen and (min-width: 1200px){
+    .award-banner .award-banner-title h2{
+        font-size: 1.75rem;
+    }
+    
+    img{
+        width: 390px;
+    }
+    .award-banner-container{
+        flex-wrap: nowrap;
+    }
+    .award-banner .award-banner-left{
+        flex-basis: auto;
+    }
+    .award-banner .award-banner-text{
+        flex-basis: auto;
+    }
+    .award-banner-image.border img{
+        /* width: calc(390px - 12px); accounting for border */
+        width: 390px;
+    }
+}

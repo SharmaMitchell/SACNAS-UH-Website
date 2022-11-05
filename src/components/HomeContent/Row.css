@@ -34,6 +34,7 @@
 .row-image img{
     max-height: 500px;
     max-width: 90vw;
+    transform: scale(1.01);
 }
 .row-image.border img{
     border-radius: 20px;

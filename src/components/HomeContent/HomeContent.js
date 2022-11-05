@@ -1,14 +1,26 @@
 import React from 'react'
 import Row from './Row'
+import AwardBanner from './AwardBanner'
 import './HomeContent.css'
 import SACNASUH from '../../assets/SACNASUH.png'
 import outreach_navarro from '../../assets/outreach_navarro.jpg'
 import houaztec from '../../assets/houaztec.jpg'
+import diversity_award from '../../assets/2022-Diversity-Award-crop2.jpg'
+import lorissa from '../../assets/leadership/lorissa.jpg'
 
 function HomeContent() {
   return (
     <>
       <div class="home">
+        <AwardBanner 
+          title={<h2>SACNAS UH: <br/> 2022 Role Model Chapter for STEM Diversity</h2>} 
+          paragraph={<p>"I am extremely proud of our UH SACNAS team, and the work we’ve put in these past couple of years. We are a very young chapter, and we were just recognized as an official National chapter in January 2022, so to be almost immediately recognized as a role model chapter is phenomenal! We’ve definitely had our ups and downs, but this is a testament to the ambition and perseverance of the amazing students here in our organization. Congratulations UH SACNISTAS! This award was well deserved!"</p>} 
+          img={diversity_award} 
+          imgborder='y'
+          quoteImg = {lorissa}
+          quoteLabel= {<h3>Lorissa Saiz <br/> President, SACNAS UH <br/> 2018-Present</h3>}
+          learnMore="https://www.uh.edu/nsm/news-events/stories/2022/1029-sacnas-award.php"
+        />
         <div class="home-container">
           <Row title={<h2>What is SACNAS?</h2>} paragraph={<p>SACNAS, or the <b>Society for Advancement of Chicanos/Hispanics and Native Americans in Science</b>, is an inclusive national organization dedicated to fostering the success of diverse scientists, from college students to professionals, in attaining research opportunities, advanced degrees, careers, and positions of leadership in Science, Technology, Engineering, and Math (STEM). SACNAS works to support the most underrepresented in STEM. For more information, please visit <a href="https://sacnas.org">sacnas.org</a>.</p>} img={SACNASUH}/>
           <Row title={<h2>Our mission</h2>} paragraph={<p>The SACNAS chapter at UH celebrates, supports, and encourages <i>true</i> diversity in STEM, with special emphasis on helping students find meaningful connections within the UH research community, flourish intellectually, and make social connections during their time at UH. Please browse our website!</p>} img={outreach_navarro} imgborder='y'/>
