@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Events from './pages/Events';
 import Research from './pages/Research';
 import Leadership from './pages/Leadership';
+import Donate from './pages/Donate';
 import SocialsBanner from './components/SocialsBanner/SocialsBanner'
 import Footer from './components/Footer/Footer';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
@@ -32,6 +33,7 @@ function App() {
           <Route path='/events' element={<Events/>} />
           <Route path='/research' element={<Research/>} />
           <Route path='/leadership' element={<Leadership/>} />
+          <Route path='/donate' element={<Donate/>} />
         </Routes>
         <SocialsBanner />
         <Footer />
