@@ -14,7 +14,8 @@ function DonateContent() {
                 </div>
                 <div class="donate-paragraph">
                     <p>Thank you for choosing to donate to SACNAS UH. By supporting us, you enable us to host cultural and educational events, facilitate community outreach, and help foster an environment to promote equity of opportunity in STEM. </p>
-                    <p>Previous donations have been put towards impactful events including ABCDEFGHIJKLMNOPQRSTUVWXYZ, ABCDEFGHIJKLMNOP QRSTUVWXYZ, ABCDEFGHIJKLMNOPQRSTUVWXYZ, ABCD EFGHIJK LMNOPQRSTUVWXYZ ABCDEFGHIJKLMNOP QRSTUVWXYZ, ABCDEFGHIJKLMNOPQRSTUVWXYZ, ABCD EFGHIJK LMNOPQRSTUVWXYZ.</p>
+                    <p>Previous donations have been put towards impactful activities including Asia Fest, a celebration of Asian American and Pacific Islander heritage month, community field trips around houston including Brazos Bend State Park and the Houston Museum of Natural Science, and more.</p>
+                    <p>With the help of our generous donors, we hope to host bigger and better events moving forward, to share the diverse cultures of our community, and </p>
                 </div>
             </div>
             <div class="donate-image border">
