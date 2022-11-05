@@ -54,7 +54,7 @@ export const Officers = [
     },
     {
         img: peanut,
-        title: "Vuong (Peanut) Vu: Undergraduate Provisional Officer",
+        title: "Vuong (Peanut) Vu: Undergraduate Officer - Secretary",
         paragraph: "Vuong (Peanut) Vu is a sophomore at the University of Houston majoring in Psychology with a Biology minor. He is currently interested in pursuing an MD in hopes of becoming an anesthesiologist or radiologist. As of late, he is working with houseflies in Dr. Richard Meisel’s laboratory studying polygenic sex determination. He joined SACNAS in hopes of increasing minorities in STEM and to give them opportunities to excel in life.",
         link: ""
     },
