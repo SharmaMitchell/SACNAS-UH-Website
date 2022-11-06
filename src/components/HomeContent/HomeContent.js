@@ -29,7 +29,7 @@ function HomeContent() {
             imgborder='y'
           />
           <Row 
-            title={<h2>Our mission</h2>} 
+            title={<h2>Our Mission</h2>} 
             paragraph={<p>The SACNAS chapter at UH celebrates, supports, and encourages <i>true</i> diversity in STEM, with special emphasis on helping students find meaningful connections within the UH research community, flourish intellectually, and make social connections during their time at UH. Please browse our website!</p>} 
             img={outreach_navarro} 
             imgborder='y'
@@ -41,7 +41,7 @@ function HomeContent() {
             imgborder='y'
           />
           <Row 
-            title={<h2>Additional info</h2>} 
+            title={<h2>Additional Info</h2>} 
             paragraph={<p>At our meetings, we host guest speakers, lead statement and poster presentation workshops, assist with lab placements in addition to going on lab tours, and host socials to better connect with our members. Feel free to reach out to us at <a href="mailto:uh.sacnas@gmail.com">uh.sacnas@gmail.com</a> or the Graduate Committee at <a href="mailto:sacnas.graduate@gmail.com">sacnas.graduate@gmail.com</a> with any questions or concerns! You can also follow us on Instagram <a href="https://www.instagram.com/uhsacnas/">@uhsacnas</a>, Facebook at <a href="https://www.facebook.com/sacnasuh">University of Houston - SACNAS</a>, and on Twitter <a href="https://twitter.com/uh_sacnas">@uh_sacnas</a>. You are also welcome in our growing <a href="https://discord.gg/KKq7Ygc3p4">Discord</a> community!</p>} 
             img=""
           />
