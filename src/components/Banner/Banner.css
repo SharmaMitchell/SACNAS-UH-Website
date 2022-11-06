@@ -1,14 +1,15 @@
 #banner{
-    background-image: url(../../assets/nasa-Q1p7bh3SHj8-unsplash.jpg);
+    background-image: url(../../assets/UH-Skyline-Shot.jpg);
 	background-size: cover;
-	background-position: top center;
+	background-position-y: top;
+	background-position-x: 35%;
 	position: relative;
 	z-index: 1;
 }
 #banner::after{
 	content: '';
 	background-color: black;
-	opacity: .1;
+	opacity: .25;
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -130,7 +131,7 @@
 /* Desktop */
 @media only screen and (min-width: 1200px){
 	#banner{
-        background-position-y: 25%;
+        background-position-y: 55%;
     }
 	.banner.home{
 		background-position: top center !important;
