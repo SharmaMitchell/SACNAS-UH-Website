@@ -43,7 +43,7 @@ On the front-end, events have been organized into cards, and sorted so that the 
 On the back-end, events are pulled from a database hosted on Google Sheets. This makes it easy for leadership to update events on the website, and allows us to run scripts to sort events directly on the Google Sheets database (via Google Apps Script) - all without the need for a server-side database setup (which would take longer to establish, and be far more daunting for leadership to utilize.)
 
 ### Advisors Section
-![Advisors-Old-vs-New](https://user-images.githubusercontent.com/90817905/185774479-811200f1-385e-40ec-9ef2-9d6e01809900.png)
+![Advisors-Old-vs-New-Nov](https://user-images.githubusercontent.com/90817905/200162496-e2a13f68-d96d-496d-9800-3cfd4198a8b3.png)
 The new Advisors section features cards for each advisor, with contact information available for those seeking partnerships/collaborations with our organization.
 
 Officers and mentors have been similarly organized into cards on the new Leadership page. The redesigned website combines student officers, faculty advisors, mentors & support officers all into one unified Leadership page. This streamlines information on the website, allowing us to consolidate relevant data and save users' time.
