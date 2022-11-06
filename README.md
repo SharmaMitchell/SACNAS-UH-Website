@@ -1,5 +1,5 @@
 # SACNAS UH Website
-![Landing-New-1368](https://user-images.githubusercontent.com/90817905/185773585-2a6b5a98-edd9-4e60-a393-ba17d922214c.png)
+![Landing-New-Nov](https://user-images.githubusercontent.com/90817905/200162152-50ead547-883f-40ac-b639-9c737bf7de33.png)
 The official website for the University of Houston chapter of SACNAS (Society for the Advancement of Chicanos/Hispanics and Native Americans in Science).
 
 Completely redesigned using HTML, CSS, and ReactJS.
@@ -31,14 +31,14 @@ Additionally, I used the `window.matchMedia` method to check if the user has adj
 
 ## Original Site Comparison
 ### 'About' Section (Home page)
-![About-Old-vs-New](https://user-images.githubusercontent.com/90817905/185774336-a7b7215d-a3ac-42df-a2ae-9ad2f4bc8485.png)
-The redesigned 'About' section, shown on the right side in the new dark theme, has been streamlined and compartmentalized by row (each row containing a heading, paragraph, and image).
+![About-Old-vs-New-Nov](https://user-images.githubusercontent.com/90817905/200162161-1bbe8842-0e9c-4b21-a13e-2be2ad49ae1c.png)
+The redesigned 'About' section, shown on the right side in the new dark theme, has been streamlined and compartmentalized by row (each row containing a heading, paragraph, and image). A new banner component has been added to display the organization's 2022 national award for STEM diversity.
 
 ### Events Section
-![Events-Old-vs-New](https://user-images.githubusercontent.com/90817905/185774900-b175d7ea-454d-40f3-9253-9b54074acdfe.png)
+![Events-Old-vs-New-Nov](https://user-images.githubusercontent.com/90817905/200162164-bc874a95-f5d9-47a1-bcee-941d85d61552.png)
 The redesigned events section is one of the biggest improvements of the new site, on both the front-end and back-end.
 
-On the front-end, events have been organized into cards, and sorted so that the soonest events are shown at the top.
+On the front-end, events have been organized into cards, and sorted so that the soonest events are shown at the top. Each card can be clicked/tapped to expand and show more event information, such as location, date & time, or an expanded event description.
 
 On the back-end, events are pulled from a database hosted on Google Sheets. This makes it easy for leadership to update events on the website, and allows us to run scripts to sort events directly on the Google Sheets database (via Google Apps Script) - all without the need for a server-side database setup (which would take longer to establish, and be far more daunting for leadership to utilize.)
 
