@@ -7,11 +7,17 @@
     background-color: var(--card-background);
     margin: 20px 0;
     border-radius: 20px;
+
+    height: fit-content;
 }
 .event-card-container{
     display: flex;
     flex-direction: column;
     height: 100%;
+    /* transition: all 0.6s ease; */
+}
+.event-card-link-wrapper{
+    height: fit-content;
 }
 .event-card-container .event-img img{
     width: 315px;
@@ -23,6 +29,16 @@
     color: var(--text-primary);
     margin: 15px;
     margin-top: 0;
+
+    /* max-height: 100px; */
+    max-height: 90px;
+    overflow: hidden;
+    /* background: var(--card-background); */
+
+    transition: all 0.6s ease;
+}
+.event-card-container .event-text.full{
+    max-height: 250px;
 }
 .event-card-container .event-text h3{
     text-align: center;
@@ -32,24 +48,49 @@
     text-align: justify;
     margin: 0;
     margin-top: 8px;
+    
+    /* display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis; */
+
+}
+.event-card-container .event-text.full .event-description{
+    /* -webkit-line-clamp: unset; */
+
+}
+.event-card-container .event-more-info{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease;
+}
+.event-card-container .event-text.full .event-more-info{
+    max-height: 130px;
 }
 .event-card-container .event-links a{
-    color: black;
+    color: var(--text-primary);
     font-weight: 600;
     text-decoration: underline;
     margin: 5px;
     display: block;
+    text-align: left;
 }
 .event-card-container .event-links{
     margin-bottom: 5px;
 }
+.event-card-container .event-datetime{
+    display: flex;
+}
 .event-card-container .event-datetime p{
     display: inline-block;
     margin: 3px;
-    color: black;
+}
+.event-card-container .event-location{
+    display: flex;
 }
 .event-card-container .event-location p{
-    color: black;
+    margin-top: 10px;
     margin: 3px;
 }
 .event-card-container .event-view-more-bg{
@@ -67,12 +108,17 @@
     padding-right: 20px;
     display: flex;
     flex-direction: row;
+    color: white;
 }
 .event-card-container .event-view-more-expand{
     filter: invert(1);
     width: 20px;
     height: 20px;
     margin-left: 10px;
+    transition: all 0.6s;
+}
+.event-card-container .event-view-more-expand.active{
+    transform: rotateX(180deg);
 }
 /* Tablet */
 @media only screen and (min-width: 768px){
