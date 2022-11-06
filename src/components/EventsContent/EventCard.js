@@ -1,5 +1,6 @@
 import React from 'react'
 import './EventCard.css'
+import expand from '../../assets/expand.png'
 
 function EventCard(props) {
   /* Props:
@@ -46,6 +47,12 @@ function EventCard(props) {
         <div class="event-text">
           <h3>{props.title}</h3>
           <p class="event-description">{props.description}</p>
+        </div>
+        <div class="event-view-more-bg">
+          <a class="event-view-more-button">
+            View More
+            <img class="event-view-more-expand" src={expand}/>
+          </a>
         </div>
       </div>
     </div>
