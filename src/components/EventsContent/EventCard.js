@@ -23,6 +23,20 @@ function EventCard(props) {
  if (props.link2 != undefined && props.link2 != ""){
   link2Tag = (<a href={props.link2}>{props.link2Label}</a>);
  }
+
+ let moreEventInfo = `<div class="event-datetime">
+ {props.time ? <p>{props.time}</p> : <></>}
+ {/* {props.time && props.date ? <p>, </p> : <></>} */}
+ {props.date ? <p>{props.date}</p> : <></>}
+</div>
+<div class="event-location">
+ {props.location ? <p>{props.location}</p> : <></>}
+</div>
+<div class="event-links">
+ {link1Tag}
+ {link2Tag}
+</div>`;
+
   return (
     <div class="event-card">
       <div class="event-card-container">
@@ -31,22 +45,8 @@ function EventCard(props) {
         </div>
         <div class="event-text">
           <h3>{props.title}</h3>
-          <div class="event-datetime">
-            {props.time ? <p>{props.time}</p> : <></>}
-            {/* {props.time && props.date ? <p>, </p> : <></>} */}
-            {props.date ? <p>{props.date}</p> : <></>}
-          </div>
-          <div class="event-location">
-            {props.location ? <p>{props.location}</p> : <></>}
-          </div>
-          <div class="event-links">
-            {link1Tag}
-            {link2Tag}
-          </div>
           <p class="event-description">{props.description}</p>
         </div>
-        
-        
       </div>
     </div>
   )
