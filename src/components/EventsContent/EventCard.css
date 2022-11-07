@@ -22,7 +22,7 @@
 .event-card-container .event-img img{
     width: 315px;
     max-width: 90vw;
-    margin: 4px;
+    margin: 6px;
     border-radius: 20px;
 }
 .event-card-container .event-text{
