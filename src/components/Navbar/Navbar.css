@@ -171,12 +171,12 @@ a{
   top: min(8vh, 80px);
   left: -100%;
   transition: 350ms;
-  z-index: 2;
+  z-index: 4;
 }
 .sidebar.active{
   left: 0;
   transition: 350ms;
-  z-index: 3;
+  z-index: 4;
   box-shadow: 0px 0px 10px black;
 }
 .side-blur{ /* Not really a blur but whatever */
@@ -191,7 +191,7 @@ a{
 }
 .side-blur.active{
   left: 80vw;
-  z-index: 3;
+  z-index: 4;
 }
 
 /* Tablet */

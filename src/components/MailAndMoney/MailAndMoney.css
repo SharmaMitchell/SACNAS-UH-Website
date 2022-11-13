@@ -22,14 +22,14 @@
 .mnm .mnm-container .mnm-wrapper:hover img{
     transform: scale(1.05);
 }
-.mnm .mnm-container .mnm-item.email:hover{
+.mnm .mnm-container .mnm-item.email:hover, .mnm-wrapper.email.cu-page .mnm-item.email{
     background: var(--blue);
 }
-.mnm .mnm-container .mnm-item.list:hover{
+.mnm .mnm-container .mnm-item.list:hover, .mnm-wrapper.list.cu-page .mnm-item.list{
     background-image: radial-gradient(circle at 40px 10px, var(--purple) 18%, transparent 19%),
     radial-gradient(circle at center, var(--purple) 56%, transparent 57%);
 }
-.mnm .mnm-container .mnm-item.donate:hover{
+.mnm .mnm-container .mnm-item.donate:hover, .mnm-wrapper.donate.cu-page .mnm-item.donate{
     background: var(--teal);
 }
 .mnm-wrapper{
