@@ -37,20 +37,22 @@ function MailListContent() {
   }
 
   return (
-    <div>
-      <div class="gform-wrapper">
-        <iframe
-            class="gform"
-            src="https://docs.google.com/forms/d/e/1FAIpQLScaahgIdex5tTTZnRiWNXglj62eJ4t9Ut505KCtjWuo55IqTw/viewform?embedded=true"
-            // width="700"
-            height={iFrameHeight}
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
-            // scrolling='no'
-        >
-            Loading…
-        </iframe>
+    <div class="mail-list-container">
+      <div class="mail-list">
+        <div class="gform-wrapper">
+            <iframe
+                class="gform"
+                src="https://docs.google.com/forms/d/e/1FAIpQLScaahgIdex5tTTZnRiWNXglj62eJ4t9Ut505KCtjWuo55IqTw/viewform?embedded=true"
+                // width="700"
+                height={iFrameHeight}
+                frameborder="0"
+                marginheight="0"
+                marginwidth="0"
+                // scrolling='no'
+            >
+                Loading…
+            </iframe>
+        </div>
       </div>
     </div>
   );

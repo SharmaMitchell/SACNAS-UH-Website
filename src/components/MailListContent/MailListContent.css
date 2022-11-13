@@ -1,5 +1,17 @@
+.mail-list-container{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+}
+.mail-list{
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+}
 .gform-wrapper{
-    
+    width: 100%;
+    max-width: 768px;
 }
 .gform-wrapper .gform{ /* Make form width responsive */
     width: 100%;
