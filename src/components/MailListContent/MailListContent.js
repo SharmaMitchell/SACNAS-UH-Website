@@ -38,6 +38,9 @@ function MailListContent() {
 
   return (
     <div class="mail-list-container">
+      <div class="mail-list-title">
+        <h2>Mail List</h2>
+      </div>
       <div class="mail-list">
         <div class="gform-wrapper">
             <iframe
@@ -53,6 +56,18 @@ function MailListContent() {
                 Loading…
             </iframe>
         </div>
+        {/* <div class="mail-list-preview">
+            <iframe 
+                class="mail-list-embed"
+                src="https://us3.campaign-archive.com/?u=9725fd8683bb429d5d3d28d33&id=211a99f664"
+                height={iFrameHeight}
+                frameborder="0"
+                marginheight="0"
+                marginwidth="0"
+            >
+                Loading Newsletter Preview...
+            </iframe>
+        </div> */}
       </div>
     </div>
   );

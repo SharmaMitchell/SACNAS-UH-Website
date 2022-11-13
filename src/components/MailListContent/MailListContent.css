@@ -1,7 +1,24 @@
 .mail-list-container{
     width: 100%;
     display:flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+.mail-list-container .mail-list-title{
+    width: 1200px;
+    max-width: 90vw;
+    text-align: left;
+}
+.mail-list-container .mail-list-title h2{
+    font-size: 1.75rem;
+    font-weight: 300;
+    font-style: normal;
+    /* text-transform: uppercase; */
+    margin-block-start: 10px;
+    margin-block-end: 0.2em;
+    max-width: 1200px;
+    text-align: left;
 }
 .mail-list{
     width: 100%;
@@ -12,6 +29,7 @@
 .gform-wrapper{
     width: 100%;
     max-width: 768px;
+    margin-right: 20px;
 }
 .gform-wrapper .gform{ /* Make form width responsive */
     width: 100%;
@@ -21,4 +39,23 @@
     margin: 20px 0;
     padding-top: 20px;
     /* height: 100%; */
+}
+.mail-list-preview{
+    width: 100%;
+    max-width: 432px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 20px 0;
+    background-color: var(--card-background);
+
+    padding: 30px;
+}
+.mail-list-preview .mail-list-embed{
+    width: 100%;
+    border-radius: 8px;
+}
+@media only screen and (min-width: 1200px){
+    .mail-list-container .mail-list-title h2{
+        font-size: 2.5rem;
+    }
 }
