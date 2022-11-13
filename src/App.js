@@ -33,7 +33,7 @@ function App() {
         <FloatingBanner 
           img={DonateImg}
           paragraph={<p><b>#GivingTuesday</b>: Support your favorite, award-winning STEM 
-          student org & help us continue to strive for greatness.</p>}
+          student organization!</p>}
           bgColor={`var(--teal)`}
           label='GivingTuesday2022'
         />
