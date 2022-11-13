@@ -1,0 +1,9 @@
+.gform-wrapper{
+    
+}
+.gform-wrapper .gform{ /* Make form width responsive */
+    width: 100%;
+}
+.RVEQke{ /* Change purple bar at top to red */
+    background-color: var(--primary) !important;
+}

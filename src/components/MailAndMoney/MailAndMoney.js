@@ -18,11 +18,11 @@ function MailAndMoney() {
           </div>
         </div>
         <div class="mnm-wrapper list">
-          <a href="https://docs.google.com/forms/d/1-SeoYFAoiSlfEbw1fAaSH6szb5Ss_eFMAFqCEnePXIc/viewform">
+          <a href="/maillist">
             <img class="mnm-item list" src={SACNASMailList} />
           </a>
           <div class="mnm-label">
-            <a href="https://docs.google.com/forms/d/1-SeoYFAoiSlfEbw1fAaSH6szb5Ss_eFMAFqCEnePXIc/viewform">Mail List</a>
+            <a href="/maillist">Mail List</a>
           </div>
         </div>
         <div class="mnm-wrapper donate">
