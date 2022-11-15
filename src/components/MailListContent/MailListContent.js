@@ -23,17 +23,22 @@ function MailListContent() {
   }, []);
   
   let iFrameHeight = "1750";
+  let previewHeight = "1700";
   if (windowSize.innerWidth <= 320){
     iFrameHeight = "2500";
+    previewHeight = "2450";
   }
   else if (windowSize.innerWidth <= 380){
     iFrameHeight = "2200";
+    previewHeight = "2150";
   }
   else if (windowSize.innerWidth <= 500){
     iFrameHeight = "2000";
+    previewHeight = "1950";
   }
   else if (windowSize.innerWidth < 768){
     iFrameHeight = "1850";
+    previewHeight = "1800";
   }
 
   return (
@@ -56,18 +61,18 @@ function MailListContent() {
                 Loading…
             </iframe>
         </div>
-        {/* <div class="mail-list-preview">
+        <div class="mail-list-preview">
             <iframe 
                 class="mail-list-embed"
-                src="https://us3.campaign-archive.com/?u=9725fd8683bb429d5d3d28d33&id=211a99f664"
-                height={iFrameHeight}
+                src="https://us3.campaign-archive.com/?u=9725fd8683bb429d5d3d28d33&id=1bd21a8dd5"
+                height={previewHeight}
                 frameborder="0"
                 marginheight="0"
                 marginwidth="0"
             >
                 Loading Newsletter Preview...
             </iframe>
-        </div> */}
+        </div>
       </div>
     </div>
   );
