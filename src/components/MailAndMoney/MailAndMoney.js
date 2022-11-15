@@ -1,15 +1,17 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import "./MailAndMoney.css";
 
 import SACNASEmail from "../../assets/SACNAS-Email.png";
 import SACNASMailList from "../../assets/SACNAS-Mail-List.png";
 import SACNASDonate from "../../assets/SACNAS-Donate-Alt.png";
 
-function MailAndMoney() {
+function MailAndMoney(props) {
+  const location = props.location;
   return (
     <div class="mnm">
       <div class="mnm-container">
-        <div class="mnm-wrapper email">
+        <div class={location === "/contact" ? "mnm-wrapper email cu-page" : "mnm-wrapper email"}>
           <a href="mailto:UH.sacnas@gmail.com">
             <img class="mnm-item email" src={SACNASEmail} />
           </a>
@@ -17,20 +19,20 @@ function MailAndMoney() {
             <a href="mailto:UH.sacnas@gmail.com">Email Us</a>
           </div>
         </div>
-        <div class="mnm-wrapper list">
-          <a href="/maillist">
+        <div class={location === "/maillist" ? "mnm-wrapper list cu-page" : "mnm-wrapper list"}>
+          <Link to="/maillist">
             <img class="mnm-item list" src={SACNASMailList} />
-          </a>
+          </Link>
           <div class="mnm-label">
-            <a href="/maillist">Mail List</a>
+            <Link to="/maillist">Mail List</Link>
           </div>
         </div>
-        <div class="mnm-wrapper donate">
-          <a href="/donate">
+        <div class={location === "/donate" ? "mnm-wrapper donate cu-page" : "mnm-wrapper donate"}>
+          <Link to="/donate">
             <img class="mnm-item donate" src={SACNASDonate} />
-          </a>
+          </Link>
           <div class="mnm-label">
-            <a href="/donate">Donate</a>
+            <Link to="/donate">Donate</Link>
           </div>
         </div>
       </div>

@@ -29,7 +29,7 @@ function Navbar(props) {
                 <div class="notch"></div>
               </div>
               <div class="spam">
-                <MailAndMoney />
+                <MailAndMoney location={location}/>
               </div>
             </div>
 
