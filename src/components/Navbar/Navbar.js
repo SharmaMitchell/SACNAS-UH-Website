@@ -92,7 +92,7 @@ function Navbar(props) {
             {/*<li><a class={location==="/advisors" ? "cu-page" : ""}><Link to="/advisors">Advisors</Link></a></li> */}
           </ul>
           <div class="nav-list-bottom">
-            <div class="spam">
+            <div class="spam" onClick={showSidebar}>
               <MailAndMoney />
             </div>
             <div class="sidebar-dark">
