@@ -1,0 +1,72 @@
+.floating-banner{
+    border-radius: 999px;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    z-index: 3;
+    max-width: 450px;
+    align-items: center;
+    overflow: hidden;
+    opacity: 1;
+    visibility: visible;
+    margin-left: 10px;
+}
+.floating-banner.hide{
+    transition: opacity 0.3s, visibility 0.3s, display 0.3s;
+    visibility: hidden;
+    opacity: 0;
+    /* display: none; */
+}
+.floating-banner .floating-banner-img{
+    font-size: 0px;
+    /* height: 100px; */
+}
+.floating-banner .floating-banner-img img{
+    height: 100px;
+    width: 100px;
+    padding: 5px;
+}
+.floating-banner .floating-banner-paragraph{
+    margin-right: 0px;
+    margin-left: 5px;
+    color: white;
+    text-align: left;
+}
+
+.floating-banner .floating-banner-paragraph p{
+    font-size: 0.9rem;
+    max-height: calc(100px - 2em);
+    overflow: hidden;
+}
+.floating-banner .floating-banner-close{
+    height: 90px;
+    width: 16px;
+    margin-right: 29px;
+    margin-top: 15px;
+    /* z-index: 4; */
+    cursor: pointer;
+}
+.floating-banner .floating-banner-close a{
+    font-size: 0px;
+    height: 16px;
+    width: 16px;
+}
+.floating-banner .floating-banner-close img{
+    width: 16px;
+    height: 16px;
+    filter: invert(100%);
+    /* z-index: 4; */
+}
+
+/* Tablet and larger */
+@media only screen and (min-width: 768px){
+    .floating-banner{
+        bottom: 20px;
+        right: 20px;
+    }
+    .floating-banner .floating-banner-paragraph p{
+        font-size: 1.1rem;
+    }
+}
