@@ -20,11 +20,11 @@ function MailAndMoney(props) {
           </div>
         </div>
         <div class={location === "/maillist" ? "mnm-wrapper list cu-page" : "mnm-wrapper list"}>
-          <a href="https://docs.google.com/forms/d/1-SeoYFAoiSlfEbw1fAaSH6szb5Ss_eFMAFqCEnePXIc/viewform">
+          <Link to="/maillist">
             <img class="mnm-item list" src={SACNASMailList} />
-          </a>
+          </Link>
           <div class="mnm-label">
-            <a href="https://docs.google.com/forms/d/1-SeoYFAoiSlfEbw1fAaSH6szb5Ss_eFMAFqCEnePXIc/viewform">Mail List</a>
+            <Link to="/maillist">Mail List</Link>
           </div>
         </div>
         <div class={location === "/donate" ? "mnm-wrapper donate cu-page" : "mnm-wrapper donate"}>
