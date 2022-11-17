@@ -1,11 +1,11 @@
 import React from 'react'
+import {useLocation} from 'react-router-dom';
 import './Banner.css'
 import SacnasLogo from '../../assets/SACNASUH-Crop.png';
 
-import {useLocation} from 'react-router-dom';
-
+/* Top banner component, with SACNAS Logo, UH Background, etc. */
 function Banner() {
-  const location = useLocation().pathname;
+  const location = useLocation().pathname; /* Page location for larger banner size on homepage */
   return (
     <div id="banner" class={location === "/" ? "banner home" : "banner"}>
         <div class={location === "/" ? "banner-container home" : "banner-container"}>

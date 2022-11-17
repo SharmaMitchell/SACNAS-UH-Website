@@ -9,30 +9,32 @@ function EventsContent() {
   /* Read-only API key, limited to sacnas-uh.org domain */
   const API_KEY = 'AIzaSyCWFLx8b9hgh5nlwhN_9S6awfghwUBoXLo';
   
-  const [upcoming, setUpcoming] = useState([]);
-  const [uLoading, setULoading] = useState(true);
+  const [upcoming, setUpcoming] = useState([]); /* Upcoming events data */
+  const [uLoading, setULoading] = useState(true); /* Upcoming events loading state */
 
+  /* Upcoming events API call to retreive data from Google Sheets */
   useEffect(() => {fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/Upcoming!A2:J18?key=${API_KEY}`)
     .then(function(response){
       return response.json();
     })
     .then(function(data){
-      console.log(data.values);
+      // console.log(data.values);
       let eventData = data.values;
       setUpcoming(data.values);
       setULoading(false);
       return eventData;
     })},[]);
 
-  const [previous, setPrevious] = useState([]);
-  const [pLoading, setPLoading] = useState(true);
-
+  const [previous, setPrevious] = useState([]); /* Previous events data */
+  const [pLoading, setPLoading] = useState(true); /* Previous events loading state */
+  
+  /* Previous events API call to retreive data from Google Sheets */
   useEffect(() => {fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/Archive!A2:J18?key=${API_KEY}`)
     .then(function(response){
       return response.json();
     })
     .then(function(data){
-      console.log(data.values);
+      // console.log(data.values);
       let eventData = data.values;
       setPrevious(data.values);
       setPLoading(false);
@@ -46,8 +48,8 @@ function EventsContent() {
           <h2>Upcoming Events</h2>
           <div class="event-list">
             
-            {uLoading ? <Spinner /> : upcoming?.map((event) => {
-              return(
+            {uLoading ? <Spinner /> : upcoming?.map((event) => { /* If events are loading, return spinner (loading animation) */
+              return( /* Once events have loaded, return 'upcoming' (event data) mapped to the EventCard component */
                 <EventCard 
                   title={event[0]} 
                   description={event[1]} 
@@ -67,8 +69,9 @@ function EventsContent() {
         <div class="events-previous">
           <h2>Previous Events</h2>
           <div class="event-list">
-            {pLoading ? <Spinner /> : previous?.map((event) => {
-              return(<EventCard 
+            {pLoading ? <Spinner /> : previous?.map((event) => { /* If events are loading, return spinner (loading animation) */
+              return( /* Once events have loaded, return 'previous' (event data) mapped to the EventCard component */
+              <EventCard 
                 title={event[0]} 
                 description={event[1]} 
                 location={event[2]}

@@ -1,6 +1,9 @@
 import React from "react";
 import "./LeadershipContent.css";
 import LeadershipCard from "./LeadershipCard";
+
+/* Importing leadership data for the cards */
+/* (To add/remove officers, change these files in './LeadershipData') */
 import { FacultyAdvisors } from './LeadershipData/FacultyAdvisors'
 import { Officers } from './LeadershipData/Officers'
 import { Mentors } from './LeadershipData/Mentors'

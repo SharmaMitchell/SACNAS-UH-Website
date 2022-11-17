@@ -18,9 +18,10 @@ function EventCard(props) {
   */
   // console.log(props);
 
-  const [viewMore, setViewMore] = useState(false);
-  const toggleViewMore = () => setViewMore(!viewMore);
+  const [viewMore, setViewMore] = useState(false); /* State for card expansion */
+  const toggleViewMore = () => setViewMore(!viewMore); /* Function to toggle card expansion */
 
+  /* Setting Links and link labels, if they're passed in */
   let link1Tag = ``;
   let link2Tag = ``;
   if (props.link1 != undefined && props.link1 != ""){

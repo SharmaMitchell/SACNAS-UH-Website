@@ -6,11 +6,11 @@ import navBarImg from "../../assets/fa_bars.png";
 import MailAndMoney from "../MailAndMoney/MailAndMoney";
 
 function Navbar(props) {
-  const location = useLocation().pathname;
+  const location = useLocation().pathname; /* page location, for underline on current page */
 
-  const [sidebar, setSidebar] = useState(false);
+  const [sidebar, setSidebar] = useState(false); /* Sidebar show/hide (for mobile) */
 
-  const showSidebar = () => setSidebar(!sidebar);
+  const showSidebar = () => setSidebar(!sidebar); /* Sidebar toggle function */
   return (
     <>
       <nav id="navbar">

@@ -13,7 +13,7 @@ function FloatingBanner(props) {
         - Must be unique, or subsequent banners won't display for users who already closed the previous one
   */
 
-  const [showBanner, setShowBanner] = useLocalStorage(props.label, true);
+  const [showBanner, setShowBanner] = useLocalStorage(props.label, true); /* Cookie for showing/hiding the banner */
   const closeBanner = () => {
     setShowBanner(false);
   };

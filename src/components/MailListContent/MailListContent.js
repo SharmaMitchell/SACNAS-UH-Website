@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import './MailListContent.css'
 
+/* Get window size for scaling iFrames */
 function getWindowSize() {
     const {innerWidth, innerHeight} = window;
     return {innerWidth, innerHeight};
@@ -8,8 +9,10 @@ function getWindowSize() {
 
 function MailListContent() {
   
-  const [windowSize, setWindowSize] = useState(getWindowSize());
-
+  const [windowSize, setWindowSize] = useState(getWindowSize()); /* Window size State */
+  
+  /* On window resize (and page load), set iFrame & Newsletter preview height */
+  /* Mainly optimized for the Google Form, to avoid scrolling within the iFrame */
   useEffect(() => {
     function handleWindowResize() {
       setWindowSize(getWindowSize());
@@ -20,7 +23,7 @@ function MailListContent() {
     return () => {
       window.removeEventListener('resize', handleWindowResize);
     };
-  }, []);
+  }, [windowSize]);
   
   let iFrameHeight = "1750";
   let previewHeight = "1700";

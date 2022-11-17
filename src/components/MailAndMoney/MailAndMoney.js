@@ -6,6 +6,7 @@ import SACNASEmail from "../../assets/SACNAS-Email.png";
 import SACNASMailList from "../../assets/SACNAS-Mail-List.png";
 import SACNASDonate from "../../assets/SACNAS-Donate-Alt.png";
 
+/* Expanding buttons on the navbar/sidebar for: 'email us', 'mail list', and 'donate' */
 function MailAndMoney(props) {
   const location = props.location;
   return (
