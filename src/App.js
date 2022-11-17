@@ -31,13 +31,13 @@ function App() {
         <ScrollToTop />
         <Navbar dark={switchTheme} theme={theme}/>
         <Banner />
-        <FloatingBanner 
+        {/* <FloatingBanner 
           img={DonateImg}
           paragraph={<p><b>#GivingTuesday</b>: Support your favorite, award-winning STEM 
           student organization!</p>}
           bgColor={`var(--teal)`}
           label='GivingTuesday2022'
-        />
+        /> */}
         <Routes> 
           <Route path='/' element={<Home/>} />
           <Route path='/events' element={<Events/>} />
