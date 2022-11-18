@@ -44,6 +44,28 @@ function MailListContent() {
     previewHeight = "1800";
   }
 
+  
+  const [previewURL, setPreviewURL] = useState(""); /* URL for most recent newsletter */
+  const [previewLoading, setPreviewLoading] = useState(true); /* newletter preview loading state */
+  
+  /* Get most recent newsletter URL from mailchimp */
+  useEffect(() => {
+    fetch("https://api.allorigins.win/get?url=" + encodeURIComponent("https://us3.campaign-archive.com/home/?u=9725fd8683bb429d5d3d28d33&id=1c72884554"))
+      .then(function (response) {
+        //console.log(response);
+        return response.json();
+      })
+      .then(function (data) {
+        //console.log(data.contents);
+        let theURL = data.contents.match(/<li class="campaign">\d*\/\d*\/\d* - <a href="(.*?)"/)[1]; /* Pull string matching this regex to extract URL */
+        //console.log(theURL);
+        
+        setPreviewURL(theURL);
+        setPreviewLoading(false);
+        return;
+      });
+  }, []);
+
   return (
     <div class="mail-list-container">
       <div class="mail-list-title">
@@ -57,8 +79,8 @@ function MailListContent() {
                 // width="700"
                 height={iFrameHeight}
                 frameborder="0"
-                marginheight="0"
-                marginwidth="0"
+                marginHeight="0"
+                marginWidth="0"
                 // scrolling='no'
             >
                 Loading…
@@ -67,11 +89,11 @@ function MailListContent() {
         <div class="mail-list-preview">
             <iframe 
                 class="mail-list-embed"
-                src="https://us3.campaign-archive.com/?u=9725fd8683bb429d5d3d28d33&id=1bd21a8dd5"
+                src={previewURL}
                 height={previewHeight}
                 frameborder="0"
-                marginheight="0"
-                marginwidth="0"
+                marginHeight="0"
+                marginWidth="0"
             >
                 Loading Newsletter Preview...
             </iframe>
