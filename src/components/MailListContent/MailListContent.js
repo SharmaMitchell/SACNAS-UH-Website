@@ -60,6 +60,9 @@ function MailListContent() {
         let theURL = data.contents.match(/<li class="campaign">\d*\/\d*\/\d* - <a href="(.*?)"/)[1]; /* Pull string matching this regex to extract URL */
         //console.log(theURL);
         
+        // console.log(theURL);
+        theURL = theURL.slice(0,4) + "s" + theURL.slice(4); /* Change URL to https */
+        // console.log(theURL);
         setPreviewURL(theURL);
         setPreviewLoading(false);
         return;
