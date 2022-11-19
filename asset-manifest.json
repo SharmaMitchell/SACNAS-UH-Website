@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.b2f21a69.css",
-    "main.js": "/static/js/main.d1d1ab12.js",
+    "main.js": "/static/js/main.7f666511.js",
     "static/media/SACNAS-Group.jpg": "/static/media/SACNAS-Group.5714489a602b6a46e523.jpg",
     "static/media/2022-Diversity-Award-crop2.jpg": "/static/media/2022-Diversity-Award-crop2.9583c9f7b76b1e9cb919.jpg",
     "static/media/greg.png": "/static/media/greg.a810072cdfc72e34f5bf.png",
@@ -39,10 +39,10 @@
     "static/media/tony.jpg": "/static/media/tony.028967c605beb9d2f1a3.jpg",
     "index.html": "/index.html",
     "main.b2f21a69.css.map": "/static/css/main.b2f21a69.css.map",
-    "main.d1d1ab12.js.map": "/static/js/main.d1d1ab12.js.map"
+    "main.7f666511.js.map": "/static/js/main.7f666511.js.map"
   },
   "entrypoints": [
     "static/css/main.b2f21a69.css",
-    "static/js/main.d1d1ab12.js"
+    "static/js/main.7f666511.js"
   ]
 }
