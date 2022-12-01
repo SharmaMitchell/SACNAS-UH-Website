@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.dccadd67.css",
-    "main.js": "/static/js/main.a84384a8.js",
+    "main.css": "/static/css/main.815a37df.css",
+    "main.js": "/static/js/main.2f3bb4d3.js",
     "static/media/SACNAS-Group.jpg": "/static/media/SACNAS-Group.5714489a602b6a46e523.jpg",
     "static/media/2022-Diversity-Award-crop2.jpg": "/static/media/2022-Diversity-Award-crop2.9583c9f7b76b1e9cb919.jpg",
     "static/media/greg.png": "/static/media/greg.a810072cdfc72e34f5bf.png",
@@ -38,11 +38,11 @@
     "static/media/Sater.jpg": "/static/media/Sater.8c7ef4b10c3f17ca4e4c.jpg",
     "static/media/tony.jpg": "/static/media/tony.028967c605beb9d2f1a3.jpg",
     "index.html": "/index.html",
-    "main.dccadd67.css.map": "/static/css/main.dccadd67.css.map",
-    "main.a84384a8.js.map": "/static/js/main.a84384a8.js.map"
+    "main.815a37df.css.map": "/static/css/main.815a37df.css.map",
+    "main.2f3bb4d3.js.map": "/static/js/main.2f3bb4d3.js.map"
   },
   "entrypoints": [
-    "static/css/main.dccadd67.css",
-    "static/js/main.a84384a8.js"
+    "static/css/main.815a37df.css",
+    "static/js/main.2f3bb4d3.js"
   ]
 }
