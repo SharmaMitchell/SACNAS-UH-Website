@@ -12,8 +12,6 @@ import MailList from './pages/MailList';
 import SocialsBanner from './components/SocialsBanner/SocialsBanner'
 import Footer from './components/Footer/Footer';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
-import FloatingBanner from './components/FloatingBanner/FloatingBanner';
-import DonateImg from './assets/SACNAS-Donate-Alt.png';
 import './App.css';
 
 function App() {
@@ -31,13 +29,6 @@ function App() {
         <ScrollToTop />
         <Navbar dark={switchTheme} theme={theme}/>
         <Banner />
-        <FloatingBanner 
-          img={DonateImg}
-          paragraph={<p><b>#GivingTuesday</b>: Support your favorite, award-winning STEM 
-          student organization!</p>}
-          bgColor={`var(--teal)`}
-          label='GivingTuesday2022'
-        />
         <Routes> 
           <Route path='/' element={<Home/>} />
           <Route path='/events' element={<Events/>} />
