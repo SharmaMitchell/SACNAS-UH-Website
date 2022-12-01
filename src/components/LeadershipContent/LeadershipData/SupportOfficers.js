@@ -1,7 +1,7 @@
 import React from "react";
 import mitch from '../../../assets/leadership/mitch.jpg'
 import caycel from '../../../assets/leadership/caycel.jpg'
-
+import mia from '../../../assets/leadership/mia.jpg'
 
 export const SupportOfficers = [
     {
@@ -14,6 +14,12 @@ export const SupportOfficers = [
         img: mitch,
         title: "Mitchell Sharma: Undergraduate Support Officer",
         paragraph: "Mitchell Sharma is a Junior majoring in Computer Science and minoring in Mathematics. Mitchell is interested in a broad variety of computer science specializations, ranging from data science to web development. In addition to programming, he has a passion for education - working as a tutor for ESL & Japanese (his second language), and developing education-related programming projects in his spare time. Through his time spent as an ESL tutor, he learned of the adversities immigrants & minorities face as they try to establish themselves in the US: an often unforgiving & unequitable environment for foreigners. He hopes to contribute to SACNAS by bringing more computer science students into the organization, deploying events to further increase interaction & outreach, and helping underrepresented communities succeed in tech, and the greater STEM field.",
+        link: ""
+    },
+    {
+        img: mia,
+        title: "Mia Borrego: Undergraduate Support Officer",
+        paragraph: "Mia is a Senior Biotechnology major. The COVID-19 pandemic has fueled her interest in vaccine development, so that she can apply her knowledge of science to help others live a longer, healthier life. She is also a third year member of the Spirit of Houston and plays the saxophone. Through SACNAS, Mia wants to continue to expand our community so that others always feel like they have a place where they belong, regardless of their physical appearance. Mia also works in Dr. Amy Sater’s lab to understand the processes by which ectodermal cells become committed to form epidermis, neurons, or glia during embryonic development of the African Clawed Frog, Xenopus laevis.",
         link: ""
     },
 ]

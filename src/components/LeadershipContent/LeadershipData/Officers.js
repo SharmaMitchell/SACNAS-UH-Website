@@ -4,7 +4,6 @@ import jake from '../../../assets/leadership/jake.png'
 import marcela from '../../../assets/leadership/marcela.jpg'
 import an from '../../../assets/leadership/an.jpg'
 import sara from '../../../assets/leadership/sara.jpg'
-import mia from '../../../assets/leadership/mia.jpg'
 import peanut from '../../../assets/leadership/peanut.jpg'
 import brayan from '../../../assets/leadership/brayan.jpg'
 import yuni from '../../../assets/leadership/yuni-crop.jpg'
@@ -48,12 +47,6 @@ export const Officers = [
         link: ""
     },
     {
-        img: mia,
-        title: "Mia Borrego: Undergraduate Officer",
-        paragraph: "Mia is a Senior Biotechnology major. The COVID-19 pandemic has fueled her interest in vaccine development, so that she can apply her knowledge of science to help others live a longer, healthier life. She is also a third year member of the Spirit of Houston and plays the saxophone. Through SACNAS, Mia wants to continue to expand our community so that others always feel like they have a place where they belong, regardless of their physical appearance. Mia also works in Dr. Amy Sater’s lab to understand the processes by which ectodermal cells become committed to form epidermis, neurons, or glia during embryonic development of the African Clawed Frog, Xenopus laevis.",
-        link: ""
-    },
-    {
         img: peanut,
         title: "Vuong (Peanut) Vu: Undergraduate Officer - Secretary",
         paragraph: "Vuong (Peanut) Vu is a Sophomore at the University of Houston majoring in Psychology with a Biology minor. He is currently interested in pursuing an MD in hopes of becoming an anesthesiologist or radiologist. As of late, he is working with houseflies in Dr. Richard Meisel’s laboratory studying polygenic sex determination. He joined SACNAS in hopes of increasing minorities in STEM and to give them opportunities to excel in life.",
@@ -67,7 +60,7 @@ export const Officers = [
     },
     {
         img: brayan,
-        title: "Brayan Gutierrez: Undergraduate Provisional Officer",
+        title: "Brayan Gutierrez: Undergraduate Officer",
         paragraph: "Brayan Gutierrez is a Junior at the University of Houston majoring in Mathematics and Data Science and is a second-year Jack Kent Cooke Foundation Undergraduate Transfer Scholar. They plan on pursuing an MS/MSDS program and eventually go for a PhD program in Statistics in the future. They are currently broadly interested in the Data Science/Statistics field, but ultimately want to contribute to cancer research as they are a bone cancer survivor. They joined SACNAS to increase minority awareness in STEM and help fellow first-generation students who lack the academic support/guidance at home.",
         link: ""
     },
