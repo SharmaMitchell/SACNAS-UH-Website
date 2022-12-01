@@ -8,6 +8,7 @@ import mia from '../../../assets/leadership/mia.jpg'
 import peanut from '../../../assets/leadership/peanut.jpg'
 import brayan from '../../../assets/leadership/brayan.jpg'
 import yuni from '../../../assets/leadership/yuni-crop.jpg'
+import jennifer from '../../../assets/leadership/jennifer.jpg'
 
 export const Officers = [
     {
@@ -32,6 +33,12 @@ export const Officers = [
         img: yuni,
         title: "Yunuen Avila Martinez: Graduate Officer",
         paragraph: "Yunuen is a second year graduate student in the Department of Chemistry and is pursuing her PhD working under Dr. Brad Carrow. Her research focuses on synthesizing sustainable polymers and in up-cycling existing plastics. Yunuen recently joined SACNAS because she enjoyed the atmosphere of the group and felt supported by the friends she made here. Her goal now is to provide an environment where STEM grads and undergrads of all backgrounds can feel comfortable and encouraged in their journey through college. She also hopes to influence interactions between different STEM fields to diversify our points of view.",
+        link: ""
+    },
+    {
+        img: jennifer,
+        title: "Jennifer Ruiz: Graduate Officer",
+        paragraph: "Jennifer graduated from UH in 2022 with a B.S. in Biology. She has been a member of the Pennings ecology lab group since 2019. She has experience doing field work at the UH Coastal Center and at the University of Georgia Marine Institute on Sapelo Island. Jennifer is also proficient in using R to conduct data analysis. She hopes to share her experiences being a first generation, Latina scientist to encourage young women and other underrepresented minorities to pursue careers in STEM.",
         link: ""
     },
     {
