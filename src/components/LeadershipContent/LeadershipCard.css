@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    margin: 5px;
+    margin: 5px auto;
 }
 .leadership-card-container{
     width: 525px;
