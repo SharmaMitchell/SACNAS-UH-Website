@@ -23,7 +23,7 @@
     width: 315px;
     max-width: 90vw;
     margin: 6px;
-    border-radius: 20px;
+    border-radius: 14px;
 }
 .event-card-container .event-text{
     color: var(--text-primary);
