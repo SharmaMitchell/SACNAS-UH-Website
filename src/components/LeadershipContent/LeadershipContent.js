@@ -44,8 +44,10 @@ function LeadershipContent() {
     })
     .then(function(data){
       console.log(data.valueRanges);
-      setLeadershipData(data.valueRanges);
-      setLoading(false);
+      if(data.valueRanges != undefined){
+        setLeadershipData(data.valueRanges);
+        setLoading(false);
+      }
       return data.valueRanges;
     })},[]);
   
