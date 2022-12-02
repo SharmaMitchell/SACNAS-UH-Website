@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./LeadershipContent.css";
 import LeadershipCard from "./LeadershipCard";
 
@@ -12,21 +12,56 @@ import { AlumniAdvisors } from "./LeadershipData/AlumniAdvisors";
 import { CoAdvisors } from './LeadershipData/CoAdvisors'
 import { FoundingAdvisor } from "./LeadershipData/FoundingAdvisor";
 import { SACNASAlumni } from "./LeadershipData/SACNASAlumni";
+import Spinner from "../Spinner/Spinner";
 
 function LeadershipContent() {
+  const [leadershipData, setLeadershipData] = useState([]); /* Upcoming events data */
+  const [loading, setLoading] = useState(true); /* Leadership loading state */
+
+  /* Public Google Sheet ID */
+  const SHEET_ID = '1vvNnL1TntLB3_nFWm-cm0ZEZDgJvFTjGcTxyWbWfebc';
+  /* Read-only API key, limited to sacnas-uh.org domain */
+  const API_KEY = 'AIzaSyCWFLx8b9hgh5nlwhN_9S6awfghwUBoXLo';
+  
+  const sheetRanges = [
+    "Officers!A2:H20",
+    "Mentors and Support Officers!A2:H20",
+    "Faculty Advisors!A2:D10",
+    "Faculty Co-Advisors!A2:D10",
+    "Alumni Advisors!A2:D10",
+    "Founding Faculty!A2:C2",
+    "Alumni List!A1:J20",
+  ];
+  let RANGES = sheetRanges[0]
+  for(let i = 1; i < sheetRanges.length; i++){
+    RANGES += ("&ranges=" + sheetRanges[i])
+  }
+
+  /* Upcoming events API call to retreive data from Google Sheets */
+  useEffect(() => {fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values:batchGet?ranges=${RANGES}&key=${API_KEY}`)
+    .then(function(response){
+      return response.json();
+    })
+    .then(function(data){
+      console.log(data.valueRanges);
+      setLeadershipData(data.valueRanges);
+      setLoading(false);
+      return data.valueRanges;
+    })},[]);
+  
   return (
     <>
       <div class="leadership">
         <div class="leadership-container">
           <div class="leadership-section-title"><h2>Faculty Advisors</h2></div>
           <div class="leadership-faculty">
-            {FacultyAdvisors.map((item) => {
+            {loading ? <Spinner /> : leadershipData[2].values.map((entry) => {
                 return(
                     <LeadershipCard 
-                        img = {item.img}
-                        title = {item.title}
-                        paragraph = {item.paragraph}
-                        email = {item.email}
+                        title = {entry[0]}
+                        paragraph = {entry[1]}
+                        img = {entry[2]}
+                        email = {entry[3]}
                         width = "m" /* for faculty advisor cards */
                     />
                 )
@@ -34,13 +69,13 @@ function LeadershipContent() {
           </div>
           <div class="leadership-section-title"><h2>Faculty Co-Advisors</h2></div>
           <div class="leadership-faculty">
-            {CoAdvisors.map((item) => {
+            {loading ? <Spinner /> : leadershipData[3].values.map((entry) => {
                 return(
                     <LeadershipCard 
-                        img = {item.img}
-                        title = {item.title}
-                        paragraph = {item.paragraph}
-                        email = {item.email}
+                        title = {entry[0]}
+                        paragraph = {entry[1]}
+                        img = {entry[2]}
+                        email = {entry[3]}
                         width = "m" /* for faculty advisor cards */
                     />
                 )
@@ -48,64 +83,49 @@ function LeadershipContent() {
           </div>
           <div class="leadership-section-title"><h2>Officers</h2></div>
           <div class="leadership-officers">
-            {Officers.map((item) => {
+            {loading ? <Spinner /> : leadershipData[0].values.map((entry) => {
                     return(
                         <LeadershipCard 
-                            img = {item.img}
-                            title = {item.title}
-                            paragraph = {item.paragraph}
-                            link = {item.link}
+                            title = {entry[0] + ": " + entry[1]}
+                            paragraph = {entry[2]}
+                            img = {entry[3]}
                         />
                     )
                 })}
           </div>
           <div class="leadership-section-title"><h2>Mentors & Support Officers</h2></div>
           <div class="leadership-officers">
-            {Mentors.map((item) => {
+            {loading ? <Spinner /> : leadershipData[1].values.map((entry) => {
                     return(
                         <LeadershipCard 
-                            img = {item.img}
-                            title = {item.title}
-                            paragraph = {item.paragraph}
-                            email = {item.email}
+                            title = {entry[0] + ": " + entry[1]}
+                            paragraph = {entry[2]}
+                            img = {entry[3]}
                         />
                     )
                 })}
-            {SupportOfficers.map((item) => {
-                return(
-                    <LeadershipCard 
-                        img = {item.img}
-                        title = {item.title}
-                        paragraph = {item.paragraph}
-                        email = {item.email}
-                    />
-                )
-            })}
           </div>
           <div class="leadership-section-title"><h2>SACNAS UH Alumni Advisory Board</h2></div>
           <div class="leadership-officers">
-            {AlumniAdvisors.map((item) => {
-                return(
-                    <LeadershipCard 
-                        img = {item.img}
-                        title = {item.title}
-                        paragraph = {item.paragraph}
-                        email = {item.email}
-                    />
-                )
-            })}
+            {loading ? <Spinner /> : leadershipData[4].values.map((entry) => {
+                    return(
+                        <LeadershipCard 
+                            title = {entry[0] + ": " + entry[1]}
+                            paragraph = {entry[2]}
+                            img = {entry[3]}
+                        />
+                    )
+                })}
           </div>
           
           <div class="leadership-section-title"><h2>Founding Chapter Faculty Advisor (2018-2019)</h2></div>
           <div class="leadership-faculty">
-            {FoundingAdvisor.map((item) => {
+            {loading ? <Spinner /> : leadershipData[5].values.map((entry) => {
                 return(
                     <LeadershipCard 
-                        img = {item.img}
-                        title = {item.title}
-                        paragraph = {item.paragraph}
-                        email = {item.email}
-                        /*width = "m" /* for faculty advisor cards */
+                        title = {entry[0]}
+                        paragraph = {entry[1]}    
+                        img = {entry[2]}
                     />
                 )
             })}
@@ -116,15 +136,15 @@ function LeadershipContent() {
 Below are SACNAS-UH alumni.</p>
           </div>
           <div class="leadership-alumni">
-            {SACNASAlumni.map((item) => {
+            {loading ? <Spinner /> : leadershipData[6].values.map((entry) => {
                 return(
                     <div class="leadership-alumlist">
-                    <h3>{item.title}</h3>
+                    <h3>{entry[0]}</h3>
                     {(() => {
                         const alumlist = [];
 
-                        for(let i = 0; i < item.list.length; i++){
-                            alumlist.push(<p>{item.list[i]}</p>);
+                        for(let i = 1; i < entry.length; i++){
+                            alumlist.push(<p>{entry[i]}</p>);
                         }
 
                         return alumlist;
