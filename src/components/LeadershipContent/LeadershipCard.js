@@ -57,11 +57,11 @@ function LeadershipCard(props) {
                 : "leadership-email"
             }
           >
-            <a href={props.email}>
+            <a href={"mailto:" + props.email}>
               <img src={SACNASEmail} />
             </a>
             <div class="leadership-email-label">
-              <a href={props.email}>Email Me</a>
+              <a href={"mailto:" + props.email}>Email Me</a>
             </div>
           </div>
         </div>
