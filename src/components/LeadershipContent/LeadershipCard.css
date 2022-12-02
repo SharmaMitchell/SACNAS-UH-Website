@@ -91,7 +91,7 @@
     align-content: center;
     align-items: center;
     justify-content: space-between; /* <-- Most Important */
-    height: 60%; /* <-- Second Most Important */
+    /*height: 60%; /* <-- Second Most Important */
 }
 .leadership-card-text{
     display: flex;
@@ -115,106 +115,171 @@
     margin: 0;
     font-size: 0.9rem;
 }
-.leadership-email-hide{
-    display: none;
-}
-.leadership-email img{
-    height: 50px;
-    width: 50px;
-    position: relative;
-    z-index: 1;
-    transition: 0.3s ease all;
-    transform: scale(1.02);
-}
-.leadership-email{
-    margin-top: -10px;
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: row;
-    border-radius: 25px;
-    background-color: transparent;
-    height: 50px;
-    width: 50px;
-    transition: all 0.15s ease-in;
-    z-index: 1;
-    background-color: rgb(55, 55, 55);
-}
-.leadership-email:hover{
-    background-color: var(--primary);
-    width: 180px;
-    box-shadow: 0px 0px 5px var(--text-primary);
-    transform: scale(1.05);
-}
-.leadership-email:hover img{
-    transform: scale(1.05);
-}
-.leadership-email-label{
-    display: flex;
-    align-items: center;
-
-    width: 0;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-    transition: width 0.1s ease-in;
-
-    z-index: 0;
-    height: 100%;
-    justify-content: flex-end;
-    overflow: hidden;
-}
-.leadership-email:hover .leadership-email-label{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-.leadership-email-label a{
-    font-size: 1.1rem;
-    font-weight: 500;
-    letter-spacing: 0.2rem;
-    color: white;
-    text-transform: uppercase;
-    padding: 0 10px;
-    padding-right: 15px;
-    white-space: nowrap;
-
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
 .leadership-card-red{
-    height: 30px;
+    min-height: 40px;
+    height: auto;
+    max-height: 40px;
     width: 100%;
     background-color: var(--primary);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     margin-top: auto;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
-
-/* Expand email label on devices without hover */
-@media(hover: none){
-    .leadership-email{
-        background-color: var(--primary);
-        width: 180px;
-        
-    }
-    .leadership-email img{
-        transform: scale(1.05);
-    }
-    .leadership-email .leadership-email-label{
-        display: flex;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        white-space: nowrap;
-        justify-content: flex-start;
-    }
+.leadership-card-red.nocontact{
+    cursor: auto;
+}
+.leadership-card-red.expanded{
+    cursor: auto;
+    max-height: 100px;
+}
+.leadership-card-red .leadership-contact{
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    color: white;
+    opacity: 1;
+}
+.leadership-card-red.expanded .leadership-contact{
+    flex-direction: row-reverse;
+}
+.leadership-card-red.expanded .leadership-contact .contact-info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px 0;
+}
+.leadership-card-red .leadership-contact .contact-icons{
+    display: flex;
+    flex-direction: row;
+    
+}
+.leadership-card-red .leadership-expand-label{
+    opacity: 1;
+    max-width: 60px;
+    transition: 0.5s ease all;
+}
+.leadership-card-red.expanded .leadership-expand-label{
+    opacity: 0;
+    max-width: 0;
+    max-height: 0;
+    transition: 0s;
+}
+.leadership-card-red .leadership-expand, .leadership-close{
+    filter: invert(1);
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    transition: 0s all;
+}
+.leadership-card-red .leadership-expand{
+    transform: rotate(0deg);
+    cursor: pointer;
+    display: block;
+    opacity: 1;
+    transition: 0.3s ease all;
+}
+.leadership-card-red.expanded .leadership-expand{
+    opacity: 0;
+    width: 0;
+    transition: 0s;
+}
+.leadership-card-red .leadership-close-wrapper{
+    font-size: 0;
+    display: block;
+    height: 18px;
+}
+.leadership-card-red .leadership-close{
+    cursor: pointer;
+    display: block;
+    opacity: 0;
+    width: 0;
+    transition: all 0s;
+}
+.leadership-card-red.expanded .leadership-close{
+    opacity: 1;
+    display: block;
+    width: 18px;
+    height: 18px;
+    margin-left: 5px;
+    margin-top: 10px;
+    transition: 0.3s ease all;
+    transition-delay: 0.15s;
+}
+.leadership-card-red .leadership-social{
+    opacity: 0;
+    width: 0;
+    height: 0;
+    transition: 0;
+}
+.leadership-card-red .leadership-social a{
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    text-decoration: underline;
+}
+.leadership-card-red.expanded .leadership-social a{
+    display: flex;
+    font-size: 1.1rem;
+}
+.leadership-card-red.expanded .leadership-social{
+    opacity: 1;
+    width: auto;
+    height: auto;
+    margin: 3px 0;
+    transition: 0.3s ease all;
+}
+.leadership-card-red.expanded .leadership-social:nth-child(2){
+    transition-delay: 0.075s
+}
+.leadership-card-red.expanded .leadership-social:nth-child(3){
+    transition-delay: 0.15s
+}
+.leadership-card-red .leadership-social img{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
 }
 
 /* Tablet */
 @media only screen and (min-width: 768px){
     .leadership-card-container{
         max-width: 42vw;
+    }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1200px){
+    .leadership-card-red, .leadership-card-red.expanded{
+        height: 40px;
+        max-height: 40px;
+    }
+    .leadership-card-red .leadership-expand{
+        transform: rotate(270deg);
+    }
+    .leadership-card-red .leadership-contact .contact-icons{
+        align-items: center;
+    }
+    .leadership-card-red.expanded .leadership-contact .contact-info{
+        flex-direction: row;
+        margin: 0;
+    }
+    .leadership-card-red.expanded .leadership-social{
+        margin-right: 10px;
+    }
+    .leadership-card-red.expanded .leadership-social a{
+        font-size: 0.95rem;
+    }
+    .leadership-card-red.expanded .leadership-close{
+        margin-top: 0;
     }
 }

@@ -91,6 +91,10 @@ function LeadershipContent() {
                             title = {entry[0] + ": " + entry[1]}
                             paragraph = {entry[2]}
                             img = {entry[3]}
+                            email = {entry[4]}
+                            discordHandle = {entry[5]}
+                            discordID = {entry[6]}
+                            linkedin = {entry[7]}
                         />
                     )
                 })}
@@ -103,6 +107,10 @@ function LeadershipContent() {
                             title = {entry[0] + ": " + entry[1]}
                             paragraph = {entry[2]}
                             img = {entry[3]}
+                            email = {entry[4]}
+                            discordHandle = {entry[5]}
+                            discordID = {entry[6]}
+                            linkedin = {entry[7]}
                         />
                     )
                 })}
@@ -115,6 +123,10 @@ function LeadershipContent() {
                             title = {entry[0] + ": " + entry[1]}
                             paragraph = {entry[2]}
                             img = {entry[3]}
+                            email = {entry[4]}
+                            discordHandle = {entry[5]}
+                            discordID = {entry[6]}
+                            linkedin = {entry[7]}
                         />
                     )
                 })}
