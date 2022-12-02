@@ -17,7 +17,7 @@
     border-radius: 20px;
 }
 .leadership-card-container.m{
-    width: 250px;
+    width: 260px;
     /*flex-basis: auto;*/
     height: 100%;
     display: flex;
@@ -176,7 +176,6 @@
     filter: invert(1);
     width: 20px;
     height: 20px;
-    margin-right: 10px;
     transition: 0s all;
 }
 .leadership-card-red .leadership-expand{
@@ -185,10 +184,11 @@
     display: block;
     opacity: 1;
     transition: 0.3s ease all;
+    margin-right: 10px;
 }
 .leadership-card-red.expanded .leadership-expand{
     opacity: 0;
-    width: 0;
+    height: 0;
     transition: 0s;
 }
 .leadership-card-red .leadership-close-wrapper{
@@ -229,7 +229,7 @@
 }
 .leadership-card-red.expanded .leadership-social a{
     display: flex;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 .leadership-card-red.expanded .leadership-social{
     opacity: 1;
@@ -279,7 +279,11 @@
     .leadership-card-red.expanded .leadership-social a{
         font-size: 0.95rem;
     }
+    .leadership-card-red.expanded .leadership-expand{
+        width: 0;
+    }
     .leadership-card-red.expanded .leadership-close{
         margin-top: 0;
     }
+    
 }
