@@ -1,17 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./LeadershipContent.css";
 import LeadershipCard from "./LeadershipCard";
-
-/* Importing leadership data for the cards */
-/* (To add/remove officers, change these files in './LeadershipData') */
-import { FacultyAdvisors } from './LeadershipData/FacultyAdvisors'
-import { Officers } from './LeadershipData/Officers'
-import { Mentors } from './LeadershipData/Mentors'
-import { SupportOfficers } from './LeadershipData/SupportOfficers'
-import { AlumniAdvisors } from "./LeadershipData/AlumniAdvisors";
-import { CoAdvisors } from './LeadershipData/CoAdvisors'
-import { FoundingAdvisor } from "./LeadershipData/FoundingAdvisor";
-import { SACNASAlumni } from "./LeadershipData/SACNASAlumni";
 import Spinner from "../Spinner/Spinner";
 
 function LeadershipContent() {
