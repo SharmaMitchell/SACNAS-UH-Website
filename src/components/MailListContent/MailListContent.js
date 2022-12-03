@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import Spinner from '../Spinner/Spinner';
 import './MailListContent.css'
 
 /* Get window size for scaling iFrames */
@@ -89,18 +90,20 @@ function MailListContent() {
                 Loading…
             </iframe>
         </div>
-        <div class="mail-list-preview">
-            <iframe 
-                class="mail-list-embed"
-                src={previewURL}
-                height={previewHeight}
-                frameborder="0"
-                marginHeight="0"
-                marginWidth="0"
-            >
-                Loading Newsletter Preview...
-            </iframe>
-        </div>
+        {previewLoading ? <Spinner /> : 
+          <div class="mail-list-preview">
+              <iframe 
+                  class="mail-list-embed"
+                  src={previewURL}
+                  height={previewHeight}
+                  frameborder="0"
+                  marginHeight="0"
+                  marginWidth="0"
+              >
+                  Loading Newsletter Preview...
+              </iframe>
+          </div>
+        }
       </div>
     </div>
   );
