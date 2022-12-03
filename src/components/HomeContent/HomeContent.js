@@ -6,7 +6,7 @@ import SACNASGroup from '../../assets/SACNAS-Group.jpg'
 import outreach_navarro from '../../assets/outreach_navarro.jpg'
 import houaztec from '../../assets/houaztec.jpg'
 import diversity_award from '../../assets/2022-Diversity-Award-crop2.jpg'
-import lorissa from '../../assets/leadership/lorissa-crop.jpg'
+import lorissa from '../../assets/lorissa-crop.jpg'
 
 function HomeContent() {
   return (
