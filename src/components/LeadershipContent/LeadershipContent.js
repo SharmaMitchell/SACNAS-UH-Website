@@ -99,7 +99,7 @@ function LeadershipContent() {
                     )
                 })}
           </div>
-          <div class="leadership-section-title"><h2>Mentors & Support Officers</h2></div>
+          <div class="leadership-section-title"><h2>Support Officers</h2></div>
           <div class="leadership-officers">
             {loading ? <Spinner /> : leadershipData[1].values.map((entry) => {
                     return(
