@@ -32,7 +32,7 @@ function LeadershipContent() {
       return response.json();
     })
     .then(function(data){
-      console.log(data.valueRanges);
+      //console.log(data.valueRanges);
       if(data.valueRanges != undefined){
         setLeadershipData(data.valueRanges);
         setLoading(false);
