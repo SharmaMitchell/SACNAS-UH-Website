@@ -13,10 +13,10 @@ function LeadershipContent() {
   const API_KEY = 'AIzaSyCWFLx8b9hgh5nlwhN_9S6awfghwUBoXLo';
   
   const sheetRanges = [
-    "Officers!A2:H20",
-    "Mentors and Support Officers!A2:H20",
     "Faculty Advisors!A2:D10",
     "Faculty Co-Advisors!A2:D10",
+    "Officers!A2:H20",
+    "Mentors and Support Officers!A2:H20",
     "Alumni Advisors!A2:D10",
     "Founding Faculty!A2:C2",
     "Alumni List!A1:J20",
@@ -40,99 +40,58 @@ function LeadershipContent() {
       return data.valueRanges;
     })},[]);
   
+  const sections = [ /* Sections for leadership cards (besides alumni) */
+    {
+      title : "Faculty Advisors",
+      category : "leadership-faculty",
+    },
+    {
+      title : "Faculty Co-Advisors",
+      category : "leadership-faculty",
+    },
+    {
+      title : "Officers",
+      category : "leadership-officers",
+    },
+    {
+      title : "Support Officers",
+      category : "leadership-officers",
+    },
+    {
+      title : "SACNAS UH Alumni Advisory Board",
+      category : "leadership-officers",
+    },
+    {
+      title : "Founding Chapter Faculty Advisor (2018-2019)",
+      category : "leadership-faculty",
+    },
+  ]
   return (
     <>
       <div class="leadership">
         <div class="leadership-container">
-          <div class="leadership-section-title"><h2>Faculty Advisors</h2></div>
-          <div class="leadership-faculty">
-            {loading ? <Spinner /> : leadershipData[2].values.map((entry) => {
-                return(
-                    <LeadershipCard 
-                        title = {entry[0]}
-                        paragraph = {entry[1]}
-                        img = {entry[2]}
-                        email = {entry[3]}
-                        width = "m" /* for faculty advisor cards */
-                    />
-                )
-            })}
-          </div>
-          <div class="leadership-section-title"><h2>Faculty Co-Advisors</h2></div>
-          <div class="leadership-faculty">
-            {loading ? <Spinner /> : leadershipData[3].values.map((entry) => {
-                return(
-                    <LeadershipCard 
-                        title = {entry[0]}
-                        paragraph = {entry[1]}
-                        img = {entry[2]}
-                        email = {entry[3]}
-                        width = "m" /* for faculty advisor cards */
-                    />
-                )
-            })}
-          </div>
-          <div class="leadership-section-title"><h2>Officers</h2></div>
-          <div class="leadership-officers">
-            {loading ? <Spinner /> : leadershipData[0].values.map((entry) => {
-                    return(
-                        <LeadershipCard 
-                            title = {entry[0] + ": " + entry[1]}
-                            paragraph = {entry[2]}
-                            img = {entry[3]}
-                            email = {entry[4]}
-                            discordHandle = {entry[5]}
-                            discordID = {entry[6]}
-                            linkedin = {entry[7]}
-                        />
-                    )
-                })}
-          </div>
-          <div class="leadership-section-title"><h2>Support Officers</h2></div>
-          <div class="leadership-officers">
-            {loading ? <Spinner /> : leadershipData[1].values.map((entry) => {
-                    return(
-                        <LeadershipCard 
-                            title = {entry[0] + ": " + entry[1]}
-                            paragraph = {entry[2]}
-                            img = {entry[3]}
-                            email = {entry[4]}
-                            discordHandle = {entry[5]}
-                            discordID = {entry[6]}
-                            linkedin = {entry[7]}
-                        />
-                    )
-                })}
-          </div>
-          <div class="leadership-section-title"><h2>SACNAS UH Alumni Advisory Board</h2></div>
-          <div class="leadership-officers">
-            {loading ? <Spinner /> : leadershipData[4].values.map((entry) => {
-                    return(
-                        <LeadershipCard 
-                            title = {entry[0] + ": " + entry[1]}
-                            paragraph = {entry[2]}
-                            img = {entry[3]}
-                            email = {entry[4]}
-                            discordHandle = {entry[5]}
-                            discordID = {entry[6]}
-                            linkedin = {entry[7]}
-                        />
-                    )
-                })}
-          </div>
-          
-          <div class="leadership-section-title"><h2>Founding Chapter Faculty Advisor (2018-2019)</h2></div>
-          <div class="leadership-faculty">
-            {loading ? <Spinner /> : leadershipData[5].values.map((entry) => {
-                return(
-                    <LeadershipCard 
-                        title = {entry[0]}
-                        paragraph = {entry[1]}    
-                        img = {entry[2]}
-                    />
-                )
-            })}
-          </div>
+          {sections.map((section, index) => {
+            return (<>
+              <div class="leadership-section-title"><h2>{section.title}</h2></div>
+              <div class={section.category}>
+              {loading ? <Spinner /> : leadershipData[index].values.map((entry) => {
+                      let fac = section.category == "leadership-faculty";
+                      return(
+                          <LeadershipCard 
+                              title = {fac ? entry[0] : entry[0] + ": " + entry[1]}
+                              paragraph = {fac ? entry[1] : entry[2]}
+                              img = {fac ? entry[2] : entry[3]}
+                              email = {fac ? entry[3] : entry[4]}
+                              discordHandle = {entry[5]}
+                              discordID = {entry[6]}
+                              linkedin = {entry[7]}
+                              width = {fac && index != 5 ? "m" : undefined} /* Small cards for faculty, except founding */
+                          />
+                      )
+                  })}
+            </div>
+          </>)
+          })}
           <div class="leadership-section-title"><h2>SACNAS UH Alumni</h2></div>
           <div class="leadership-alumni-blurb">
             <p>Our chapter at UH was founded in 2018-2019 and began with an undergraduate student base.
@@ -145,11 +104,9 @@ Below are SACNAS-UH alumni.</p>
                     <h3>{entry[0]}</h3>
                     {(() => {
                         const alumlist = [];
-
                         for(let i = 1; i < entry.length; i++){
                             alumlist.push(<p>{entry[i]}</p>);
                         }
-
                         return alumlist;
                     })()}
                     </div>
