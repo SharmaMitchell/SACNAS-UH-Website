@@ -35,6 +35,33 @@ function EventCard(props) {
   link2Tag = (<a href={props.link2}>{props.link2Label}</a>);
  }
 
+  let rawImgURL = ""
+  if(props.img.indexOf("i.imgur.com") != -1){
+    rawImgURL = props.img.slice(0,props.img.lastIndexOf('l')) + props.img.slice(props.img.lastIndexOf('l') + 1)
+  }
+  else{
+    rawImgURL = props.img
+  }
+
+  let calendarDateNum = Date.parse(props.date)
+  let calendarDateISO = new Date(calendarDateNum)
+  let day = calendarDateISO.getDate().toString()
+  let month = (calendarDateISO.getMonth()+1).toString()
+  month.length == 1 ? month = '0' + month : month = month
+  let year = calendarDateISO.getFullYear().toString()
+  let calendarDate = year + month + day
+
+  let calendarStartTime = props.time.replace(":","").replace(/(AM|PM)/, "").replace(" ", "") + "00"
+  if(calendarStartTime.length < 6){
+    calendarStartTime = '0' + calendarStartTime
+  }
+  if(props.time.indexOf("PM") != -1){
+    calendarStartTime = (Number(calendarStartTime) + 120000).toString()
+  }
+  let calendarEndTime = (Number(calendarStartTime) + 20000).toString() // End time 2 hours after
+
+  let formattedCalDates = calendarDate + "T" + calendarStartTime + "/" + calendarDate + "T" + calendarEndTime
+
   return (
     <div class="event-card">
       {/* <Link to="#" class="event-card-link-wrapper"> */}
@@ -42,11 +69,11 @@ function EventCard(props) {
           <div class="event-img">
             <div class="event-img-overlay">
               <div class="overlay-row">
-                <a href="#"><img src={zoom}/></a>
+                <a target="_blank" rel="noopener" href={rawImgURL}><img src={zoom}/></a>
                 {link1Tag != '' ? <a target="_blank" rel="noopener" href={props.link1}><img src={linkImg}/></a> : <></>}
               </div>
               <div class="overlay-row">
-                <a target="_blank" rel="noopener" href={`https://www.google.com/calendar/render?action=TEMPLATE&text=${props.title}&dates=${props.date}&details=${props.description}&location=${props.location}&sf=true&output=xml`}><img src={calendar}/></a>
+                <a target="_blank" rel="noopener" href={`https://www.google.com/calendar/render?action=TEMPLATE&text=${props.title}&dates=${formattedCalDates}&details=${props.description}&location=${props.location}&sf=true&output=xml`}><img src={calendar}/></a>
                 <a target="_blank" rel="noopener" href={`https://www.google.com/maps/search/?api=1&query=${props.location}`}><img src={maps}/></a>
               </div>
             </div> 
