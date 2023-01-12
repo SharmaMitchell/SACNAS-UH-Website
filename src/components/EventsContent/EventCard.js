@@ -1,11 +1,16 @@
-import React, { useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import { Link }from 'react-router-dom'
+import 'react-medium-image-zoom/dist/styles.css'
 import './EventCard.css'
 import expand from '../../assets/expand.png'
 import zoom from '../../assets/zoom.png'
 import maps from '../../assets/maps.png'
 import calendar from '../../assets/calendar.png'
 import linkImg from '../../assets/link.png'
+
+import Zoom from 'react-medium-image-zoom'
+
+import { Controlled as ControlledZoom } from 'react-medium-image-zoom'
 
 function EventCard(props) {
   /* Props:
@@ -24,6 +29,17 @@ function EventCard(props) {
 
   const [viewMore, setViewMore] = useState(false); /* State for card expansion */
   const toggleViewMore = () => setViewMore(!viewMore); /* Function to toggle card expansion */
+
+  /* Image zoom state */
+  const [isZoomed, setIsZoomed] = useState(false)
+  const [hasZoomed, setHasZoomed] = useState(false)
+  const handleZoomChange = useCallback(shouldZoom => {
+    setIsZoomed(shouldZoom)
+    if(!hasZoomed){
+      setHasZoomed(true)
+    }
+  }, [])
+
 
   /* Setting Links and link labels, if they're passed in */
   let link1Tag = ``;
@@ -69,7 +85,8 @@ function EventCard(props) {
           <div class="event-img">
             <div class="event-img-overlay">
               <div class="overlay-row">
-                <a target="_blank" rel="noopener" href={rawImgURL}><img src={zoom}/></a>
+                {/* <a target="_blank" rel="noopener" href={rawImgURL}><img src={zoom}/></a> */}
+                <a onClick={handleZoomChange}><img src={zoom}/></a>
                 {link1Tag != '' ? <a target="_blank" rel="noopener" href={props.link1}><img src={linkImg}/></a> : <></>}
               </div>
               <div class="overlay-row">
@@ -77,7 +94,9 @@ function EventCard(props) {
                 <a target="_blank" rel="noopener" href={`https://www.google.com/maps/search/?api=1&query=${props.location}`}><img src={maps}/></a>
               </div>
             </div> 
-            <img class="poster" src={props.img} />
+            <ControlledZoom isZoomed={isZoomed} onZoomChange={handleZoomChange}>
+              <img class="poster" src={hasZoomed ? rawImgURL: props.img} />
+            </ControlledZoom>
           </div>
           <a onClick={toggleViewMore} class="event-card-link-wrapper">
             <div class={viewMore ? "event-text full" : "event-text"}>

@@ -73,6 +73,15 @@
 .event-img-overlay .overlay-row:nth-child(2){
     padding-bottom: 10%;
 }
+.event-img-overlay .overlay-row a{
+    cursor: pointer;
+}
+[data-rmiz-modal-overlay="visible"]{
+    background-color: var(--background-dark);
+}
+[data-rmiz-modal-img]{
+    transition: all 0.3s;
+}
 .event-card-container .event-text{
     color: var(--text-primary);
     margin: 15px;
