@@ -43,7 +43,7 @@
     display: flex;
     flex-direction: column;
     opacity: 0;
-    z-index: 2;
+    z-index: 1;
 }
 .event-card-container .event-img:hover .event-img-overlay{
     opacity: 1;
@@ -75,6 +75,9 @@
 }
 .event-img-overlay .overlay-row a{
     cursor: pointer;
+}
+[data-rmiz-content="found"] img{
+    cursor: default;
 }
 [data-rmiz-modal-overlay="visible"]{
     background-color: var(--background-dark);
@@ -215,5 +218,14 @@
     .event-card-container .event-text{
         margin: 15px;
         margin-top: 0;
+    }
+}
+@media (hover: none){
+    /* Prevent accidentally tapping links in img overlay */
+    .event-img-overlay{
+        z-index: 0;
+    }
+    .event-card-container .event-img:hover .event-img-overlay{
+        z-index: 1;
     }
 }

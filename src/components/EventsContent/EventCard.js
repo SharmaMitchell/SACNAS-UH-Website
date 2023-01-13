@@ -41,6 +41,11 @@ function EventCard(props) {
       setHasZoomed(true)
     }
   }, [])
+  const handleZoomChangeImg = () => {
+    if(isZoomed){
+      handleZoomChange()
+    }
+  }
 
   /* Handle img loading, errors */
   const [imgError, setImgError] = useState(false)
@@ -122,7 +127,7 @@ function EventCard(props) {
               </a>
             </div>
           </div>
-          <ControlledZoom isZoomed={isZoomed} onZoomChange={handleZoomChange}>
+          <ControlledZoom isZoomed={isZoomed} onZoomChange={handleZoomChangeImg}>
             <img
               onError={handleImgError}
               class="poster"
