@@ -1,11 +1,18 @@
-import React, { useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import { Link }from 'react-router-dom'
+import 'react-medium-image-zoom/dist/styles.css'
 import './EventCard.css'
 import expand from '../../assets/expand.png'
 import zoom from '../../assets/zoom.png'
 import maps from '../../assets/maps.png'
 import calendar from '../../assets/calendar.png'
 import linkImg from '../../assets/link.png'
+import defaultEventImg from '../../assets/DefaultEvent.png'
+
+import Zoom from 'react-medium-image-zoom'
+
+import { Controlled as ControlledZoom } from 'react-medium-image-zoom'
+import Spinner from '../Spinner/Spinner'
 
 function EventCard(props) {
   /* Props:
@@ -24,6 +31,23 @@ function EventCard(props) {
 
   const [viewMore, setViewMore] = useState(false); /* State for card expansion */
   const toggleViewMore = () => setViewMore(!viewMore); /* Function to toggle card expansion */
+
+  /* Image zoom state */
+  const [isZoomed, setIsZoomed] = useState(false)
+  const [hasZoomed, setHasZoomed] = useState(false)
+  const handleZoomChange = useCallback(shouldZoom => {
+    setIsZoomed(shouldZoom)
+    if(!hasZoomed){
+      setHasZoomed(true)
+    }
+  }, [])
+
+  /* Handle img loading, errors */
+  const [imgError, setImgError] = useState(false)
+  const [rawImgError, setRawImgError] = useState(false)
+  const handleImgError = () => {
+    isZoomed ? setRawImgError(true) : setImgError(true)
+  }
 
   /* Setting Links and link labels, if they're passed in */
   let link1Tag = ``;
@@ -65,47 +89,96 @@ function EventCard(props) {
   return (
     <div class="event-card">
       {/* <Link to="#" class="event-card-link-wrapper"> */}
-        <div class="event-card-container">
-          <div class="event-img">
-            <div class="event-img-overlay">
-              <div class="overlay-row">
-                <a target="_blank" rel="noopener" href={rawImgURL}><img src={zoom}/></a>
-                {link1Tag != '' ? <a target="_blank" rel="noopener" href={props.link1}><img src={linkImg}/></a> : <></>}
-              </div>
-              <div class="overlay-row">
-                <a target="_blank" rel="noopener" href={`https://www.google.com/calendar/render?action=TEMPLATE&text=${props.title}&dates=${formattedCalDates}&details=${props.description}&location=${props.location}&sf=true&output=xml`}><img src={calendar}/></a>
-                <a target="_blank" rel="noopener" href={`https://www.google.com/maps/search/?api=1&query=${props.location}`}><img src={maps}/></a>
-              </div>
-            </div> 
-            <img class="poster" src={props.img} />
-          </div>
-          <a onClick={toggleViewMore} class="event-card-link-wrapper">
-            <div class={viewMore ? "event-text full" : "event-text"}>
-              <h3>{props.title}</h3>
-              <p class="event-description">{props.description}</p>
-              <div class="event-more-info">
-                <div class="event-location">
-                  {props.location ? <p><b>Location:</b> {props.location}</p> : <></>}
-                </div>
-                <div class="event-datetime">
-                  {props.time ? <p>{props.time}</p> : <></>}
-                  {/* {props.time && props.date ? <p>, </p> : <></>} */}
-                  {props.date ? <p>{props.date}</p> : <></>}
-                </div>
-                <div class="event-links">
-                  {link1Tag}
-                  {link2Tag}
-                </div>
-              </div>
+      <div class="event-card-container">
+        <div class="event-img">
+          <div class="event-img-overlay">
+            <div class="overlay-row">
+              {/* <a target="_blank" rel="noopener" href={rawImgURL}><img src={zoom}/></a> */}
+              <a onClick={handleZoomChange}>
+                <img src={zoom} />
+              </a>
+              {link1Tag != "" ? (
+                <a target="_blank" rel="noopener" href={props.link1}>
+                  <img src={linkImg} />
+                </a>
+              ) : (
+                <></>
+              )}
             </div>
-            <div class="event-view-more-bg">
-              <a class="event-view-more-button">
-                View {viewMore ? "Less" : "More"}
-                <img class={viewMore ? "event-view-more-expand active" : "event-view-more-expand"} src={expand} />
+            <div class="overlay-row">
+              <a
+                target="_blank"
+                rel="noopener"
+                href={`https://www.google.com/calendar/render?action=TEMPLATE&text=${props.title}&dates=${formattedCalDates}&details=${props.description}&location=${props.location}&sf=true&output=xml`}
+              >
+                <img src={calendar} />
+              </a>
+              <a
+                target="_blank"
+                rel="noopener"
+                href={`https://www.google.com/maps/search/?api=1&query=${props.location}`}
+              >
+                <img src={maps} />
               </a>
             </div>
-          </a>
+          </div>
+          <ControlledZoom isZoomed={isZoomed} onZoomChange={handleZoomChange}>
+            <img
+              onError={handleImgError}
+              class="poster"
+              src={
+                imgError && !rawImgError
+                  ? rawImgURL
+                  : imgError && rawImgError
+                  ? defaultEventImg
+                  : hasZoomed && !rawImgError
+                  ? rawImgURL
+                  : props.img
+              }
+            />
+          </ControlledZoom>
+          {/* {imgError ? <Spinner /> : <></>} */}
         </div>
+        <a onClick={toggleViewMore} class="event-card-link-wrapper">
+          <div class={viewMore ? "event-text full" : "event-text"}>
+            <h3>{props.title}</h3>
+            <p class="event-description">{props.description}</p>
+            <div class="event-more-info">
+              <div class="event-location">
+                {props.location ? (
+                  <p>
+                    <b>Location:</b> {props.location}
+                  </p>
+                ) : (
+                  <></>
+                )}
+              </div>
+              <div class="event-datetime">
+                {props.time ? <p>{props.time}</p> : <></>}
+                {/* {props.time && props.date ? <p>, </p> : <></>} */}
+                {props.date ? <p>{props.date}</p> : <></>}
+              </div>
+              <div class="event-links">
+                {link1Tag}
+                {link2Tag}
+              </div>
+            </div>
+          </div>
+          <div class="event-view-more-bg">
+            <a class="event-view-more-button">
+              View {viewMore ? "Less" : "More"}
+              <img
+                class={
+                  viewMore
+                    ? "event-view-more-expand active"
+                    : "event-view-more-expand"
+                }
+                src={expand}
+              />
+            </a>
+          </div>
+        </a>
+      </div>
       {/* </Link> */}
     </div>
   );

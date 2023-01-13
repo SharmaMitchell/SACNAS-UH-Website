@@ -73,6 +73,23 @@
 .event-img-overlay .overlay-row:nth-child(2){
     padding-bottom: 10%;
 }
+.event-img-overlay .overlay-row a{
+    cursor: pointer;
+}
+[data-rmiz-modal-overlay="visible"]{
+    background-color: var(--background-dark);
+}
+/* [data-rmiz-modal-img]{
+    transition: all 0.3s;
+} */
+.event-img .lds-ring{
+    position: absolute;
+    margin-top: calc(50% - 34px)
+}
+.event-img .lds-ring div {
+    border: 8px solid rgb(125, 125, 125);
+    border-color: rgb(125, 125, 125) transparent transparent transparent;
+  }
 .event-card-container .event-text{
     color: var(--text-primary);
     margin: 15px;
