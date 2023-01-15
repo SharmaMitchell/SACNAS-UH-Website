@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.0f4aee58.css",
-    "main.js": "/static/js/main.f25c0f81.js",
+    "main.css": "/static/css/main.2412c3cb.css",
+    "main.js": "/static/js/main.4f2af2c1.js",
     "static/media/UH-Skyline-Shot.jpg": "/static/media/UH-Skyline-Shot.63f101264f5826f3bab6.jpg",
     "static/media/2022-Diversity-Award-crop2.jpg": "/static/media/2022-Diversity-Award-crop2.cbd3b72dea392195eb4b.jpg",
     "static/media/houaztec.jpg": "/static/media/houaztec.725f21d433e16c7af502.jpg",
@@ -15,11 +15,11 @@
     "static/media/SACNAS-Donate-Alt.png": "/static/media/SACNAS-Donate-Alt.f18c559b1f742d34314c.png",
     "static/media/sun-icon.png": "/static/media/sun-icon.f7ee4f76a714a1999eb8.png",
     "index.html": "/index.html",
-    "main.0f4aee58.css.map": "/static/css/main.0f4aee58.css.map",
-    "main.f25c0f81.js.map": "/static/js/main.f25c0f81.js.map"
+    "main.2412c3cb.css.map": "/static/css/main.2412c3cb.css.map",
+    "main.4f2af2c1.js.map": "/static/js/main.4f2af2c1.js.map"
   },
   "entrypoints": [
-    "static/css/main.0f4aee58.css",
-    "static/js/main.f25c0f81.js"
+    "static/css/main.2412c3cb.css",
+    "static/js/main.4f2af2c1.js"
   ]
 }
