@@ -42,11 +42,15 @@ a{
 #navbar .brand{
   position: absolute;
   width: min(100%, 1300px);
-  pointer-events: none; /* Can click through to navlist and spam, but can't click to go home */
+  pointer-events: none; /*Can click through to navlist and spam, but can't click to go home*/
 
   /*font-family: 'Roboto';*/
   font-size: 1.2rem;
   letter-spacing: 0.15rem;
+}
+#navbar .brand a{
+  display: inline-block;
+  pointer-events: all;
 }
 #navbar .brand h1{
     color: white;
