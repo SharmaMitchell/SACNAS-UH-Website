@@ -48,10 +48,6 @@
 .event-card-container .event-img:hover .event-img-overlay{
     opacity: 1;
 }
-.event-card-container .event-img:hover .poster{
-    /* transform: scale(1.05); */
-    /* filter: blur(1px); */
-}
 .event-img-overlay img{
     width: 60px;
     height: 60px;
