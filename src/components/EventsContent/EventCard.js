@@ -65,31 +65,37 @@ function EventCard(props) {
  }
 
   let rawImgURL = ""
-  if(props.img.indexOf("i.imgur.com") != -1){
-    rawImgURL = props.img.slice(0,props.img.lastIndexOf('l')) + props.img.slice(props.img.lastIndexOf('l') + 1)
-  }
-  else{
-    rawImgURL = props.img
+  if(props.img){
+    if(props.img.indexOf("i.imgur.com") != -1){
+      rawImgURL = props.img.slice(0,props.img.lastIndexOf('l')) + props.img.slice(props.img.lastIndexOf('l') + 1)
+    }
+    else{
+      rawImgURL = props.img
+    }
   }
 
-  let calendarDateNum = Date.parse(props.date)
-  let calendarDateISO = new Date(calendarDateNum)
-  let day = calendarDateISO.getDate().toString()
-  let month = (calendarDateISO.getMonth()+1).toString()
-  month.length == 1 ? month = '0' + month : month = month
-  let year = calendarDateISO.getFullYear().toString()
-  let calendarDate = year + month + day
+  let formattedCalDates = props.date
+  if(props.date){
+    let calendarDateNum = Date.parse(props.date)
+    let calendarDateISO = new Date(calendarDateNum)
+    let day = calendarDateISO.getDate().toString()
+    let month = (calendarDateISO.getMonth()+1).toString()
+    month.length == 1 ? month = '0' + month : month = month
+    let year = calendarDateISO.getFullYear().toString()
+    let calendarDate = year + month + day
 
-  let calendarStartTime = props.time.replace(":","").replace(/(AM|PM)/, "").replace(" ", "") + "00"
-  if(calendarStartTime.length < 6){
-    calendarStartTime = '0' + calendarStartTime
-  }
-  if(props.time.indexOf("PM") != -1){
-    calendarStartTime = (Number(calendarStartTime) + 120000).toString()
-  }
-  let calendarEndTime = (Number(calendarStartTime) + 20000).toString() // End time 2 hours after
+    let calendarStartTime = props.time.replace(":","").replace(/(AM|PM)/, "").replace(" ", "") + "00"
+    if(calendarStartTime.length < 6){
+      calendarStartTime = '0' + calendarStartTime
+    }
+    if(props.time.indexOf("PM") != -1){
+      calendarStartTime = (Number(calendarStartTime) + 120000).toString()
+    }
+    let calendarEndTime = (Number(calendarStartTime) + 20000).toString() // End time 2 hours after
 
-  let formattedCalDates = calendarDate + "T" + calendarStartTime + "/" + calendarDate + "T" + calendarEndTime
+    formattedCalDates = calendarDate + "T" + calendarStartTime + "/" + calendarDate + "T" + calendarEndTime
+  }
+  
 
   return (
     <div class="event-card">
