@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.2412c3cb.css",
-    "main.js": "/static/js/main.e0b9b3a6.js",
+    "main.js": "/static/js/main.e9366ff2.js",
     "static/media/UH-Skyline-Shot.jpg": "/static/media/UH-Skyline-Shot.63f101264f5826f3bab6.jpg",
     "static/media/2022-Diversity-Award-crop2.jpg": "/static/media/2022-Diversity-Award-crop2.cbd3b72dea392195eb4b.jpg",
     "static/media/houaztec.jpg": "/static/media/houaztec.725f21d433e16c7af502.jpg",
@@ -16,10 +16,10 @@
     "static/media/sun-icon.png": "/static/media/sun-icon.f7ee4f76a714a1999eb8.png",
     "index.html": "/index.html",
     "main.2412c3cb.css.map": "/static/css/main.2412c3cb.css.map",
-    "main.e0b9b3a6.js.map": "/static/js/main.e0b9b3a6.js.map"
+    "main.e9366ff2.js.map": "/static/js/main.e9366ff2.js.map"
   },
   "entrypoints": [
     "static/css/main.2412c3cb.css",
-    "static/js/main.e0b9b3a6.js"
+    "static/js/main.e9366ff2.js"
   ]
 }
