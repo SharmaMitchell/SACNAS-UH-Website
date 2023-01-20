@@ -41,7 +41,7 @@ function EventCard(props) {
       setHasZoomed(true)
     }
   }, [])
-  const handleZoomChangeImg = () => {
+  const handleZoomOut = () => {
     if(isZoomed){
       handleZoomChange()
     }
@@ -58,10 +58,10 @@ function EventCard(props) {
   let link1Tag = ``;
   let link2Tag = ``;
   if (props.link1 != undefined && props.link1 != ""){
-  link1Tag = (<a href={props.link1}>{props.link1Label}</a>);
+  link1Tag = (<a target="_blank" rel="noopener" href={props.link1}>{props.link1Label || "Event Link"}</a>);
  }
  if (props.link2 != undefined && props.link2 != ""){
-  link2Tag = (<a href={props.link2}>{props.link2Label}</a>);
+  link2Tag = (<a target="_blank" rel="noopener" href={props.link2}>{props.link2Label || "Event Link 2"}</a>);
  }
 
   let rawImgURL = ""
@@ -127,7 +127,7 @@ function EventCard(props) {
               </a>
             </div>
           </div>
-          <ControlledZoom isZoomed={isZoomed} onZoomChange={handleZoomChangeImg}>
+          <ControlledZoom isZoomed={isZoomed} onZoomChange={handleZoomOut}>
             <img
               onError={handleImgError}
               class="poster"
