@@ -34,9 +34,9 @@ function Navbar(props) {
             </div>
 
             <div class="brand">
-              <a>
+              <Link to="/">
                 <h1>SACNAS UH</h1>
-              </a>
+              </Link>
             </div>
             <div class="nav-list">
               <ul>
