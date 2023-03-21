@@ -60,7 +60,11 @@ function Navbar(props) {
                     <Link to="/leadership">Leadership</Link>
                   </a>
                 </li>
-                {/*<li><a class={location==="/advisors" ? "cu-page" : ""}><Link to="/advisors">Advisors</Link></a></li> */}
+                {/* <li>
+                  <a class={location === "/resources" ? "cu-page" : ""}>
+                    <Link to="/resources">Resources</Link>
+                  </a>
+                </li> */}
               </ul>
             </div>
           </div>
@@ -89,7 +93,11 @@ function Navbar(props) {
                 <Link to="/leadership">Leadership</Link>
               </a>
             </li>
-            {/*<li><a class={location==="/advisors" ? "cu-page" : ""}><Link to="/advisors">Advisors</Link></a></li> */}
+            {/* <li>
+                  <a class={location === "/resources" ? "cu-page" : ""}>
+                    <Link to="/resources">Resources</Link>
+                  </a>
+                </li> */}
           </ul>
           <div class="nav-list-bottom">
             <div class="spam" onClick={showSidebar}>
