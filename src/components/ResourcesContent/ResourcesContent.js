@@ -1,11 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 /* 
 TODO:
-- Get 5 latest videos from SACNAS UH YouTube channel
-- Link (or embed) the videos
-- List video metadata (title, description, date published) next to the link/embed 
-    (if possible via youtube API)
+- Properly set up API call (need API key)
 - Add a link to the SACNAS UH YouTube channel (May want to add that to the footer too)
 */
 
@@ -42,7 +39,24 @@ const videos = [
   },
 ];
 
+const SACNAS_UH_YT_ID = "UC2X1nE_E-cpXlSXWKvaRCtQ";
+const NUM_VIDEOS = 5;
+// const API_KEY = process.env.SACNAS_UH_YT_API_KEY;
+
 function ResourcesContent() {
+  //   const [videos, setVideos] = useState([]);
+
+  //   useEffect(() => {
+  //     fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet
+  //             &channelId=${SACNAS_UH_YT_ID}
+  //             &maxResults=${NUM_VIDEOS}
+  //             &order=date
+  //             &type=video
+  //             &key=${API_KEY}`)
+  //       .then((response) => response.json())
+  //       .then((data) => setVideos(data.items));
+  //   }, []);
+
   return (
     <div class="resources">
       <div class="resources-container">
