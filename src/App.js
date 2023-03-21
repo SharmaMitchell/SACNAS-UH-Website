@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Events from './pages/Events';
 import Research from './pages/Research';
 import Leadership from './pages/Leadership';
+import Resources from './pages/Resources';
 import Donate from './pages/Donate';
 import MailList from './pages/MailList';
 import SocialsBanner from './components/SocialsBanner/SocialsBanner'
@@ -34,6 +35,7 @@ function App() {
           <Route path='/events' element={<Events/>} />
           <Route path='/research' element={<Research/>} />
           <Route path='/leadership' element={<Leadership/>} />
+          <Route path='/resources' element={<Resources/>} />
           <Route path='/maillist' element={<MailList/>} />
           <Route path='/donate' element={<Donate/>} />
         </Routes>
