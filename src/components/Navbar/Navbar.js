@@ -6,9 +6,11 @@ import navBarImg from "../../assets/fa_bars.png";
 import MailAndMoney from "../MailAndMoney/MailAndMoney";
 
 function Navbar(props) {
-  const location = useLocation().pathname; /* page location, for underline on current page */
+  const location =
+    useLocation().pathname; /* page location, for underline on current page */
 
-  const [sidebar, setSidebar] = useState(false); /* Sidebar show/hide (for mobile) */
+  const [sidebar, setSidebar] =
+    useState(false); /* Sidebar show/hide (for mobile) */
 
   const showSidebar = () => setSidebar(!sidebar); /* Sidebar toggle function */
   return (
@@ -29,7 +31,7 @@ function Navbar(props) {
                 <div class="notch"></div>
               </div>
               <div class="spam">
-                <MailAndMoney location={location}/>
+                <MailAndMoney location={location} />
               </div>
             </div>
 
@@ -60,11 +62,11 @@ function Navbar(props) {
                     <Link to="/leadership">Leadership</Link>
                   </a>
                 </li>
-                {/* <li>
+                <li>
                   <a class={location === "/resources" ? "cu-page" : ""}>
                     <Link to="/resources">Resources</Link>
                   </a>
-                </li> */}
+                </li>
               </ul>
             </div>
           </div>
@@ -93,11 +95,11 @@ function Navbar(props) {
                 <Link to="/leadership">Leadership</Link>
               </a>
             </li>
-            {/* <li>
-                  <a class={location === "/resources" ? "cu-page" : ""}>
-                    <Link to="/resources">Resources</Link>
-                  </a>
-                </li> */}
+            <li>
+              <a class={location === "/resources" ? "cu-page" : ""}>
+                <Link to="/resources">Resources</Link>
+              </a>
+            </li>
           </ul>
           <div class="nav-list-bottom">
             <div class="spam" onClick={showSidebar}>
