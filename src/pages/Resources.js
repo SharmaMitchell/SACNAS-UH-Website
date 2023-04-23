@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ResourcesContent from '../components/ResourcesContent/ResourcesContent'
 
-function Research() {
+function Resources() {
+  useEffect(() => {
+    document.title = "Resources - SACNAS UH | Celebrating Scientific Research and Diversity in STEM";
+  }, []);
   return (
     <>
         <ResourcesContent />
@@ -9,4 +12,4 @@ function Research() {
   )
 }
 
-export default Research
+export default Resources

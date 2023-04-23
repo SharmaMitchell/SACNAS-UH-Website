@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import HomeContent from '../components/HomeContent/HomeContent'
-import AwardBanner from '../components/HomeContent/AwardBanner'
+
 function Home() {
+  useEffect(() => {
+    document.title = "SACNAS UH | Celebrating Scientific Research and Diversity in STEM";
+  }, []);
+
   return (
     <>
         <HomeContent />
