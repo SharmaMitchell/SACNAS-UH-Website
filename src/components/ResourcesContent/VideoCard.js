@@ -3,6 +3,12 @@ import "./VideoCard.css";
 import expand from "../../assets/expand.png";
 
 function VideoCard(props) {
+  const formattedDate = new Date(props.date).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+
   return (
     <div class="video-card">
       <div class="video-card-container">
@@ -13,7 +19,7 @@ function VideoCard(props) {
           <h3>{props.title}</h3>
         </a>
         <div class="video-card-date">
-          <p>{props.date}</p>
+          <p>{formattedDate}</p>
         </div>
       </div>
       <div class="video-card-view">

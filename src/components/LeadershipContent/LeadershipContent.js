@@ -10,7 +10,7 @@ function LeadershipContent() {
   /* Public Google Sheet ID */
   const SHEET_ID = '1vvNnL1TntLB3_nFWm-cm0ZEZDgJvFTjGcTxyWbWfebc';
   /* Read-only API key, limited to sacnas-uh.org domain */
-  const API_KEY = 'AIzaSyCWFLx8b9hgh5nlwhN_9S6awfghwUBoXLo';
+  const API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
   
   const sheetRanges = [
     "Faculty Advisors!A2:D10",

@@ -7,7 +7,7 @@ function EventsContent() {
   /* Public Google Sheet ID */
   const SHEET_ID = '19AWlwwjbWWRGz68mzYSHN5-mKiKmKZbHZDuDpZegtmE';
   /* Read-only API key, limited to sacnas-uh.org domain */
-  const API_KEY = 'AIzaSyCWFLx8b9hgh5nlwhN_9S6awfghwUBoXLo';
+  const API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
   
   const [upcoming, setUpcoming] = useState([]); /* Upcoming events data */
   const [uLoading, setULoading] = useState(true); /* Upcoming events loading state */
