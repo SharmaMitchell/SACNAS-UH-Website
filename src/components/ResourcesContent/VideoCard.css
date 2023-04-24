@@ -5,7 +5,7 @@
   justify-content: center;
   border-radius: 20px;
   background-color: var(--card-background);
-  margin: 20px 40px 20px 0;
+  margin: 20px;
   width: 330px;
 }
 .video-card-container {
@@ -81,4 +81,10 @@
   margin-left: 10px;
   transition: all 0.6s;
   transform: rotate(270deg);
+}
+
+@media only screen and (min-width: 768px) {
+  .video-card {
+    margin: 20px 40px 20px 0;
+  }
 }
