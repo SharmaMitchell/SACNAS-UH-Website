@@ -13,7 +13,7 @@ function EventsContent() {
   const [uLoading, setULoading] = useState(true); /* Upcoming events loading state */
 
   /* Upcoming events API call to retreive data from Google Sheets */
-  useEffect(() => {fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/Upcoming!A2:J18?key=${API_KEY}`)
+  useEffect(() => {fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/Upcoming!A2:J19?key=${API_KEY}`)
     .then(function(response){
       return response.json();
     })
@@ -29,7 +29,7 @@ function EventsContent() {
   const [pLoading, setPLoading] = useState(true); /* Previous events loading state */
   
   /* Previous events API call to retreive data from Google Sheets */
-  useEffect(() => {fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/Archive!A2:J18?key=${API_KEY}`)
+  useEffect(() => {fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/Archive!A2:J19?key=${API_KEY}`)
     .then(function(response){
       return response.json();
     })
