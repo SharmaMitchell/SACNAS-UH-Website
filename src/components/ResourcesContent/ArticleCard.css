@@ -24,7 +24,7 @@
 .article-card-image img {
   width: 100%;
   min-width: min(318px, 90vw);
-  height: 160px;
+  height: 140px;
   object-fit: cover;
   border-radius: 14px;
 }
