@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./ResourcesContent.css";
 import VideoCard from "./VideoCard";
 import ArticleCard from "./ArticleCard";
+import Spinner from "../Spinner/Spinner";
 /* 
 TODO:
 - Add a link to the SACNAS UH YouTube channel (May want to add that to the footer too)
@@ -37,13 +38,17 @@ const API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
 
 function ResourcesContent() {
   const [videos, setVideos] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch(
       `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${SACNAS_UH_YT_ID}&maxResults=${NUM_VIDEOS}&order=date&type=video&key=${API_KEY}&hqdefault=true`
     )
       .then((response) => response.json())
-      .then((data) => setVideos(data.items));
+      .then((data) => {
+        setVideos(data.items);
+        setLoading(false);
+      });
   }, []);
 
   useEffect(() => {
@@ -74,6 +79,7 @@ function ResourcesContent() {
         </div>
         <div class="resources-content">
           <div class="resources-content-container">
+            {loading && <Spinner />}
             {videos?.map((video) => (
               <VideoCard
                 title={video.snippet.title}
