@@ -2,6 +2,7 @@
   --background: white;
   --background-dark: #121212;
   --text-primary: black;
+  --text-light: #222;
   --text-highlight: #c8102e;
   --primary: #c8102e;
   --secondary: #960C22;
@@ -20,6 +21,7 @@
 [data-theme='dark']{
   --background: var(--background-dark);
   --text-primary: white;
+  --text-light: #DDD;
 
   --url: var(--pink);
 

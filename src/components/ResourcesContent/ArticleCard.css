@@ -35,14 +35,20 @@
 }
 .article-card-title h3 {
   text-align: left;
-  /* font-size: 1.25rem;
-    font-weight: 300; */
+  font-size: 1rem;
   font-style: normal;
   color: var(--text-primary);
   margin: 5px 0;
   margin-top: 10px;
   padding: 0 10px;
   width: 100%;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }
 .article-card-date {
   display: flex;
@@ -52,9 +58,10 @@
 .article-card-date p {
   text-align: left;
   width: 100%;
-  font-size: 1.15rem;
+  font-size: 1rem;
   font-weight: 300;
   font-style: normal;
+  color: var(--text-light);
   margin: 0;
   margin-bottom: 10px;
   padding: 0 10px;
