@@ -147,14 +147,14 @@
 }
 .event-card-container .event-datetime p{
     display: inline-block;
-    margin: 3px;
+    margin: 3px 3px 3px 0;
 }
 .event-card-container .event-location{
     display: flex;
 }
 .event-card-container .event-location p{
     margin-top: 10px;
-    margin: 3px;
+    margin: 3px 0;
 }
 .event-card-container .event-view-more-bg{
     background-color: var(--primary);
