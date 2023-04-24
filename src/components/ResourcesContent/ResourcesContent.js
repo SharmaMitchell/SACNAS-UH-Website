@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-
+import "./ResourcesContent.css";
+import VideoCard from "./VideoCard";
 /* 
 TODO:
 - Properly set up API call (need API key)
@@ -12,35 +13,47 @@ const videos = [
     description: "SACNAS UH 2021 Virtual Graduation",
     date: "May 2021",
     link: "https://www.youtube.com/watch?v=6I0J0l9c6gA",
+    img: "https://i.ytimg.com/vi/6I0J0l9c6gA/maxresdefault.jpg",
   },
   {
     title: "SACNAS UH: 2021 Virtual Graduation",
     description: "SACNAS UH 2021 Virtual Graduation",
     date: "May 2021",
     link: "https://www.youtube.com/watch?v=6I0J0l9c6gA",
+    img: "https://i.ytimg.com/vi/6I0J0l9c6gA/maxresdefault.jpg",
   },
   {
     title: "SACNAS UH: 2021 Virtual Graduation",
     description: "SACNAS UH 2021 Virtual Graduation",
     date: "May 2021",
     link: "https://www.youtube.com/watch?v=6I0J0l9c6gA",
+    img: "https://i.ytimg.com/vi/6I0J0l9c6gA/maxresdefault.jpg",
   },
   {
     title: "SACNAS UH: 2021 Virtual Graduation",
     description: "SACNAS UH 2021 Virtual Graduation",
     date: "May 2021",
     link: "https://www.youtube.com/watch?v=6I0J0l9c6gA",
+    img: "https://i.ytimg.com/vi/6I0J0l9c6gA/maxresdefault.jpg",
   },
   {
     title: "SACNAS UH: 2021 Virtual Graduation",
     description: "SACNAS UH 2021 Virtual Graduation",
     date: "May 2021",
     link: "https://www.youtube.com/watch?v=6I0J0l9c6gA",
+    img: "https://i.ytimg.com/vi/6I0J0l9c6gA/maxresdefault.jpg",
+  },
+  {
+    title: "SACNAS UH: 2021 Virtual Graduation",
+    description: "SACNAS UH 2021 Virtual Graduation",
+    date: "May 2021",
+    link: "https://www.youtube.com/watch?v=6I0J0l9c6gA",
+    img: "https://i.ytimg.com/vi/6I0J0l9c6gA/maxresdefault.jpg",
   },
 ];
 
 const SACNAS_UH_YT_ID = "UC2X1nE_E-cpXlSXWKvaRCtQ";
-const NUM_VIDEOS = 5;
+const NUM_VIDEOS = 6;
 // const API_KEY = process.env.SACNAS_UH_YT_API_KEY;
 
 function ResourcesContent() {
@@ -61,30 +74,26 @@ function ResourcesContent() {
     <div class="resources">
       <div class="resources-container">
         <div class="resources-title">
-          <h1>Resources</h1>
+          <h2>Workshops</h2>
         </div>
         <div class="resources-content">
           <div class="resources-content-container">
-            <div class="resources-content-title">
-              <h2>SACNAS UH YouTube</h2>
-              {videos.map((video) => (
-                <div class="resources-content-video">
-                  <div class="resources-content-video-title">
-                    <h3>{video.title}</h3>
-                  </div>
-                  <div class="resources-content-video-description">
-                    <p>{video.description}</p>
-                  </div>
-                  <div class="resources-content-video-date">
-                    <p>{video.date}</p>
-                  </div>
-                  <div class="resources-content-video-link">
-                    <a href={video.link}>Link</a>
-                  </div>
-                </div>
-              ))}
-            </div>
+            {videos.map((video) => (
+              <VideoCard
+                title={video.title}
+                description={video.description}
+                date={video.date}
+                link={video.link}
+                img={video.img}
+              />
+            ))}
           </div>
+        </div>
+        <div class="resources-title">
+          <h2>Articles</h2>
+        </div>
+        <div class="resources-content">
+          <div class="resources-content-container"></div>
         </div>
       </div>
     </div>
