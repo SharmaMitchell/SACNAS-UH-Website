@@ -3,6 +3,11 @@ import "./ArticleCard.css";
 import expand from "../../assets/expand.png";
 
 function ArticleCard(props) {
+  const formattedDate = new Date(props.date).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
   return (
     <div class="article-card">
       <div class="article-card-container">
@@ -14,7 +19,7 @@ function ArticleCard(props) {
         </a>
         <div class="article-card-date">
           <p>
-            {props.author} | {props.date}
+            {props.author} | {formattedDate}
           </p>
         </div>
       </div>
