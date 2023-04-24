@@ -132,7 +132,7 @@ a{
   color: white;
   text-transform: uppercase;
   /* Note: Padding doubled due to using both <Link> and <a> (needed <a> for class) */
-  padding: 10px 5px; 
+  padding: 8px 5px; 
   display: block;
   text-align: left;
 }
@@ -168,6 +168,7 @@ a{
 .sidebar{
   background-color: var(--secondary);
   width: 80vw;
+  min-width: min(280px, 100vw);
   height: max(92vh, 100vh - 80px);
   display: flex;
   justify-content: flex-start;
