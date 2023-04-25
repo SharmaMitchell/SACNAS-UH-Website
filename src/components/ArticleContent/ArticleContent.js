@@ -21,7 +21,7 @@ function ArticleContent() {
         console.log(data);
         // Replace hardcoded colors with CSS variables
         let formattedData = data.replace(
-          /color:#000000;/g,
+          /color:#(?:[0-9a-fA-F]{3}){1,2};/g,
           "color:var(--text-primary);"
         );
 
