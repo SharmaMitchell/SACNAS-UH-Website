@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./ArticleCard.css";
 import expand from "../../assets/expand.png";
 
@@ -21,7 +22,7 @@ function ArticleCard(props) {
   return (
     <div class="article-card">
       <div class="article-card-container">
-        <a class="article-card-image" href={props.link}>
+        <Link class="article-card-image" to={props.link}>
           <img
             src={imgURL}
             onError={() => {
@@ -30,10 +31,10 @@ function ArticleCard(props) {
             alt="Article Thumbnail"
             referrerpolicy="no-referrer"
           />
-        </a>
-        <a class="article-card-title" href={props.link}>
+        </Link>
+        <Link class="article-card-title" to={props.link}>
           <h3>{props.title}</h3>
-        </a>
+        </Link>
         <div class="article-card-date">
           <p>
             {props.author} | {formattedDate}
@@ -41,10 +42,10 @@ function ArticleCard(props) {
         </div>
       </div>
       <div class="article-card-view">
-        <a class="article-card-view-button" href={props.link}>
+        <Link class="article-card-view-button" to={props.link}>
           Read Article
           <img class="article-card-view-arrow" src={expand} />
-        </a>
+        </Link>
       </div>
     </div>
   );
