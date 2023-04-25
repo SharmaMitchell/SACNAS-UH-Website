@@ -113,7 +113,6 @@ function ResourcesContent() {
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setArticles(
           data.files.filter(
             (file) => file.mimeType === "application/vnd.google-apps.document"

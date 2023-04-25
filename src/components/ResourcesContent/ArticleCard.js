@@ -13,10 +13,8 @@ function ArticleCard(props) {
   });
 
   useEffect(() => {
-    console.log(props.img);
     if (props.img === "" || props.img === undefined) {
       setImgURL(defaultImg);
-      console.log("default");
     }
   }, [props.img]);
 
