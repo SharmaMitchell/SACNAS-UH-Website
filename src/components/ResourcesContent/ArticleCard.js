@@ -29,7 +29,7 @@ function ArticleCard(props) {
               setImgURL(defaultImg);
             }}
             alt="Article Thumbnail"
-            referrerpolicy="no-referrer"
+            referrerPolicy="no-referrer"
           />
         </Link>
         <Link class="article-card-title" to={props.link}>
