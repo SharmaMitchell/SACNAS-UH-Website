@@ -1,15 +1,35 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./ArticleContent.css";
+import LeadershipCard from "../LeadershipContent/LeadershipCard";
 
 const API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
 
 function ArticleContent() {
   const { articleId } = useParams();
+  const [profileData, setProfileData] = useState([]);
+  const [profileDataLoading, setProfileDataLoading] = useState(true);
   const [articleData, setArticleData] = useState([]);
   const [articleDataLoading, setArticleDataLoading] = useState(true);
   const [articleMetadata, setArticleMetadata] = useState({});
   const [articleMetadataLoading, setArticleMetadataLoading] = useState(true);
+
+  /* Public Google Sheet ID */
+  const SHEET_ID = "1vvNnL1TntLB3_nFWm-cm0ZEZDgJvFTjGcTxyWbWfebc";
+
+  const sheetRanges = [
+    "Faculty Advisors!A2:D10",
+    "Faculty Co-Advisors!A2:D10",
+    "Officers!A2:H20",
+    "Mentors and Support Officers!A2:H20",
+    "Alumni Advisors!A2:D10",
+    "Founding Faculty!A2:C2",
+    "Alumni List!A1:J20",
+  ];
+  let RANGES = sheetRanges[0];
+  for (let i = 1; i < sheetRanges.length; i++) {
+    RANGES += "&ranges=" + sheetRanges[i];
+  }
 
   useEffect(() => {
     if (articleId === "" || articleId === undefined) return;
@@ -112,6 +132,51 @@ function ArticleContent() {
     }
   }, [articleId]);
 
+  /* Leadership data API call to retreive data from Google Sheets */
+  useEffect(() => {
+    // Check if data exists in session storage
+    const storageData = sessionStorage.getItem("leadershipData");
+    if (storageData) {
+      const leadershipData = JSON.parse(storageData);
+      const flattenedData = leadershipData.flatMap((entry) =>
+        entry.values.slice(1)
+      );
+      const person = flattenedData.find(
+        (entry) => entry[0] === "Mitchell Sharma"
+      );
+      setProfileData(person);
+      setProfileDataLoading(false);
+      return;
+    }
+
+    fetch(
+      `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values:batchGet?ranges=${RANGES}&key=${API_KEY}`
+    )
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        //console.log(data.valueRanges);
+        if (data.valueRanges != undefined) {
+          // Store data in session storage
+          sessionStorage.setItem(
+            "leadershipData",
+            JSON.stringify(data.valueRanges)
+          );
+          const leadershipData = data.valueRanges;
+          const flattenedData = leadershipData.flatMap((entry) =>
+            entry.values.slice(1)
+          );
+          const person = flattenedData.find(
+            (entry) => entry[0] === "Mitchell Sharma"
+          );
+          setProfileData(person);
+          setProfileDataLoading(false);
+        }
+        return data.valueRanges;
+      });
+  }, []);
+
   return (
     <div className="article">
       <div className="article-wrapper">
@@ -131,6 +196,14 @@ function ArticleContent() {
             dangerouslySetInnerHTML={{ __html: articleData }}
           ></div>
         </div>
+        {!profileDataLoading && (
+          <LeadershipCard
+            title={profileData[0]}
+            paragraph={profileData[2]}
+            img={profileData[3]}
+            width="m"
+          />
+        )}
       </div>
     </div>
   );

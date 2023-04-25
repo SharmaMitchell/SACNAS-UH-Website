@@ -4,7 +4,7 @@ import LeadershipCard from "./LeadershipCard";
 import Spinner from "../Spinner/Spinner";
 
 function LeadershipContent() {
-  const [leadershipData, setLeadershipData] = useState([]); /* Upcoming events data */
+  const [leadershipData, setLeadershipData] = useState([]); /* Leadership data */
   const [loading, setLoading] = useState(true); /* Leadership loading state */
 
   /* Public Google Sheet ID */
