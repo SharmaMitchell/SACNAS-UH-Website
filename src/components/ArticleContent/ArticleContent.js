@@ -17,6 +17,17 @@ function ArticleContent() {
   const [thumnails, setThumbnails] = useState([]);
   const [articlesLoading, setArticlesLoading] = useState(true);
 
+  // Set page title to article title, once it has loaded
+  useEffect(() => {
+    if (articleMetadata?.title) {
+      document.title =
+        articleMetadata.title +
+        ", by " +
+        articleMetadata.author +
+        " | SACNAS UH";
+    }
+  }, [articleMetadata]);
+
   useEffect(() => {
     if (articleId === "" || articleId === undefined) return;
 
