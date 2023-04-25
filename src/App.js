@@ -8,6 +8,7 @@ import Events from './pages/Events';
 import Research from './pages/Research';
 import Leadership from './pages/Leadership';
 import Resources from './pages/Resources';
+import Article from './pages/Article';
 import Donate from './pages/Donate';
 import MailList from './pages/MailList';
 import SocialsBanner from './components/SocialsBanner/SocialsBanner'
@@ -36,6 +37,7 @@ function App() {
           <Route path='/research' element={<Research/>} />
           <Route path='/leadership' element={<Leadership/>} />
           <Route path='/resources' element={<Resources/>} />
+          <Route path='/article/:articleId' element={<Article/>} />
           <Route path='/maillist' element={<MailList/>} />
           <Route path='/donate' element={<Donate/>} />
         </Routes>
