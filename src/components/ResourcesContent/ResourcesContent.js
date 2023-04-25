@@ -118,6 +118,7 @@ function ResourcesContent() {
     setVideosLoading(false);
   }, []);
 
+  // TODO: Refactor this into a custom hook
   useEffect(() => {
     const sessionData = sessionStorage.getItem("articlesData");
 
