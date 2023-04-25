@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./ArticleContent.css";
 import ArticleCard from "../ResourcesContent/ArticleCard";
+import Spinner from "../Spinner/Spinner";
 
 const API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
 
@@ -38,7 +39,7 @@ function ArticleContent() {
           // Replace hardcoded colors with CSS variables
           let formattedData = data.replace(
             /color:#(?:[0-9a-fA-F]{3}){1,2};/g,
-            "color:var(--text-primary);"
+            ""
           );
 
           // Set all images to have no referrer policy (prevent CORS errors)
@@ -142,10 +143,14 @@ function ArticleContent() {
                 : `${articleMetadata.author} | ${articleMetadata.createdTime}`}
             </p>
           </div>
-          <div
-            className="article-content"
-            dangerouslySetInnerHTML={{ __html: articleData }}
-          ></div>
+          {articleDataLoading ? (
+            <Spinner />
+          ) : (
+            <div
+              className="article-content"
+              dangerouslySetInnerHTML={{ __html: articleData }}
+            ></div>
+          )}
         </div>
         <div className="article-sidebar">
           <div className="article-sidebar-container">
