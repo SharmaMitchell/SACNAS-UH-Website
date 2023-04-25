@@ -104,6 +104,7 @@
     margin: 0;
     text-align: center;
     font-size: 1.05rem;
+    font-weight: 500;
 }
 .leadership-card-text .leadership-card-paragraph{
     text-align: justify;

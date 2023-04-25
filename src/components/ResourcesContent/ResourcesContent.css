@@ -17,7 +17,7 @@
 .resources-title h2 {
   text-align: left;
   font-size: 1.75rem;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
   /* text-transform: uppercase; */
   margin-block-start: 10px;
@@ -30,6 +30,14 @@
   flex-wrap: wrap;
   justify-content: flex-start;
 }
+
+/* Tablet */
+@media only screen and (min-width: 768px) {
+  .resources-title {
+    margin-left: 0;
+  }
+}
+
 /* Desktop */
 @media only screen and (min-width: 1200px) {
   .resources-title h2 {

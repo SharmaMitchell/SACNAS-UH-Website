@@ -109,6 +109,7 @@
 .event-card-container .event-text h3{
     text-align: center;
     margin: 0;
+    font-weight: 500;
 }
 .event-card-container .event-text .event-description{
     text-align: justify;
@@ -133,7 +134,7 @@
 }
 .event-card-container .event-links a{
     color: var(--text-primary);
-    font-weight: 600;
+    font-weight: 500;
     text-decoration: underline;
     margin: 5px;
     display: block;

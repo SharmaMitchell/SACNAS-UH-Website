@@ -32,3 +32,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+b{
+  font-weight: 500;
+}

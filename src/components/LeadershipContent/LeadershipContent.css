@@ -18,7 +18,7 @@
 }
 .leadership-container h2{
     font-size: 1.75rem;
-    font-weight: 300;
+    font-weight: 400;
     font-style: normal;
     /* text-transform: uppercase; */
     margin: 0;
@@ -53,6 +53,9 @@
     justify-content: flex-start;
     width: 100%;
     margin-left: 20px;
+}
+.leadership-alumlist h3{
+    font-weight: 500;
 }
 @media only screen and (min-width: 1200px){
     .leadership-container h2{

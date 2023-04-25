@@ -29,9 +29,12 @@
 .article-container h6 {
   text-align: left;
   width: 100%;
-  color: var(--text-primary) !important;
+  color: var(--text-primary);
   /* overflow: hidden; */
   text-overflow: wrap;
+}
+.article-container a {
+  color: var(--url);
 }
 .article-img {
   max-width: min(95vw, 600px);
@@ -49,6 +52,11 @@
   margin-block-start: 10px;
   margin-block-end: 0.2em;
   margin-bottom: 0;
+}
+.article-title p {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: var(--text-light);
 }
 .article-sidebar {
   display: flex;
