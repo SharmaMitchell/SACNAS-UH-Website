@@ -58,6 +58,12 @@ function ArticleContent() {
           // remove font-family: "...";
           formattedData = formattedData.replace(/font-family: *.*?;/g, "");
 
+          // reduce weight of bold text
+          formattedData = formattedData.replace(
+            /font-weight:700/g,
+            "font-weight:500"
+          );
+
           // remove line height
           formattedData = formattedData.replace(/line-height: *.*?;/g, "");
 
