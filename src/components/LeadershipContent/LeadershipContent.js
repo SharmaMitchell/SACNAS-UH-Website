@@ -26,19 +26,31 @@ function LeadershipContent() {
     RANGES += ("&ranges=" + sheetRanges[i])
   }
 
-  /* Upcoming events API call to retreive data from Google Sheets */
-  useEffect(() => {fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values:batchGet?ranges=${RANGES}&key=${API_KEY}`)
-    .then(function(response){
-      return response.json();
-    })
-    .then(function(data){
-      //console.log(data.valueRanges);
-      if(data.valueRanges != undefined){
-        setLeadershipData(data.valueRanges);
-        setLoading(false);
-      }
-      return data.valueRanges;
-    })},[]);
+  /* Leadership data API call to retreive data from Google Sheets */
+  useEffect(() => {
+    // Check if data exists in session storage
+    const storageData = sessionStorage.getItem('leadershipData');
+    if (storageData) {
+      setLeadershipData(JSON.parse(storageData));
+      setLoading(false);
+      return;
+    }
+  
+    fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values:batchGet?ranges=${RANGES}&key=${API_KEY}`)
+      .then(function(response){
+        return response.json();
+      })
+      .then(function(data){
+        //console.log(data.valueRanges);
+        if(data.valueRanges != undefined){
+          setLeadershipData(data.valueRanges);
+          setLoading(false);
+          // Store data in session storage
+          sessionStorage.setItem('leadershipData', JSON.stringify(data.valueRanges));
+        }
+        return data.valueRanges;
+      })
+  }, []);
   
   const sections = [ /* Sections for leadership cards (besides alumni) */
     {

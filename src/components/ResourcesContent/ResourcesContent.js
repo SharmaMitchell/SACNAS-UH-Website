@@ -93,38 +93,60 @@ function ResourcesContent() {
   // NOTE: This fetch is rly expensive and reaches quota limits quickly (100 reqs/day)
   // TODO: Fetch using Google Apps Script once per day and store on Sheets
   useEffect(() => {
-    fetch(
-      `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${SACNAS_UH_YT_ID}&maxResults=${NUM_VIDEOS}&order=date&type=video&key=${API_KEY}&hqdefault=true`
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.items === undefined) {
-          setVideos(fallbackVideos);
-        } else {
-          setVideos(data.items);
-        }
-        setVideosLoading(false);
-      });
+    // const videosFromStorage = sessionStorage.getItem("workshopVideos");
+
+    // if (videosFromStorage) {
+    //   setVideos(JSON.parse(videosFromStorage));
+    //   setVideosLoading(false);
+    // } else {
+    //   fetch(
+    //     `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${SACNAS_UH_YT_ID}&maxResults=${NUM_VIDEOS}&order=date&type=video&key=${API_KEY}&hqdefault=true`
+    //   )
+    //     .then((response) => response.json())
+    //     .then((data) => {
+    //       if (data.items === undefined) {
+    //         setVideos(fallbackVideos);
+    //       } else {
+    //         setVideos(data.items);
+    //       }
+    //       setVideosLoading(false);
+    //       sessionStorage.setItem("workshopVideos", JSON.stringify(data.items));
+    //     })
+    //     .catch((error) => console.error(error));
+    // }
+    setVideos(fallbackVideos);
+    setVideosLoading(false);
   }, []);
 
   useEffect(() => {
-    fetch(
-      `https://www.googleapis.com/drive/v3/files?q="${ARTICLES_FOLDER_ID}"+in+parents&fields=${fields}&key=${API_KEY}`
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        setArticles(
-          data.files.filter(
+    const sessionData = sessionStorage.getItem("articlesData");
+
+    if (sessionData) {
+      const { articles, thumbnails } = JSON.parse(sessionData);
+      setArticles(articles);
+      setThumbnails(thumbnails);
+      setArticlesLoading(false);
+    } else {
+      fetch(
+        `https://www.googleapis.com/drive/v3/files?q="${ARTICLES_FOLDER_ID}"+in+parents&fields=${fields}&key=${API_KEY}`
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          const articles = data.files.filter(
             (file) => file.mimeType === "application/vnd.google-apps.document"
-          )
-        );
-        setThumbnails(
-          data.files.filter(
+          );
+          const thumbnails = data.files.filter(
             (file) => file.mimeType !== "application/vnd.google-apps.document"
-          )
-        );
-        setArticlesLoading(false);
-      });
+          );
+
+          setArticles(articles);
+          setThumbnails(thumbnails);
+          setArticlesLoading(false);
+
+          const articlesData = JSON.stringify({ articles, thumbnails });
+          sessionStorage.setItem("articlesData", articlesData);
+        });
+    }
   }, []);
 
   // useEffect(() => {

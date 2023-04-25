@@ -13,72 +13,103 @@ function ArticleContent() {
 
   useEffect(() => {
     if (articleId === "" || articleId === undefined) return;
-    fetch(
-      `https://www.googleapis.com/drive/v3/files/${articleId}/export?mimeType=text/html&key=${API_KEY}`
-    )
-      .then((response) => response.text())
-      .then((data) => {
-        console.log(data);
-        // Replace hardcoded colors with CSS variables
-        let formattedData = data.replace(
-          /color:#(?:[0-9a-fA-F]{3}){1,2};/g,
-          "color:var(--text-primary);"
-        );
 
-        // Set all images to have no referrer policy (prevent CORS errors)
-        formattedData = formattedData.replace(
-          /<img/g,
-          '<img referrerpolicy="no-referrer" class="article-img"'
-        );
+    const articleData = sessionStorage.getItem(`articleData-${articleId}`);
+    const articleMetadata = sessionStorage.getItem(
+      `articleMetadata-${articleId}`
+    );
 
-        // remove hardcoded height and width values
-        formattedData = formattedData.replace(/height: *.*?;/g, "");
-        formattedData = formattedData.replace(/width: *.*?;/g, "");
+    if (articleData) {
+      if (articleData !== "undefined") {
+        setArticleData(JSON.parse(articleData));
+      }
+      setArticleDataLoading(false);
+    } else {
+      fetch(
+        `https://www.googleapis.com/drive/v3/files/${articleId}/export?mimeType=text/html&key=${API_KEY}`
+      )
+        .then((response) => response.text())
+        .then((data) => {
+          // Replace hardcoded colors with CSS variables
+          let formattedData = data.replace(
+            /color:#(?:[0-9a-fA-F]{3}){1,2};/g,
+            "color:var(--text-primary);"
+          );
 
-        // remove font size
-        formattedData = formattedData.replace(/font-size: *.*?pt;/g, "");
+          // Set all images to have no referrer policy (prevent CORS errors)
+          formattedData = formattedData.replace(
+            /<img/g,
+            '<img referrerpolicy="no-referrer" class="article-img"'
+          );
 
-        // remove font-family: "...";
-        formattedData = formattedData.replace(/font-family: *.*?;/g, "");
+          // remove hardcoded height and width values
+          formattedData = formattedData.replace(/height: *.*?;/g, "");
+          formattedData = formattedData.replace(/width: *.*?;/g, "");
 
-        // remove line height
-        formattedData = formattedData.replace(/line-height: *.*?;/g, "");
+          // remove font size
+          formattedData = formattedData.replace(/font-size: *.*?pt;/g, "");
 
-        // remove orphans, widows, page break
-        formattedData = formattedData.replace(/orphans: *.*?;/g, "");
-        formattedData = formattedData.replace(/widows: *.*?;/g, "");
-        formattedData = formattedData.replace(
-          /line-page-break-after: *.*?;/g,
-          ""
-        );
+          // remove font-family: "...";
+          formattedData = formattedData.replace(/font-family: *.*?;/g, "");
 
-        setArticleData(formattedData);
-        setArticleDataLoading(false);
-        console.log(formattedData);
-      });
+          // remove line height
+          formattedData = formattedData.replace(/line-height: *.*?;/g, "");
 
-    fetch(
-      `https://www.googleapis.com/drive/v3/files/${articleId}?fields=createdTime%2Cname&key=${API_KEY}`
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        const formattedDate = new Date(data.createdTime).toLocaleDateString(
-          "en-US",
-          {
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-          }
-        );
-        const formattedAuthor = data.name.split(" by ")[1];
-        const formattedTitle = data.name.split(" by ")[0];
-        setArticleMetadata({
-          title: formattedTitle,
-          author: formattedAuthor,
-          createdTime: formattedDate,
+          // remove orphans, widows, page break
+          formattedData = formattedData.replace(/orphans: *.*?;/g, "");
+          formattedData = formattedData.replace(/widows: *.*?;/g, "");
+          formattedData = formattedData.replace(
+            /line-page-break-after: *.*?;/g,
+            ""
+          );
+
+          setArticleData(formattedData);
+          setArticleDataLoading(false);
+
+          const articleData = JSON.stringify(formattedData);
+          sessionStorage.setItem(`articleData-${articleId}`, articleData);
         });
-        setArticleMetadataLoading(false);
-      });
+    }
+
+    if (articleMetadata) {
+      if (articleMetadata !== "undefined") {
+        setArticleMetadata(JSON.parse(articleMetadata));
+      }
+      setArticleMetadataLoading(false);
+    } else {
+      fetch(
+        `https://www.googleapis.com/drive/v3/files/${articleId}?fields=createdTime%2Cname&key=${API_KEY}`
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          const formattedDate = new Date(data.createdTime).toLocaleDateString(
+            "en-US",
+            {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            }
+          );
+          const formattedAuthor = data.name.split(" by ")[1];
+          const formattedTitle = data.name.split(" by ")[0];
+          setArticleMetadata({
+            title: formattedTitle,
+            author: formattedAuthor,
+            createdTime: formattedDate,
+          });
+          setArticleMetadataLoading(false);
+
+          const articleMetadata = JSON.stringify({
+            title: formattedTitle,
+            author: formattedAuthor,
+            createdTime: formattedDate,
+          });
+          sessionStorage.setItem(
+            `articleMetadata-${articleId}`,
+            articleMetadata
+          );
+        });
+    }
   }, [articleId]);
 
   return (
