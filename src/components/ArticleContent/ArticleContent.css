@@ -4,7 +4,7 @@
   justify-content: center;
 }
 .article-wrapper {
-  max-width: 1000px;
+  max-width: min(95vw, 1000px);
   margin: 40px 40px;
   display: flex;
   align-items: flex-start;
@@ -34,6 +34,9 @@
   text-overflow: wrap;
 }
 .article-img {
-  max-width: 600px;
+  max-width: min(95vw, 600px);
   height: auto;
+}
+.article-title {
+  width: 100%;
 }
