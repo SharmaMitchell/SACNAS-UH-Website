@@ -17,6 +17,7 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
+  transition: color 0.3s ease;
 }
 .article-container p,
 .article-container ul,

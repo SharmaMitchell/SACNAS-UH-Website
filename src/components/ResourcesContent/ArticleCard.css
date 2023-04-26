@@ -8,6 +8,7 @@
   margin: 20px;
   width: 330px;
   max-width: 90vw;
+  transition: all 0.3s ease;
 }
 .article-card-container {
   display: flex;
