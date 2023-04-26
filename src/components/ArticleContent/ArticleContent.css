@@ -29,9 +29,13 @@
 .article-container h6 {
   text-align: left;
   width: 100%;
+  max-width: fit-content;
   color: var(--text-primary);
   /* overflow: hidden; */
   text-overflow: wrap;
+}
+.article-container li {
+  margin: 5px 0;
 }
 .article-container h2,
 .article-container h3 {

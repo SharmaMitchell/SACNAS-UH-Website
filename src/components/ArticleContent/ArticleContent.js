@@ -48,10 +48,7 @@ function ArticleContent() {
         .then((response) => response.text())
         .then((data) => {
           // Replace hardcoded colors with CSS variables
-          let formattedData = data.replace(
-            /color:#(?:[0-9a-fA-F]{3}){1,2};/g,
-            ""
-          );
+          let formattedData = data.replace(/color: *.*?;/g, "");
 
           // Set all images to have no referrer policy (prevent CORS errors)
           formattedData = formattedData.replace(
