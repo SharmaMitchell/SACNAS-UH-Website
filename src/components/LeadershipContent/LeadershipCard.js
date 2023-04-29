@@ -53,7 +53,28 @@ function LeadershipCard(props) {
             <div class="leadership-card-paragraph">
               <p>{props.paragraph}</p>
             </div>
+            {props.articleCard && hasContact && (
+            <div class="leadership-card-contact">
+              {props.discordHandle && (
+                <a
+                  href={
+                    props.discordID
+                      ? "https://discord.com/users/" + props.discordID
+                      : "#"
+                  }
+                >
+                  <img src={SACNASDiscord} />
+                </a>
+              )}
+              {props.linkedin && (
+                <a href={props.linkedin}>
+                  <img src={SACNASLinkedIn} />
+                </a>
+              )}
+            </div>
+          )}
           </div>
+          
         </div>
         {!props.articleCard && (
           <div

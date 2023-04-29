@@ -195,10 +195,13 @@ function ArticleContent() {
               {!authorDataLoading && (
                 <LeadershipCard
                   title={authorData[0]}
+                  position={authorData[1]}
                   paragraph={authorData[2]}
                   img={authorData[3]}
+                  discordHandle={authorData[5]}
+                  discordID={authorData[6]}
+                  linkedin={authorData[7]}
                   articleCard={true}
-                  position={authorData[1]}
                 />
               )}
               <div className="article-sidebar-title">
