@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import "./ArticleContent.css";
 import ArticleCard from "../ResourcesContent/ArticleCard";
 import Spinner from "../Spinner/Spinner";
+import LeadershipCard from "../LeadershipContent/LeadershipCard";
 
 const API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
 
@@ -16,6 +17,9 @@ function ArticleContent() {
   const [articles, setArticles] = useState([]);
   const [thumnails, setThumbnails] = useState([]);
   const [articlesLoading, setArticlesLoading] = useState(true);
+
+  const [authorData, setAuthorData] = useState([]);
+  const [authorDataLoading, setAuthorDataLoading] = useState(true);
 
   // Set page title to article title, once it has loaded
   useEffect(() => {
@@ -143,6 +147,25 @@ function ArticleContent() {
     }
   }, []);
 
+  // TODO: Fetch leadership data from Google Drive if not in session storage
+  useEffect(() => {
+    const sessionData = sessionStorage.getItem("leadershipData");
+    console.log(sessionData);
+    if (sessionData && !articleMetadataLoading) {
+      const leadershipData = JSON.parse(sessionData);
+      const flattenedData = leadershipData.flatMap((entry) =>
+        entry.values.slice(1)
+      );
+      const author = flattenedData.find(
+        (entry) => entry[0] === articleMetadata.author
+      );
+      console.log(author);
+      setAuthorData(author);
+      setAuthorDataLoading(false);
+      console.log(authorData);
+    }
+  }, [articleMetadataLoading]);
+
   return (
     <div className="article">
       <div className="article-wrapper">
@@ -168,10 +191,19 @@ function ArticleContent() {
         </div>
         <div className="article-sidebar">
           <div className="article-sidebar-container">
-            <div className="article-sidebar-title">
-              <h3>More from SACNAS UH</h3>
-            </div>
             <div className="article-sidebar-content">
+              {!authorDataLoading && (
+                <LeadershipCard
+                  title={authorData[0]}
+                  paragraph={authorData[2]}
+                  img={authorData[3]}
+                  articleCard={true}
+                  position={authorData[1]}
+                />
+              )}
+              <div className="article-sidebar-title">
+                <h3>More from SACNAS UH</h3>
+              </div>
               {articles
                 ?.filter(
                   (article) =>
