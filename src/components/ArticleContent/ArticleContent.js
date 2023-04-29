@@ -87,6 +87,22 @@ function ArticleContent() {
             ""
           );
 
+          // remove google redirect
+          const matchRegex =
+            /https?:\/\/www\.google\.com\/url\?q=([^&;]+)&(?:amp;)?[^"]*/g;
+          const matches = formattedData.matchAll(matchRegex);
+          for (const match of matches) {
+            const originalUrl = decodeURIComponent(match[1]);
+            const isOnSameDomain = originalUrl.startsWith(
+              "https://sacnas-uh.org"
+            );
+            const slug = isOnSameDomain
+              ? originalUrl.replace("https://sacnas-uh.org", "")
+              : "";
+            const newUrl = isOnSameDomain ? slug : originalUrl;
+            formattedData = formattedData.replace(match[0], newUrl);
+          }
+
           setArticleData(formattedData);
           setArticleDataLoading(false);
 
@@ -150,7 +166,6 @@ function ArticleContent() {
   // TODO: Fetch leadership data from Google Drive if not in session storage
   useEffect(() => {
     const sessionData = sessionStorage.getItem("leadershipData");
-    console.log(sessionData);
     if (sessionData && !articleMetadataLoading) {
       const leadershipData = JSON.parse(sessionData);
       const flattenedData = leadershipData.flatMap((entry) =>
@@ -159,10 +174,8 @@ function ArticleContent() {
       const author = flattenedData.find(
         (entry) => entry[0] === articleMetadata.author
       );
-      console.log(author);
       setAuthorData(author);
       setAuthorDataLoading(false);
-      console.log(authorData);
     }
   }, [articleMetadataLoading]);
 
