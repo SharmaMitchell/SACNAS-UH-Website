@@ -306,15 +306,15 @@
     .leadership-card-container{
         max-width: 42vw;
     }
-}
-
-/* Desktop */
-@media only screen and (min-width: 1200px){
     .leadership-card.article{
         margin: 0;
         margin-bottom: 10px;
         color: #fff;
     }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1200px){
     .leadership-card-red, .leadership-card-red.expanded{
         height: 40px;
         max-height: 40px;
