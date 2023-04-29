@@ -140,6 +140,11 @@ function ResourcesContent() {
             (file) => file.mimeType !== "application/vnd.google-apps.document"
           );
 
+          //sort articles by date
+          articles.sort((a, b) => {
+            return new Date(b.createdTime) - new Date(a.createdTime);
+          });
+
           setArticles(articles);
           setThumbnails(thumbnails);
           setArticlesLoading(false);
