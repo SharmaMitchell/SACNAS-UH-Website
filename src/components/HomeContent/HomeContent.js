@@ -24,7 +24,7 @@ function HomeContent() {
         <div class="home-container">
           <Row 
             title={<h2>What is SACNAS?</h2>} 
-            paragraph={<p>SACNAS, or the <b>Society for Advancement of Chicanos/Hispanics and Native Americans in Science</b>, is an inclusive national organization dedicated to fostering the success of diverse scientists, from college students to professionals, in attaining research opportunities, advanced degrees, careers, and positions of leadership in Science, Technology, Engineering, and Math (STEM). SACNAS works to support the most underrepresented in STEM. For more information, please visit <a href="https://sacnas.org">sacnas.org</a>.</p>} 
+            paragraph={<p>SACNAS, or the <b>Society for Advancement of Chicanos/Hispanics and Native Americans in Science</b>, is an inclusive national organization dedicated to fostering the success of diverse scientists, from college students to professionals, in attaining research opportunities, advanced degrees, careers, and positions of leadership in Science, Technology, Engineering, and Math (STEM). SACNAS works to support the most underrepresented in STEM. For more information, please visit <a target="_blank" rel="noopener" href="https://sacnas.org">sacnas.org</a>.</p>} 
             img={SACNASGroup}
             imgborder='y'
           />
@@ -42,7 +42,7 @@ function HomeContent() {
           />
           <Row 
             title={<h2>Additional Info</h2>} 
-            paragraph={<p>At our meetings, we host guest speakers, lead statement and poster presentation workshops, assist with lab placements in addition to going on lab tours, and host socials to better connect with our members. Feel free to reach out to us at <a href="mailto:uh.sacnas@gmail.com">uh.sacnas@gmail.com</a> or the Graduate Committee at <a href="mailto:sacnas.graduate@gmail.com">sacnas.graduate@gmail.com</a> with any questions or concerns! You can also follow us on Instagram <a href="https://www.instagram.com/uhsacnas/">@uhsacnas</a>, Facebook at <a href="https://www.facebook.com/sacnasuh">University of Houston - SACNAS</a>, and on Twitter <a href="https://twitter.com/uh_sacnas">@uh_sacnas</a>. You are also welcome in our growing <a href="https://discord.gg/KKq7Ygc3p4">Discord</a> community!</p>} 
+            paragraph={<p>At our meetings, we host guest speakers, lead statement and poster presentation workshops, assist with lab placements in addition to going on lab tours, and host socials to better connect with our members. Feel free to reach out to us at <a href="mailto:uh.sacnas@gmail.com">uh.sacnas@gmail.com</a> or the Graduate Committee at <a href="mailto:sacnas.graduate@gmail.com">sacnas.graduate@gmail.com</a> with any questions or concerns! You can also follow us on Instagram <a target="_blank" rel="noopener" href="https://www.instagram.com/uhsacnas/">@uhsacnas</a>, Facebook at <a target="_blank" rel="noopener" href="https://www.facebook.com/sacnasuh">University of Houston - SACNAS</a>, and on Twitter <a target="_blank" rel="noopener" href="https://twitter.com/uh_sacnas">@uh_sacnas</a>. You are also welcome in our growing <a target="_blank" rel="noopener" href="https://discord.gg/KKq7Ygc3p4">Discord</a> community!</p>} 
             img=""
           />
         </div>

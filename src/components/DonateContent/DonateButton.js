@@ -16,7 +16,7 @@ function DonateButton(props) {
   return (
     
     <div class="donate-button-container">
-        <a href={link}>
+        <a target="_blank" rel="noopener" href={link}>
             {label}
         </a>
     </div>

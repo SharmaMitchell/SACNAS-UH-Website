@@ -26,7 +26,7 @@ function DonateContent() {
             </div>
         </div>
         <div class="donate-button-container paypal">
-            <a href="https://paypal.me/SACNASUH/">
+            <a target="_blank" rel="noopener" href="https://paypal.me/SACNASUH/">
                 <img src={paypalButton} />
             </a>
             </div>

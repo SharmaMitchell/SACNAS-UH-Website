@@ -31,7 +31,7 @@ function AwardBanner(props) {
                     <div class="award-banner-paragraph">
                         {props.paragraph}
                         <div class="learn-more">
-                            <a href={props.learnMore}>Learn More</a>
+                            <a target="_blank" rel="noopener" href={props.learnMore}>Learn More</a>
                         </div>
                     </div>
                 </div>

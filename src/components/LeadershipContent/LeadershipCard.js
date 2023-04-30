@@ -57,6 +57,8 @@ function LeadershipCard(props) {
             <div class="leadership-card-contact">
               {props.discordHandle && (
                 <a
+                  target="_blank" 
+                  rel="noopener"
                   href={
                     props.discordID
                       ? "https://discord.com/users/" + props.discordID
@@ -67,7 +69,7 @@ function LeadershipCard(props) {
                 </a>
               )}
               {props.linkedin && (
-                <a href={props.linkedin}>
+                <a target="_blank" rel="noopener" href={props.linkedin}>
                   <img src={SACNASLinkedIn} />
                 </a>
               )}
@@ -119,6 +121,8 @@ function LeadershipCard(props) {
                   {props.discordHandle ? (
                     <div class="leadership-social">
                       <a
+                        target="_blank" 
+                        rel="noopener"
                         href={
                           props.discordID
                             ? "https://discord.com/users/" + props.discordID
@@ -134,7 +138,7 @@ function LeadershipCard(props) {
                   )}
                   {props.linkedin ? (
                     <div class="leadership-social">
-                      <a href={props.linkedin}>
+                      <a target="_blank" rel="noopener" href={props.linkedin}>
                         <img src={SACNASLinkedIn} />
                         LinkedIn
                       </a>
