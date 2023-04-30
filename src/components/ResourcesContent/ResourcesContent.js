@@ -3,6 +3,7 @@ import "./ResourcesContent.css";
 import VideoCard from "./VideoCard";
 import ArticleCard from "./ArticleCard";
 import Spinner from "../Spinner/Spinner";
+import { useArticlesData } from "../../hooks/useArticlesData";
 /* 
 TODO:
 - Add a link to the SACNAS UH YouTube channel (May want to add that to the footer too)
@@ -10,10 +11,6 @@ TODO:
 
 const SACNAS_UH_YT_ID = "UC2X1nE_E-cpXlSXWKvaRCtQ";
 const NUM_VIDEOS = 6;
-const API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
-
-const ARTICLES_FOLDER_ID = "1eMQ0gxH5luOtG5NZXERPc2t_OyEyKqh-";
-const fields = "files(id, name, createdTime, thumbnailLink, mimeType)";
 
 function ResourcesContent() {
   const [videos, setVideos] = useState([]);
@@ -86,10 +83,6 @@ function ResourcesContent() {
     },
   ];
 
-  const [articles, setArticles] = useState([]);
-  const [thumnails, setThumbnails] = useState([]);
-  const [articlesLoading, setArticlesLoading] = useState(true);
-
   // NOTE: This fetch is rly expensive and reaches quota limits quickly (100 reqs/day)
   // TODO: Fetch using Google Apps Script once per day and store on Sheets
   useEffect(() => {
@@ -118,53 +111,7 @@ function ResourcesContent() {
     setVideosLoading(false);
   }, []);
 
-  // TODO: Refactor this into a custom hook
-  useEffect(() => {
-    const sessionData = sessionStorage.getItem("articlesData");
-
-    if (sessionData) {
-      const { articles, thumbnails } = JSON.parse(sessionData);
-      setArticles(articles);
-      setThumbnails(thumbnails);
-      setArticlesLoading(false);
-    } else {
-      fetch(
-        `https://www.googleapis.com/drive/v3/files?q="${ARTICLES_FOLDER_ID}"+in+parents&fields=${fields}&key=${API_KEY}`
-      )
-        .then((response) => response.json())
-        .then((data) => {
-          const articles = data.files.filter(
-            (file) => file.mimeType === "application/vnd.google-apps.document"
-          );
-          const thumbnails = data.files.filter(
-            (file) => file.mimeType !== "application/vnd.google-apps.document"
-          );
-
-          //sort articles by date
-          articles.sort((a, b) => {
-            return new Date(b.createdTime) - new Date(a.createdTime);
-          });
-
-          setArticles(articles);
-          setThumbnails(thumbnails);
-          setArticlesLoading(false);
-
-          const articlesData = JSON.stringify({ articles, thumbnails });
-          sessionStorage.setItem("articlesData", articlesData);
-        });
-    }
-  }, []);
-
-  // useEffect(() => {
-  //   if (articleIDs.length === 0) return;
-  //   fetch(
-  //     `https://www.googleapis.com/drive/v3/files/${articleIDs[0]}/export?mimeType=text/html&key=${API_KEY}`
-  //   )
-  //     .then((response) => response.text())
-  //     .then((data) => {
-  //       console.log(data);
-  //     });
-  // }, [articleIDs]);
+  const { articles, thumbnails, articlesLoading } = useArticlesData();
 
   return (
     <div class="resources">
@@ -181,7 +128,7 @@ function ResourcesContent() {
                 date={article.createdTime}
                 link={`/article/${article.id}`}
                 img={
-                  thumnails.find(
+                  thumbnails.find(
                     (thumbnail) => thumbnail.name.split(".")[0] === article.name
                   )?.thumbnailLink
                 }
