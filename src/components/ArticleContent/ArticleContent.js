@@ -46,7 +46,12 @@ function ArticleContent() {
       setAuthorData(author);
       setAuthorDataLoading(false);
     }
-  }, [articleMetadataLoading]);
+  }, [
+    articleMetadataLoading,
+    leadershipDataLoading,
+    leadershipData,
+    articleMetadata,
+  ]);
 
   return (
     <div className="article">
@@ -74,7 +79,7 @@ function ArticleContent() {
         <div className="article-sidebar">
           <div className="article-sidebar-container">
             <div className="article-sidebar-content">
-              {!authorDataLoading && (
+              {authorData && !authorDataLoading && (
                 <LeadershipCard
                   title={authorData[0]}
                   position={authorData[1]}
