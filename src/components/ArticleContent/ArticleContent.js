@@ -7,6 +7,7 @@ import LeadershipCard from "../LeadershipContent/LeadershipCard";
 import { useArticlesData } from "../../hooks/useArticlesData";
 import { useLeadershipData } from "../../hooks/useLeadershipData";
 import { useArticleData } from "../../hooks/useArticleData";
+import expand from "../../assets/expand.png";
 
 function ArticleContent() {
   const { articleId } = useParams();
@@ -20,8 +21,15 @@ function ArticleContent() {
     articleDataLoading,
     articleMetadataLoading,
   } = useArticleData(articleId);
+  const [articleSections, setArticleSections] = useState([]);
   const { articles, thumbnails, articlesLoading } = useArticlesData();
   const { leadershipData, leadershipDataLoading } = useLeadershipData();
+
+  const [outlineExpanded, setOutlineExpanded] = useState(false);
+
+  const handleOutlineExpand = () => {
+    setOutlineExpanded(!outlineExpanded);
+  };
 
   // Set page title to article title, once it has loaded
   useEffect(() => {
@@ -53,6 +61,17 @@ function ArticleContent() {
     articleMetadata,
   ]);
 
+  // Set article sections for outline
+  useEffect(() => {
+    if (!articleDataLoading) {
+      // 1. Get all headings based on id, starting with "h."
+      // 2. Label headings based on the text within the span contaned within the heading
+      // 3. Navigate to the heading when the outline link is clicked
+      // (Use <a> tags with href="#id" to navigate to the heading)
+      // TODO: Ensure smooth scrolling is enabled for this
+    }
+  }, [articleDataLoading]);
+
   return (
     <div className="article">
       <div className="article-wrapper">
@@ -66,6 +85,44 @@ function ArticleContent() {
                 ? "Loading..."
                 : `${articleMetadata.author} | ${articleMetadata.createdTime}`}
             </p>
+            <button
+              className={
+                outlineExpanded ? "article-outline active" : "article-outline"
+              }
+              onClick={handleOutlineExpand}
+            >
+              <a className="article-outline-button">
+                <img
+                  class={
+                    outlineExpanded
+                      ? "article-outline-expand active"
+                      : "article-outline-expand"
+                  }
+                  src={expand}
+                />
+                Article Outline
+              </a>
+            </button>
+            {outlineExpanded && (
+              <div className="article-outline-content">
+                <ul>
+                  {articleDataLoading ? (
+                    <Spinner />
+                  ) : (
+                    articleData
+                      .split("<h2>")
+                      .slice(1)
+                      .map((section) => (
+                        <li>
+                          <a href={`#${section.split("</h2>")[0]}`}>
+                            {section.split("</h2>")[0]}
+                          </a>
+                        </li>
+                      ))
+                  )}
+                </ul>
+              </div>
+            )}
           </div>
           {articleDataLoading ? (
             <Spinner />
