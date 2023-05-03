@@ -27,13 +27,19 @@
 .article-container h3,
 .article-container h4,
 .article-container h5,
-.article-container h6 {
+.article-container h6,
+.article-container span {
   text-align: left;
   width: 100%;
   max-width: fit-content;
   color: var(--text-primary);
   /* overflow: hidden; */
   text-overflow: wrap;
+  scroll-margin-top: 80px;
+}
+.article-container ul {
+  all: unset;
+  display: block;
 }
 .article-container li {
   margin: 5px 0;
@@ -52,6 +58,7 @@
 .article-title,
 .article-sidebar-title {
   width: 100%;
+  margin-bottom: 20px;
 }
 .article-title h2 {
   text-align: left;
@@ -73,13 +80,17 @@
   width: min(95vw, 758px);
   border-radius: 6px;
   padding: 4px 0;
-  margin-bottom: 20px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   margin-top: auto;
   cursor: pointer;
   border-bottom: 4px solid var(--secondary);
+}
+.article-outline.active {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom: 0;
 }
 .article-outline-button {
   padding-left: 15px;
@@ -99,6 +110,32 @@
 }
 .article-outline-expand.active {
   transform: rotate(360deg);
+}
+.article-outline-content {
+  width: min(95vw, 758px);
+  background-color: var(--secondary);
+  padding: 5px 0;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-bottom: 4px solid var(--primary);
+}
+.article-outline-content ul {
+  all: unset;
+  display: block;
+  margin: 0;
+  padding: 0;
+  color: white;
+  list-style: none;
+  padding-left: 36px;
+}
+.article-outline-content li {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: white;
+}
+.article-outline-content li a {
+  color: white;
+  font-weight: 300;
 }
 .article-sidebar {
   display: flex;

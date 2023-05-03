@@ -64,13 +64,18 @@ function ArticleContent() {
   // Set article sections for outline
   useEffect(() => {
     if (!articleDataLoading) {
-      // 1. Get all headings based on id, starting with "h."
-      // 2. Label headings based on the text within the span contaned within the heading
-      // 3. Navigate to the heading when the outline link is clicked
-      // (Use <a> tags with href="#id" to navigate to the heading)
-      // TODO: Ensure smooth scrolling is enabled for this
+      const headings = document.querySelectorAll(
+        'h1[id^="h."], h2[id^="h."], h3[id^="h."], h4[id^="h."]'
+      );
+      const labeledHeadings = Array.from(headings).map((heading) => {
+        const headingLabel = heading.querySelector("span").textContent;
+        const headingId = heading.getAttribute("id");
+        const level = parseInt(heading.tagName.substring(1));
+        return [headingLabel, headingId, level];
+      });
+      setArticleSections(labeledHeadings);
     }
-  }, [articleDataLoading]);
+  }, [articleDataLoading, articleData]);
 
   return (
     <div className="article">
@@ -109,16 +114,24 @@ function ArticleContent() {
                   {articleDataLoading ? (
                     <Spinner />
                   ) : (
-                    articleData
-                      .split("<h2>")
-                      .slice(1)
-                      .map((section) => (
-                        <li>
-                          <a href={`#${section.split("</h2>")[0]}`}>
-                            {section.split("</h2>")[0]}
-                          </a>
-                        </li>
-                      ))
+                    articleSections.map(([headingLabel, headingId, level]) => (
+                      <li
+                        key={headingId}
+                        style={{
+                          marginLeft: `${(level > 2 ? level - 2 : 0) * 2}rem`,
+                          listStyleType: level >= 3 ? "circle" : "none",
+                        }}
+                      >
+                        <a
+                          href={`#${headingId}`}
+                          style={{
+                            textDecoration: level <= 2 ? "underline" : "none",
+                          }}
+                        >
+                          {headingLabel}
+                        </a>
+                      </li>
+                    ))
                   )}
                 </ul>
               </div>

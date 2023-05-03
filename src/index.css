@@ -16,7 +16,8 @@
   --url: var(--primary);
 
   --card-background: rgb(220,220,220);
-;
+
+  scroll-behavior: smooth;
 }
 [data-theme='dark']{
   --background: var(--background-dark);
