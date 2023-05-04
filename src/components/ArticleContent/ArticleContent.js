@@ -107,31 +107,33 @@ function ArticleContent() {
                 ? "Loading..."
                 : `${articleMetadata.author} | ${articleMetadata.createdTime}`}
             </p>
-            <button
-              className={
-                outlineExpanded ? "article-outline active" : "article-outline"
-              }
-              onClick={handleOutlineExpand}
-            >
-              <a className="article-outline-button">
-                <img
-                  class={
-                    outlineExpanded
-                      ? "article-outline-expand active"
-                      : "article-outline-expand"
-                  }
-                  src={expand}
-                />
-                Article Outline
-              </a>
-            </button>
+            {articleSections.length > 0 && (
+              <button
+                className={
+                  outlineExpanded ? "article-outline active" : "article-outline"
+                }
+                onClick={handleOutlineExpand}
+              >
+                <a className="article-outline-button">
+                  <img
+                    class={
+                      outlineExpanded
+                        ? "article-outline-expand active"
+                        : "article-outline-expand"
+                    }
+                    src={expand}
+                  />
+                  Article Outline
+                </a>
+              </button>
+            )}
             {outlineExpanded && (
               <div className="article-outline-content">
                 <ul>
                   {articleDataLoading ? (
                     <Spinner />
                   ) : (
-                    articleSections.map(([headingLabel, headingId, level]) => (
+                    articleSections?.map(([headingLabel, headingId, level]) => (
                       <li
                         key={headingId}
                         style={{
