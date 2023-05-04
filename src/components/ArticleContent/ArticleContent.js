@@ -23,6 +23,7 @@ function ArticleContent() {
   } = useArticleData(articleId);
   const [articleSections, setArticleSections] = useState([]);
   const { articles, thumbnails, articlesLoading } = useArticlesData();
+  const [filteredArticles, setFilteredArticles] = useState([]);
   const { leadershipData, leadershipDataLoading } = useLeadershipData();
 
   const [outlineExpanded, setOutlineExpanded] = useState(false);
@@ -76,6 +77,17 @@ function ArticleContent() {
       setArticleSections(labeledHeadings);
     }
   }, [articleDataLoading, articleData]);
+
+  // Filter articles to only those that are not the current article
+  useEffect(() => {
+    if (!articlesLoading) {
+      setFilteredArticles(
+        articles.filter(
+          (article) => article.name.split(" by ")[0] !== articleMetadata?.title
+        )
+      );
+    }
+  }, [articlesLoading, articles, articleMetadata]);
 
   return (
     <div className="article">
@@ -164,25 +176,21 @@ function ArticleContent() {
               <div className="article-sidebar-title">
                 <h3>More from SACNAS UH</h3>
               </div>
-              {articles
-                ?.filter(
-                  (article) =>
-                    article.name.split(" by ")[0] !== articleMetadata?.title
-                )
-                .map((article) => (
-                  <ArticleCard
-                    title={article.name.split(" by ")[0]}
-                    date={article.createdTime}
-                    link={`/article/${article.id}`}
-                    img={
-                      thumbnails.find(
-                        (thumbnail) =>
-                          thumbnail.name.split(".")[0] === article.name
-                      )?.thumbnailLink
-                    }
-                    author={article.name.split(" by ")[1]}
-                  />
-                ))}
+              {filteredArticles?.map((article) => (
+                <ArticleCard
+                  key={article.id}
+                  title={article.name.split(" by ")[0]}
+                  date={article.createdTime}
+                  link={`/article/${article.id}`}
+                  img={
+                    thumbnails.find(
+                      (thumbnail) =>
+                        thumbnail.name.split(".")[0] === article.name
+                    )?.thumbnailLink
+                  }
+                  author={article.name.split(" by ")[1]}
+                />
+              ))}
             </div>
           </div>
         </div>
