@@ -48,6 +48,9 @@
 .article-container h3 {
   font-weight: 500;
 }
+.article-content {
+  width: min(95vw, 758px);
+}
 .article-content a {
   color: var(--url);
 }
