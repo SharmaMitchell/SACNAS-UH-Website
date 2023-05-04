@@ -49,9 +49,14 @@ function ArticleContent() {
       const flattenedData = leadershipData.flatMap((entry) =>
         entry.values.slice(1)
       );
-      const author = flattenedData.find(
+      let author = flattenedData.find(
         (entry) => entry[0] === articleMetadata.author
       );
+      // If author name ends in ", PhD", set entry[3] to entry[2] and remove entry[2]
+      if (author[0].endsWith(", PhD")) {
+        author[3] = author[2];
+        author[2] = "";
+      }
       setAuthorData(author);
       setAuthorDataLoading(false);
     }
