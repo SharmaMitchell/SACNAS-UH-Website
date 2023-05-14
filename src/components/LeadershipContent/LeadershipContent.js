@@ -61,11 +61,11 @@ function LeadershipContent() {
           </>)
             : null;
           })}
-          <div class="leadership-section-title"><h2>SACNAS UH Alumni</h2></div>
+          {!loading && (<><div class="leadership-section-title"><h2>SACNAS UH Alumni</h2></div>
           <div class="leadership-alumni-blurb">
             <p>Our chapter at UH was founded in 2018-2019 and began with an undergraduate student base.
 Below are SACNAS-UH alumni.</p>
-          </div>
+          </div></>)}
           <div class="leadership-alumni">
             {loading ? <Spinner /> : leadershipData[6]?.values?.map((entry) => {
                 return(
