@@ -39,7 +39,8 @@ function LeadershipContent() {
       <div class="leadership">
         <div class="leadership-container">
           {sections?.map((section, index) => {
-            return leadershipData[index]?.values?.length > 0 ? (
+            return loading ||
+              (!loading && leadershipData[index]?.values?.length > 0) ? (
               <>
                 <div class="leadership-section-title">
                   <h2>{section.title}</h2>
