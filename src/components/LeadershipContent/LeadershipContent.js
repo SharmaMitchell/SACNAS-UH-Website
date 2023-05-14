@@ -37,11 +37,12 @@ function LeadershipContent() {
     <>
       <div class="leadership">
         <div class="leadership-container">
-          {sections.map((section, index) => {
-            return (<>
+          {sections?.map((section, index) => {
+            return leadershipData[index]?.values?.length > 0 
+              ? (<>
               <div class="leadership-section-title"><h2>{section.title}</h2></div>
               <div class={section.category}>
-              {loading ? <Spinner /> : leadershipData[index].values.map((entry) => {
+              {loading ? <Spinner /> : leadershipData[index]?.values?.map((entry) => {
                       let fac = section.category == "leadership-faculty";
                       return(
                           <LeadershipCard 
@@ -58,6 +59,7 @@ function LeadershipContent() {
                   })}
             </div>
           </>)
+            : null;
           })}
           <div class="leadership-section-title"><h2>SACNAS UH Alumni</h2></div>
           <div class="leadership-alumni-blurb">
@@ -65,7 +67,7 @@ function LeadershipContent() {
 Below are SACNAS-UH alumni.</p>
           </div>
           <div class="leadership-alumni">
-            {loading ? <Spinner /> : leadershipData[6].values.map((entry) => {
+            {loading ? <Spinner /> : leadershipData[6]?.values?.map((entry) => {
                 return(
                     <div class="leadership-alumlist">
                     <h3>{entry[0]}</h3>
