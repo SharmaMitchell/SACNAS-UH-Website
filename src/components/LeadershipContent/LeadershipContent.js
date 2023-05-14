@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./LeadershipContent.css";
 import LeadershipCard from "./LeadershipCard";
 import Spinner from "../Spinner/Spinner";
@@ -43,7 +43,7 @@ function LeadershipContent() {
               <div class="leadership-section-title"><h2>{section.title}</h2></div>
               <div class={section.category}>
               {loading ? <Spinner /> : leadershipData[index]?.values?.map((entry) => {
-                      let fac = section.category == "leadership-faculty";
+                      let fac = section.category === "leadership-faculty";
                       return(
                           <LeadershipCard 
                               title = {fac ? entry[0] : entry[0] + ": " + entry[1]}
@@ -53,7 +53,7 @@ function LeadershipContent() {
                               discordHandle = {entry[5]}
                               discordID = {entry[6]}
                               linkedin = {entry[7]}
-                              width = {fac && index != 5 ? "m" : undefined} /* Small cards for faculty, except founding */
+                              width = {fac && index !== 5 ? "m" : undefined} /* Small cards for faculty, except founding */
                           />
                       )
                   })}
