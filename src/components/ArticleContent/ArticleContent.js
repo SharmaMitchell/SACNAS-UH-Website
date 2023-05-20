@@ -47,7 +47,7 @@ function ArticleContent() {
   useEffect(() => {
     if (!leadershipDataLoading && !articleMetadataLoading) {
       const flattenedData = leadershipData.flatMap((entry) =>
-        entry.values.slice(1)
+        entry.values?.slice(1)
       );
       let author = flattenedData.find(
         (entry) => entry[0] === articleMetadata.author
