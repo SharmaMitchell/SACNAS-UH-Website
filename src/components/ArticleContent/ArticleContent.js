@@ -45,20 +45,24 @@ function ArticleContent() {
 
   // Get author data from leadership data, once metadata has loaded
   useEffect(() => {
-    if (!leadershipDataLoading && !articleMetadataLoading) {
-      const flattenedData = leadershipData.flatMap((entry) =>
-        entry.values?.slice(1)
-      );
-      let author = flattenedData.find(
-        (entry) => entry[0] === articleMetadata.author
-      );
-      // If author name ends in ", PhD", set entry[3] to entry[2] and remove entry[2]
-      if (author && author[0].endsWith(", PhD")) {
-        author[3] = author[2];
-        author[2] = "";
+    try {
+      if (!leadershipDataLoading && !articleMetadataLoading) {
+        const flattenedData = leadershipData.flatMap((entry) =>
+          entry.values?.slice(1)
+        );
+        let author = flattenedData.find(
+          (entry) => entry[0] === articleMetadata.author
+        );
+        // If author name ends in ", PhD", set entry[3] to entry[2] and remove entry[2]
+        if (author && author[0].endsWith(", PhD")) {
+          author[3] = author[2];
+          author[2] = "";
+        }
+        setAuthorData(author);
+        setAuthorDataLoading(false);
       }
-      setAuthorData(author);
-      setAuthorDataLoading(false);
+    } catch {
+      console.log("Error loading author data in ArticleContent");
     }
   }, [
     articleMetadataLoading,
