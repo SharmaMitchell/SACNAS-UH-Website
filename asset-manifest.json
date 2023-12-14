@@ -1,25 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.270180bf.css",
-    "main.js": "/static/js/main.fcf8f7ec.js",
+    "main.css": "/static/css/main.e54816d8.css",
+    "main.js": "/static/js/main.a22e29fe.js",
     "static/media/UH-Skyline-Shot.jpg": "/static/media/UH-Skyline-Shot.63f101264f5826f3bab6.jpg",
-    "static/media/2022-Diversity-Award-crop2.jpg": "/static/media/2022-Diversity-Award-crop2.cbd3b72dea392195eb4b.jpg",
+    "static/media/COTY-Award.webp": "/static/media/COTY-Award.c4e9c45a1d511cf82d1b.webp",
     "static/media/houaztec.jpg": "/static/media/houaztec.725f21d433e16c7af502.jpg",
     "static/media/SACNASUH-Crop.png": "/static/media/SACNASUH-Crop.a58dd6cd6659aedd659a.png",
     "static/media/outreach_navarro.jpg": "/static/media/outreach_navarro.051ccf1b49291ae326db.jpg",
     "static/media/SACNAS-Group.jpg": "/static/media/SACNAS-Group.5c26972303f05324fabd.jpg",
     "static/media/SACNAS-Email.png": "/static/media/SACNAS-Email.447ba8d66f31dae4b22d.png",
+    "static/media/Chevron-logo.png": "/static/media/Chevron-logo.5f9c058f0c1a0bf7e367.png",
     "static/media/SACNAS-Twitter.png": "/static/media/SACNAS-Twitter.d700ff27255780e81627.png",
     "static/media/lorissa-crop.jpg": "/static/media/lorissa-crop.44afbdde3f3752e19699.jpg",
     "static/media/SACNAS-Mail-List.png": "/static/media/SACNAS-Mail-List.524d1431a4bf624d61b7.png",
     "static/media/SACNAS-Donate-Alt.png": "/static/media/SACNAS-Donate-Alt.f18c559b1f742d34314c.png",
     "static/media/sun-icon.png": "/static/media/sun-icon.f7ee4f76a714a1999eb8.png",
+    "static/media/Altair-logo.png": "/static/media/Altair-logo.c1f1140a9056d086fd10.png",
     "index.html": "/index.html",
-    "main.270180bf.css.map": "/static/css/main.270180bf.css.map",
-    "main.fcf8f7ec.js.map": "/static/js/main.fcf8f7ec.js.map"
+    "main.e54816d8.css.map": "/static/css/main.e54816d8.css.map",
+    "main.a22e29fe.js.map": "/static/js/main.a22e29fe.js.map"
   },
   "entrypoints": [
-    "static/css/main.270180bf.css",
-    "static/js/main.fcf8f7ec.js"
+    "static/css/main.e54816d8.css",
+    "static/js/main.a22e29fe.js"
   ]
 }
