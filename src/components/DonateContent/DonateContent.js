@@ -61,45 +61,37 @@ function DonateContent() {
           </div>
           <div class="donate-paragraph">
             <p>
-              Sponsoring SACNAS UH is a great way to support diversity and
-              equity of opportunity in STEM. Our sponsors TODO
-            </p>
-            <p>
-              As the SACNAS National 2023 Graduate and Professional Chapter of
-              the Year, SACNAS UH is dedicated to TODO. We have a strong track
-              record of preparing students for academic and professional
-              opportunities in STEM, hosting events and performing outreact
-              specifically aimed at underrepresented communities and
-              first-generation university students.
+              If you are interested in partnering with SACNAS UH and supporting
+              our mission to promote equity of opportunity in STEM, we would
+              love to hear from you. By becoming a sponsor, you will not only
+              have the opportunity to impact the lives of our members, but also
+              to connect with a vibrant community of individuals and
+              organizations committed to diversity and inclusion in STEM. Please
+              contact us to learn more about partnership opportunities and the
+              impact your sponsorship can make. We look forward to hearing from
+              you.
             </p>
           </div>
-        </div>
-        <div class="donate-image">
-          <img src={SACNASGroup} />
         </div>
       </div>
       <div class="donate-container">
         <div class="donate-text">
           <div class="donate-title">
-            <h2>Sponsorship</h2>
+            <h2>Sponsors and Partners</h2>
           </div>
           <div class="donate-paragraph">
             <p>
-              Sponsoring SACNAS UH is a great way to support diversity and
-              equity of opportunity in STEM. Our sponsors TODO
-            </p>
-            <p>
-              As the SACNAS National 2023 Graduate and Professional Chapter of
-              the Year, SACNAS UH is dedicated to TODO. We have a strong track
-              record of preparing students for academic and professional
-              opportunities in STEM, hosting events and performing outreact
-              specifically aimed at underrepresented communities and
-              first-generation university students.
+              We would like to extend a heartfelt thank you to our generous
+              sponsors and partners. Your support enables us to host cultural
+              and educational events, facilitate community outreach, and promote
+              equity of opportunity in STEM. Previous sponsorships and
+              partnerships have allowed us to organize impactful activities like
+              Asia Fest, community field trips, career workshops, and more. With
+              your continued support, we look forward to hosting even bigger and
+              better events, and sharing the diverse cultures of our community
+              with the world.
             </p>
           </div>
-        </div>
-        <div class="donate-image">
-          <img src={SACNASGroup} />
         </div>
       </div>
     </div>
