@@ -5,7 +5,7 @@ import './HomeContent.css'
 import SACNASGroup from '../../assets/SACNAS-Group.jpg'
 import outreach_navarro from '../../assets/outreach_navarro.jpg'
 import houaztec from '../../assets/houaztec.jpg'
-import diversity_award from '../../assets/2022-Diversity-Award-crop2.jpg'
+import coty_award from '../../assets/COTY-Award.webp'
 import lorissa from '../../assets/lorissa-crop.jpg'
 
 function HomeContent() {
@@ -13,13 +13,13 @@ function HomeContent() {
     <>
       <div class="home">
         <AwardBanner 
-          title={<h2>SACNAS UH: <br/> 2022 Role Model Chapter for STEM Diversity</h2>} 
+          title={<h2>SACNAS UH: <br/> 2023 Graduate and Professional Chapter of the Year</h2>} 
           paragraph={<p>"I am extremely proud of our UH SACNAS team, and the work we’ve put in these past couple of years. We are a very young chapter, and we were just recognized as an official National chapter in January 2022, so to be almost immediately recognized as a role model chapter is phenomenal! We’ve definitely had our ups and downs, but this is a testament to the ambition and perseverance of the amazing students here in our organization. Congratulations UH SACNISTAS! This award was well deserved!"</p>} 
-          img={diversity_award} 
+          img={coty_award} 
           imgborder='y'
           quoteImg = {lorissa}
           quoteLabel= {<h3>Lorissa Saiz <br/> President, SACNAS UH <br/> 2018-Present</h3>}
-          learnMore="https://www.uh.edu/nsm/news-events/stories/2022/1029-sacnas-award.php"
+          learnMore="https://www.uh.edu/nsm/news-events/stories/2023/1030-sacnas-honored.php"
         />
         <div class="home-container">
           <Row 
