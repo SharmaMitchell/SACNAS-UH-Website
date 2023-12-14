@@ -28,7 +28,7 @@ function DonateContent() {
         <div class="donate-button-container paypal">
             <a target="_blank" rel="noopener" href="https://paypal.me/SACNASUH/">
                 <img src={paypalButton} />
-            </a>
+            </a>˚
             </div>
         <div class="donate-button-list">
             <DonateButton amount="25"/>
@@ -37,6 +37,34 @@ function DonateContent() {
             <DonateButton amount="250"/>
             <DonateButton amount="500"/>
             <DonateButton amount=""/>
+        </div>
+        <div class="donate-container">
+            <div class="donate-text">
+                <div class="donate-title">
+                    <h2>Sponsorship</h2>
+                </div>
+                <div class="donate-paragraph">
+                    <p>Sponsoring SACNAS UH is a great way to support diversity and equity of opportunity in STEM. Our sponsors TODO</p>
+                    <p>As the SACNAS National 2023 Graduate and Professional Chapter of the Year, SACNAS UH is dedicated to TODO. We have a strong track record of preparing students for academic and professional opportunities in STEM, hosting events and performing outreact specifically aimed at underrepresented communities and first-generation university students.</p>
+                </div>
+            </div>
+            <div class="donate-image">
+                <img src={SACNASGroup}/>
+            </div>
+        </div>
+        <div class="donate-container">
+            <div class="donate-text">
+                <div class="donate-title">
+                    <h2>Sponsorship</h2>
+                </div>
+                <div class="donate-paragraph">
+                    <p>Sponsoring SACNAS UH is a great way to support diversity and equity of opportunity in STEM. Our sponsors TODO</p>
+                    <p>As the SACNAS National 2023 Graduate and Professional Chapter of the Year, SACNAS UH is dedicated to TODO. We have a strong track record of preparing students for academic and professional opportunities in STEM, hosting events and performing outreact specifically aimed at underrepresented communities and first-generation university students.</p>
+                </div>
+            </div>
+        <div class="donate-image">
+                <img src={SACNASGroup}/>
+            </div>
         </div>
     </div>
   )
