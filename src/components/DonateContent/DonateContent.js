@@ -3,6 +3,8 @@ import "./DonateContent.css";
 import SACNASGroup from "../../assets/SACNAS-Group.jpg";
 import DonateButton from "./DonateButton";
 import paypalButton from "../../assets/paypal-donate-button-black-crop.png";
+import ChevronLogo from "../../assets/Chevron-logo.png";
+import AltairLogo from "../../assets/Altair-logo.png";
 
 function DonateContent() {
   return (
@@ -93,6 +95,10 @@ function DonateContent() {
             </p>
           </div>
         </div>
+      </div>
+      <div class="sponsors-container">
+        <img src={ChevronLogo} />
+        <img src={AltairLogo} />
       </div>
     </div>
   );
