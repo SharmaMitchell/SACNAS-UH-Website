@@ -59,7 +59,7 @@ function DonateContent() {
       <div class="donate-container">
         <div class="donate-text">
           <div class="donate-title">
-            <h2>Sponsorship</h2>
+            <h2 id="sponsor">Sponsorship</h2>
           </div>
           <div class="donate-paragraph">
             <p>
@@ -75,6 +75,9 @@ function DonateContent() {
               <a href="/files/SACNAS_UH_Sponsorship_Packet.pdf">
                 Sponsorship Packet PDF
               </a>
+              . To sign up for sponsorship or request a consultation, please see
+              the{" "}
+              <a href="https://forms.gle/RZrHTiKNnDAYMcBg7">Sponsorship Form</a>
               . If you have any questions, feel free to{" "}
               <a href="mailto:UH.sacnas@gmail.com">contact us</a> to learn more
               about partnership opportunities and the impact your sponsorship
