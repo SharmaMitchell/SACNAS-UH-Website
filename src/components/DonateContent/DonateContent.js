@@ -68,8 +68,14 @@ function DonateContent() {
               love to hear from you. By becoming a sponsor, you will not only
               have the opportunity to impact the lives of our members, but also
               to connect with a vibrant community of individuals and
-              organizations committed to diversity and inclusion in STEM. If you
-              have any questions, feel free to{" "}
+              organizations committed to diversity and inclusion in STEM.
+            </p>
+            <p>
+              To view sponsorship details and benefits, please reference our{" "}
+              <a href="/files/SACNAS_UH_Sponsorship_Packet.pdf">
+                Sponsorship Packet PDF
+              </a>
+              . If you have any questions, feel free to{" "}
               <a href="mailto:UH.sacnas@gmail.com">contact us</a> to learn more
               about partnership opportunities and the impact your sponsorship
               can make. We look forward to hearing from you.
