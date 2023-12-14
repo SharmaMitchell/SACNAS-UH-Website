@@ -17,6 +17,8 @@
 
   --card-background: rgb(220,220,220);
 
+  --sponsors-background: var(--card-background);
+
   scroll-behavior: smooth;
 }
 [data-theme='dark']{
@@ -27,6 +29,8 @@
   --url: var(--pink);
 
   --card-background: rgb(55, 55, 55);
+
+  --sponsors-background: black;
 }
 body {
   margin: 0;
