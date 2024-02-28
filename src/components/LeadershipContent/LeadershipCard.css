@@ -1,355 +1,365 @@
-.leadership-card{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    margin: 5px auto;
+.leadership-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin: 5px auto;
 }
-.leadership-card.article{
-    color: #fff;
-    margin: 20px;
+.leadership-card.article {
+  color: #fff;
+  margin: 20px;
 }
-.leadership-card-container{
-    width: 525px;
-    max-width: 90vw;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: linear-gradient(180deg, transparent 79px, var(--card-background) 80px);
-    margin: 5px;
-    border-radius: 20px;
+.leadership-card-container {
+  width: 525px;
+  max-width: 90vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(
+    180deg,
+    transparent 79px,
+    var(--card-background) 80px
+  );
+  margin: 5px;
+  border-radius: 20px;
 }
-.leadership-card-container.m{
-    width: 260px;
-    /*flex-basis: auto;*/
-    min-height: 300px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: linear-gradient(180deg, transparent 79px, var(--card-background) 80px);
-    margin: 5px;
-    border-radius: 20px;
+.leadership-card-container.m {
+  width: 260px;
+  /*flex-basis: auto;*/
+  min-height: 300px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(
+    180deg,
+    transparent 79px,
+    var(--card-background) 80px
+  );
+  margin: 5px;
+  border-radius: 20px;
 }
-.leadership-card-container.article{
-    background: linear-gradient(180deg, transparent 79px, var(--secondary) 80px);
-    width: 330px;
-    max-width: 90vw;
-    margin: 0;
-    border-bottom: 10px solid var(--primary);
+.leadership-card-container.article {
+  background: linear-gradient(180deg, transparent 79px, var(--secondary) 80px);
+  width: 330px;
+  max-width: 90vw;
+  margin: 0;
+  border-bottom: 10px solid var(--primary);
 }
 .leadership-card-container.article .leadership-card-img-background {
-    background: var(--secondary);
+  background: var(--secondary);
 }
-.leadership-card-img-background{
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    width: 100%;
-    height: 50px;
-    background: var(--card-background);
-    border-radius: 20px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    margin-top: 60px;
-    /*transition: 0.3s ease all;*/
+.leadership-card-img-background {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 50px;
+  background: var(--card-background);
+  border-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-top: 60px;
+  /*transition: 0.3s ease all;*/
 }
-.leadership-card-img{
-    width: 100px;
-    height: 100px;
-    position: relative;
-    border-radius: 100%;
-    border: 5px solid var(--background);
-    margin-top: 80px;
-    transition: all 0.3s ease;
+.leadership-card-img {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  border-radius: 100%;
+  border: 5px solid var(--background);
+  margin-top: 80px;
+  transition: all 0.3s ease;
+  background-color: var(--background);
 }
-.leadership-card-img img{
-    position: relative;
-    object-fit: cover;
-    object-position: top;
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-    transition: all 0.3s ease;
+.leadership-card-img img {
+  position: relative;
+  object-fit: cover;
+  object-position: top;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  transition: all 0.3s ease;
 }
-.leadership-card-img .no-link{
-    display: none;
+.leadership-card-img .no-link {
+  display: none;
 }
-.leadership-card-img .card-img-top{
-    position: absolute;
-    left: 0;
-    top: 0;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    opacity: 0;
-    transition: all 0.3s ease;
+.leadership-card-img .card-img-top {
+  position: absolute;
+  left: 0;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  opacity: 0;
+  transition: all 0.3s ease;
 }
-.leadership-card-img .card-img-top .linkedin-logo{
-    width: 60%;
-    height: 60%;
+.leadership-card-img .card-img-top .linkedin-logo {
+  width: 60%;
+  height: 60%;
 }
-.leadership-card-img:hover .card-img-top{
-    opacity: 1;
+.leadership-card-img:hover .card-img-top {
+  opacity: 1;
 }
-.leadership-card-img:hover .officer-pic{
-    transform: scale(1.05);
-    filter: blur(1px) brightness(.8);
+.leadership-card-img:hover .officer-pic {
+  transform: scale(1.05);
+  filter: blur(1px) brightness(0.8);
 }
-.leadership-card-bottom{
-    /* This keeps the email buttons at the bottom of the faculty cards */
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-    justify-content: space-between; /* <-- Most Important */
-    /*height: 60%; /* <-- Second Most Important */
+.leadership-card-bottom {
+  /* This keeps the email buttons at the bottom of the faculty cards */
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between; /* <-- Most Important */
+  /*height: 60%; /* <-- Second Most Important */
 }
-.leadership-card-text{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px;
+.leadership-card-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
 }
-.leadership-card-text .leadership-card-title h3{
-    margin: 0;
-    text-align: center;
-    font-size: 1.05rem;
-    font-weight: 500;
+.leadership-card-text .leadership-card-title h3 {
+  margin: 0;
+  text-align: center;
+  font-size: 1.05rem;
+  font-weight: 500;
 }
-.leadership-card.article .leadership-card-position{
-    font-size: 0.9rem;
-    font-weight: 300;
-    text-align: center;
-    margin: 0;
-    margin-top: 5px;
+.leadership-card.article .leadership-card-position {
+  font-size: 0.9rem;
+  font-weight: 300;
+  text-align: center;
+  margin: 0;
+  margin-top: 5px;
 }
-.leadership-card-text .leadership-card-paragraph{
-    text-align: justify;
-    margin: 10px;
+.leadership-card-text .leadership-card-paragraph {
+  text-align: justify;
+  margin: 10px;
 }
-.leadership-card-container.m .leadership-card-text .leadership-card-paragraph{
-    text-align: center;
+.leadership-card-container.m .leadership-card-text .leadership-card-paragraph {
+  text-align: center;
 }
-.leadership-card-text .leadership-card-paragraph p{
-    margin: 0;
-    font-size: 0.9rem;
+.leadership-card-text .leadership-card-paragraph p {
+  margin: 0;
+  font-size: 0.9rem;
 }
-.leadership-card.article .leadership-card-text .leadership-card-paragraph p{
-    font-size: 0.8rem;
+.leadership-card.article .leadership-card-text .leadership-card-paragraph p {
+  font-size: 0.8rem;
 }
-.leadership-card-red{
-    min-height: 40px;
-    height: auto;
-    max-height: 40px;
-    width: 100%;
-    background-color: var(--primary);
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: auto;
-    cursor: pointer;
-    transition: all 0.3s ease;
+.leadership-card-red {
+  min-height: 40px;
+  height: auto;
+  max-height: 40px;
+  width: 100%;
+  background-color: var(--primary);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: auto;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
-.leadership-card-red.nocontact{
-    cursor: auto;
+.leadership-card-red.nocontact {
+  cursor: auto;
 }
-.leadership-card-red.expanded{
-    cursor: auto;
-    max-height: 100px;
+.leadership-card-red.expanded {
+  cursor: auto;
+  max-height: 100px;
 }
-.leadership-card-red .leadership-contact{
-    padding-left: 20px;
-    padding-right: 20px;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    width: 100%;
-    color: white;
-    opacity: 1;
+.leadership-card-red .leadership-contact {
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  width: 100%;
+  color: white;
+  opacity: 1;
 }
-.leadership-card-red.expanded .leadership-contact{
-    flex-direction: row-reverse;
+.leadership-card-red.expanded .leadership-contact {
+  flex-direction: row-reverse;
 }
-.leadership-card-red.expanded .leadership-contact .contact-info{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 10px 0;
+.leadership-card-red.expanded .leadership-contact .contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px 0;
 }
-.leadership-card-red .leadership-contact .contact-icons{
-    display: flex;
-    flex-direction: row-reverse;
+.leadership-card-red .leadership-contact .contact-icons {
+  display: flex;
+  flex-direction: row-reverse;
 }
-.leadership-card-red.expanded .leadership-contact .contact-icons{
-    display: block;
+.leadership-card-red.expanded .leadership-contact .contact-icons {
+  display: block;
 }
-.leadership-card-red .leadership-expand-label{
-    opacity: 1;
-    max-width: 60px;
-    transition: 0.5s ease all;
+.leadership-card-red .leadership-expand-label {
+  opacity: 1;
+  max-width: 60px;
+  transition: 0.5s ease all;
 }
-.leadership-card-red.expanded .leadership-expand-label{
-    opacity: 0;
-    max-width: 0;
-    max-height: 0;
-    transition: 0s;
+.leadership-card-red.expanded .leadership-expand-label {
+  opacity: 0;
+  max-width: 0;
+  max-height: 0;
+  transition: 0s;
 }
-.leadership-card-red .leadership-expand, .leadership-close{
-    filter: invert(1);
-    width: 20px;
-    height: 20px;
-    transition: 0s all;
+.leadership-card-red .leadership-expand,
+.leadership-close {
+  filter: invert(1);
+  width: 20px;
+  height: 20px;
+  transition: 0s all;
 }
-.leadership-card-red .leadership-expand{
-    transform: rotate(0deg);
-    cursor: pointer;
-    display: block;
-    opacity: 1;
-    transition: 0.3s ease all;
-    margin-left: 10px;
+.leadership-card-red .leadership-expand {
+  transform: rotate(0deg);
+  cursor: pointer;
+  display: block;
+  opacity: 1;
+  transition: 0.3s ease all;
+  margin-left: 10px;
 }
-.leadership-card-red.expanded .leadership-expand{
-    opacity: 0;
-    height: 0;
-    width: 0;
-    transition: 0s;
+.leadership-card-red.expanded .leadership-expand {
+  opacity: 0;
+  height: 0;
+  width: 0;
+  transition: 0s;
 }
-.leadership-card-red .leadership-close-wrapper{
-    font-size: 0;
-    display: block;
-    height: 18px;
+.leadership-card-red .leadership-close-wrapper {
+  font-size: 0;
+  display: block;
+  height: 18px;
 }
-.leadership-card-red .leadership-close{
-    cursor: pointer;
-    display: block;
-    opacity: 0;
-    width: 0;
-    transition: all 0s;
+.leadership-card-red .leadership-close {
+  cursor: pointer;
+  display: block;
+  opacity: 0;
+  width: 0;
+  transition: all 0s;
 }
-.leadership-card-red.expanded .leadership-close{
-    opacity: 1;
-    display: block;
-    width: 18px;
-    height: 18px;
-    margin-left: 5px;
-    margin-top: 10px;
-    transition: 0.3s ease all;
-    transition-delay: 0.15s;
+.leadership-card-red.expanded .leadership-close {
+  opacity: 1;
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin-left: 5px;
+  margin-top: 10px;
+  transition: 0.3s ease all;
+  transition-delay: 0.15s;
 }
-.leadership-card-red .leadership-social{
-    opacity: 0;
-    width: 0;
-    height: 0;
-    transition: 0;
+.leadership-card-red .leadership-social {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  transition: 0;
 }
-.leadership-card-red .leadership-social a{
-    display: none;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    color:white;
-    text-decoration: underline;
+.leadership-card-red .leadership-social a {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: underline;
 }
-.leadership-card-red.expanded .leadership-social a{
-    display: flex;
-    font-size: 1rem;
+.leadership-card-red.expanded .leadership-social a {
+  display: flex;
+  font-size: 1rem;
 }
-.leadership-card-red.expanded .leadership-social{
-    opacity: 1;
-    width: auto;
-    height: auto;
-    margin: 3px 0;
-    transition: 0.3s ease all;
+.leadership-card-red.expanded .leadership-social {
+  opacity: 1;
+  width: auto;
+  height: auto;
+  margin: 3px 0;
+  transition: 0.3s ease all;
 }
-.leadership-card-red.expanded .leadership-social:nth-child(2){
-    transition-delay: 0.075s
+.leadership-card-red.expanded .leadership-social:nth-child(2) {
+  transition-delay: 0.075s;
 }
-.leadership-card-red.expanded .leadership-social:nth-child(3){
-    transition-delay: 0.15s
+.leadership-card-red.expanded .leadership-social:nth-child(3) {
+  transition-delay: 0.15s;
 }
-.leadership-card-red .leadership-social img{
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
-}
-
-.leadership-card-contact{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+.leadership-card-red .leadership-social img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
 }
 
-.leadership-card-contact a{
-    width: 30px;
-    height: 30px;
-    margin: 0 10px;
+.leadership-card-contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
-.leadership-card-contact img{
-    width: 100%;
-    height: 100%;
-    transition: 0.3s ease transform;
+
+.leadership-card-contact a {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
 }
-.leadership-card-contact img:hover{
-    transform: scale(1.05);
+.leadership-card-contact img {
+  width: 100%;
+  height: 100%;
+  transition: 0.3s ease transform;
+}
+.leadership-card-contact img:hover {
+  transform: scale(1.05);
 }
 
 /* Tablet */
-@media only screen and (min-width: 768px){
-    .leadership-card-container{
-        max-width: 42vw;
-    }
-    .leadership-card.article{
-        margin: 0;
-        margin-bottom: 10px;
-        color: #fff;
-    }
+@media only screen and (min-width: 768px) {
+  .leadership-card-container {
+    max-width: 42vw;
+  }
+  .leadership-card.article {
+    margin: 0;
+    margin-bottom: 10px;
+    color: #fff;
+  }
 }
 
 /* Desktop */
-@media only screen and (min-width: 1200px){
-    .leadership-card-red, .leadership-card-red.expanded{
-        height: 40px;
-        max-height: 40px;
-    }
-    .leadership-card-red .leadership-expand{
-        transform: rotate(270deg);
-        margin-right: 10px;
-        margin-left: 0;
-    }
-    .leadership-card-red .leadership-contact{
-        flex-direction: row;
-    }
-    .leadership-card-red .leadership-contact .contact-icons{
-        align-items: center;
-        flex-direction: row;
-    }
-    .leadership-card-red.expanded .leadership-contact .contact-icons{
-        display: flex;
-    }
-    .leadership-card-red.expanded .leadership-contact .contact-info{
-        flex-direction: row;
-        margin: 0;
-    }
-    .leadership-card-red.expanded .leadership-social{
-        margin-right: 10px;
-    }
-    .leadership-card-red.expanded .leadership-social a{
-        font-size: 0.95rem;
-    }
-    .leadership-card-red.expanded .leadership-expand{
-        width: 0;
-    }
-    .leadership-card-red.expanded .leadership-close{
-        margin-top: 0;
-        margin-right: 0;
-    }
-    
+@media only screen and (min-width: 1200px) {
+  .leadership-card-red,
+  .leadership-card-red.expanded {
+    height: 40px;
+    max-height: 40px;
+  }
+  .leadership-card-red .leadership-expand {
+    transform: rotate(270deg);
+    margin-right: 10px;
+    margin-left: 0;
+  }
+  .leadership-card-red .leadership-contact {
+    flex-direction: row;
+  }
+  .leadership-card-red .leadership-contact .contact-icons {
+    align-items: center;
+    flex-direction: row;
+  }
+  .leadership-card-red.expanded .leadership-contact .contact-icons {
+    display: flex;
+  }
+  .leadership-card-red.expanded .leadership-contact .contact-info {
+    flex-direction: row;
+    margin: 0;
+  }
+  .leadership-card-red.expanded .leadership-social {
+    margin-right: 10px;
+  }
+  .leadership-card-red.expanded .leadership-social a {
+    font-size: 0.95rem;
+  }
+  .leadership-card-red.expanded .leadership-expand {
+    width: 0;
+  }
+  .leadership-card-red.expanded .leadership-close {
+    margin-top: 0;
+    margin-right: 0;
+  }
 }

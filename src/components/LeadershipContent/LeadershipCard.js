@@ -5,6 +5,7 @@ import SACNASEmail from "../../assets/SACNAS-Email.png";
 import SACNASDiscord from "../../assets/SACNAS-Discord.png";
 import expand from "../../assets/expand.png";
 import close from "../../assets/close.png";
+import avatar from "../../assets/avatar.png";
 
 function LeadershipCard(props) {
   /*
@@ -39,6 +40,9 @@ function LeadershipCard(props) {
                   ? `${process.env.PUBLIC_URL}${props.img}`
                   : props.img
               }
+              onError={(e) => {
+                e.target.src = avatar;
+              }}
             />
           </div>
         </div>
@@ -54,29 +58,28 @@ function LeadershipCard(props) {
               <p>{props.paragraph}</p>
             </div>
             {props.articleCard && hasContact && (
-            <div class="leadership-card-contact">
-              {props.discordHandle && (
-                <a
-                  target="_blank" 
-                  rel="noopener"
-                  href={
-                    props.discordID
-                      ? "https://discord.com/users/" + props.discordID
-                      : "#"
-                  }
-                >
-                  <img src={SACNASDiscord} />
-                </a>
-              )}
-              {props.linkedin && (
-                <a target="_blank" rel="noopener" href={props.linkedin}>
-                  <img src={SACNASLinkedIn} />
-                </a>
-              )}
-            </div>
-          )}
+              <div class="leadership-card-contact">
+                {props.discordHandle && (
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href={
+                      props.discordID
+                        ? "https://discord.com/users/" + props.discordID
+                        : "#"
+                    }
+                  >
+                    <img src={SACNASDiscord} />
+                  </a>
+                )}
+                {props.linkedin && (
+                  <a target="_blank" rel="noopener" href={props.linkedin}>
+                    <img src={SACNASLinkedIn} />
+                  </a>
+                )}
+              </div>
+            )}
           </div>
-          
         </div>
         {!props.articleCard && (
           <div
@@ -121,7 +124,7 @@ function LeadershipCard(props) {
                   {props.discordHandle ? (
                     <div class="leadership-social">
                       <a
-                        target="_blank" 
+                        target="_blank"
                         rel="noopener"
                         href={
                           props.discordID
