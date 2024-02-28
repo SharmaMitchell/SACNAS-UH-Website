@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.e54816d8.css",
-    "main.js": "/static/js/main.857e90d1.js",
+    "main.js": "/static/js/main.43c3440c.js",
     "static/media/UH-Skyline-Shot.jpg": "/static/media/UH-Skyline-Shot.63f101264f5826f3bab6.jpg",
     "static/media/COTY-Award.webp": "/static/media/COTY-Award.c4e9c45a1d511cf82d1b.webp",
     "static/media/houaztec.jpg": "/static/media/houaztec.725f21d433e16c7af502.jpg",
@@ -18,10 +18,10 @@
     "static/media/Altair-logo.png": "/static/media/Altair-logo.c1f1140a9056d086fd10.png",
     "index.html": "/index.html",
     "main.e54816d8.css.map": "/static/css/main.e54816d8.css.map",
-    "main.857e90d1.js.map": "/static/js/main.857e90d1.js.map"
+    "main.43c3440c.js.map": "/static/js/main.43c3440c.js.map"
   },
   "entrypoints": [
     "static/css/main.e54816d8.css",
-    "static/js/main.857e90d1.js"
+    "static/js/main.43c3440c.js"
   ]
 }
