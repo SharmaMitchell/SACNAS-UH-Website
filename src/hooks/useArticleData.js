@@ -41,8 +41,10 @@ export function useArticleData(articleId) {
           formattedData = formattedData.replace(/width: *.*?;/g, "");
 
           // remove font size
-          formattedData = formattedData.replace(/font-size: *.*?pt;/g, "");
-
+          formattedData = formattedData.replace(
+            /font-size:\s*\d+(\.\d+)?pt;/g,
+            ""
+          );
           // remove font-family: "...";
           formattedData = formattedData.replace(/font-family: *.*?;/g, "");
 
