@@ -20,7 +20,7 @@ export function useEventsData() {
       setULoading(false);
     } else {
       fetch(
-        `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/Upcoming!A2:J19?key=${API_KEY}`,
+        `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/Upcoming!A2:J19?key=${API_KEY}`
       )
         .then(function (response) {
           return response.json();
@@ -31,12 +31,12 @@ export function useEventsData() {
           setULoading(false);
           sessionStorage.setItem(
             "upcomingEventsData",
-            JSON.stringify(eventData),
+            JSON.stringify(eventData)
           );
           return eventData;
         });
     }
-  }, []);
+  }, [API_KEY]);
 
   const [previous, setPrevious] = useState([]); /* Previous events data */
   const [pLoading, setPLoading] =
@@ -52,7 +52,7 @@ export function useEventsData() {
       setPLoading(false);
     } else {
       fetch(
-        `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/Archive!A2:J19?key=${API_KEY}`,
+        `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/Archive!A2:J19?key=${API_KEY}`
       )
         .then(function (response) {
           return response.json();
@@ -63,12 +63,12 @@ export function useEventsData() {
           setPLoading(false);
           sessionStorage.setItem(
             "previousEventsData",
-            JSON.stringify(eventData),
+            JSON.stringify(eventData)
           );
           return eventData;
         });
     }
-  }, []);
+  }, [API_KEY]);
 
   return { upcoming, previous, uLoading, pLoading };
 }

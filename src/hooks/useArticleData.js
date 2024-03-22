@@ -13,7 +13,7 @@ export function useArticleData(articleId) {
 
     const articleData = sessionStorage.getItem(`articleData-${articleId}`);
     const articleMetadata = sessionStorage.getItem(
-      `articleMetadata-${articleId}`,
+      `articleMetadata-${articleId}`
     );
 
     if (articleData) {
@@ -23,7 +23,7 @@ export function useArticleData(articleId) {
       setArticleDataLoading(false);
     } else {
       fetch(
-        `https://www.googleapis.com/drive/v3/files/${articleId}/export?mimeType=text/html&key=${API_KEY}`,
+        `https://www.googleapis.com/drive/v3/files/${articleId}/export?mimeType=text/html&key=${API_KEY}`
       )
         .then((response) => response.text())
         .then((data) => {
@@ -33,7 +33,7 @@ export function useArticleData(articleId) {
           // Set all images to have no referrer policy (prevent CORS errors)
           formattedData = formattedData.replace(
             /<img/g,
-            '<img referrerpolicy="no-referrer" class="article-img"',
+            '<img referrerpolicy="no-referrer" class="article-img"'
           );
 
           // remove hardcoded height and width values
@@ -43,7 +43,7 @@ export function useArticleData(articleId) {
           // remove font size
           formattedData = formattedData.replace(
             /font-size:\s*\d+(\.\d+)?pt;/g,
-            "",
+            ""
           );
           // remove font-family: "...";
           formattedData = formattedData.replace(/font-family: *.*?;/g, "");
@@ -51,7 +51,7 @@ export function useArticleData(articleId) {
           // reduce weight of bold text
           formattedData = formattedData.replace(
             /font-weight:700/g,
-            "font-weight:500",
+            "font-weight:500"
           );
 
           // remove line height
@@ -62,7 +62,7 @@ export function useArticleData(articleId) {
           formattedData = formattedData.replace(/widows: *.*?;/g, "");
           formattedData = formattedData.replace(
             /line-page-break-after: *.*?;/g,
-            "",
+            ""
           );
 
           // remove google redirect
@@ -72,7 +72,7 @@ export function useArticleData(articleId) {
           for (const match of matches) {
             const originalUrl = decodeURIComponent(match[1]);
             const isOnSameDomain = originalUrl.startsWith(
-              "https://sacnas-uh.org",
+              "https://sacnas-uh.org"
             );
             const slug = isOnSameDomain
               ? originalUrl.replace("https://sacnas-uh.org", "")
@@ -96,7 +96,7 @@ export function useArticleData(articleId) {
       setArticleMetadataLoading(false);
     } else {
       fetch(
-        `https://www.googleapis.com/drive/v3/files/${articleId}?fields=createdTime%2Cname&key=${API_KEY}`,
+        `https://www.googleapis.com/drive/v3/files/${articleId}?fields=createdTime%2Cname&key=${API_KEY}`
       )
         .then((response) => response.json())
         .then((data) => {
@@ -106,7 +106,7 @@ export function useArticleData(articleId) {
               year: "numeric",
               month: "long",
               day: "numeric",
-            },
+            }
           );
           const formattedAuthor = data.name.split(" by ")[1];
           const formattedTitle = data.name.split(" by ")[0];
@@ -124,11 +124,11 @@ export function useArticleData(articleId) {
           });
           sessionStorage.setItem(
             `articleMetadata-${articleId}`,
-            articleMetadata,
+            articleMetadata
           );
         });
     }
-  }, [articleId]);
+  }, [API_KEY, articleId]);
 
   return {
     articleData,

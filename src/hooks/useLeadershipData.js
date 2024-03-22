@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 export function useLeadershipData() {
   const [leadershipData, setLeadershipData] = useState(
-    [],
+    []
   ); /* Leadership data */
   const [loading, setLoading] = useState(true); /* Leadership loading state */
 
@@ -36,25 +36,25 @@ export function useLeadershipData() {
     }
 
     fetch(
-      `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values:batchGet?ranges=${RANGES}&key=${API_KEY}`,
+      `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values:batchGet?ranges=${RANGES}&key=${API_KEY}`
     )
       .then(function (response) {
         return response.json();
       })
       .then(function (data) {
         //console.log(data.valueRanges);
-        if (data.valueRanges != undefined) {
+        if (data.valueRanges !== undefined) {
           setLeadershipData(data.valueRanges);
           setLoading(false);
           // Store data in session storage
           sessionStorage.setItem(
             "leadershipData",
-            JSON.stringify(data.valueRanges),
+            JSON.stringify(data.valueRanges)
           );
         }
         return data.valueRanges;
       });
-  }, []);
+  }, [API_KEY, RANGES]);
 
   return { leadershipData, loading };
 }
