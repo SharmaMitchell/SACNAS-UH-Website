@@ -16,7 +16,7 @@ function Row(props) {
         <div class="row-paragraph">{props.paragraph}</div>
       </div>
       <div class={!props.imgborder ? "row-image" : "row-image border"}>
-        <img src={props.img} />
+        <img src={props.img} alt={props.tilte} />
       </div>
     </div>
   );

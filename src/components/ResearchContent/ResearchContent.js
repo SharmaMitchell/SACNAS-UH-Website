@@ -20,7 +20,7 @@ function ResearchContent() {
               how to start searching for a research opportunity{" "}
               <a
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 href="https://uh.edu/nsm/students/undergraduate/research/index"
               >
                 here
@@ -32,7 +32,7 @@ function ResearchContent() {
               This is a{" "}
               <a
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 href="https://uh.edu/honors/undergraduate-research/research-resources/research-positions-uh/"
               >
                 list
@@ -44,7 +44,7 @@ function ResearchContent() {
               information/other opportunities, such as research fellowships{" "}
               <a
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 href="https://uh.edu/honors/undergraduate-research/"
               >
                 here
@@ -58,7 +58,7 @@ function ResearchContent() {
               placement. Application deadline is April 30, 2021. More info{" "}
               <a
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 href="https://uh.edu/nsm/students/scholarships/stem-scholarship-program/"
               >
                 here
@@ -69,7 +69,7 @@ function ResearchContent() {
           <div class="research-advice">
             <div class="email-icon">
               <a href="mailto:UH.sacnas@gmail.com">
-                <img src={SACNASEmail} />
+                <img src={SACNASEmail} alt="Email SACNAS UH" />
               </a>
             </div>
             <div class="email-blurb">

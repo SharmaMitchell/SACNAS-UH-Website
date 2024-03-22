@@ -8,14 +8,14 @@ function DonateButton(props) {
   */
   let link = "https://paypal.me/SACNASUH/";
   let label = "Other";
-  if (props.amount != undefined && props.amount != "") {
+  if (props.amount !== undefined && props.amount !== "") {
     link += props.amount;
     label = "$" + props.amount;
   }
 
   return (
     <div class="donate-button-container">
-      <a target="_blank" rel="noopener" href={link}>
+      <a target="_blank" rel="noopener noreferrer" href={link}>
         {label}
       </a>
     </div>

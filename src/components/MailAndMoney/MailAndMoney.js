@@ -20,7 +20,11 @@ function MailAndMoney(props) {
           }
         >
           <a href="mailto:UH.sacnas@gmail.com">
-            <img class="mnm-item email" src={SACNASEmail} />
+            <img
+              class="mnm-item email"
+              src={SACNASEmail}
+              alt="Email SACNAS UH"
+            />
           </a>
           <div class="mnm-label">
             <a href="mailto:UH.sacnas@gmail.com">Email Us</a>
@@ -34,7 +38,11 @@ function MailAndMoney(props) {
           }
         >
           <Link to="/maillist">
-            <img class="mnm-item list" src={SACNASMailList} />
+            <img
+              class="mnm-item list"
+              src={SACNASMailList}
+              alt="SACNAS UH Mail List"
+            />
           </Link>
           <div class="mnm-label">
             <Link to="/maillist">Mail List</Link>
@@ -48,7 +56,11 @@ function MailAndMoney(props) {
           }
         >
           <Link to="/donate">
-            <img class="mnm-item donate" src={SACNASDonate} />
+            <img
+              class="mnm-item donate"
+              src={SACNASDonate}
+              alt="Donate to SACNAS UH"
+            />
           </Link>
           <div class="mnm-label">
             <Link to="/donate">Donate</Link>

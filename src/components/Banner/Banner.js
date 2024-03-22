@@ -18,7 +18,7 @@ function Banner() {
           <h2>Celebrating Scientific Research and diversity in stem</h2>
         </div>
         <div class="banner-logo">
-          <img src={SacnasLogo} />
+          <img src={SacnasLogo} alt="SACNAS UH Logo" />
         </div>
       </div>
     </div>

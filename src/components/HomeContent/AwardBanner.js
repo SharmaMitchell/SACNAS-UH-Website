@@ -18,7 +18,7 @@ function AwardBanner(props) {
         <div class="award-banner-container">
           <div class="award-banner-left">
             <div class="quote-image">
-              <img src={props.quoteImg} />
+              <img src={props.quoteImg} alt={props.quoteLabel} />
             </div>
             <div class="quote-label">{props.quoteLabel}</div>
           </div>
@@ -27,7 +27,11 @@ function AwardBanner(props) {
             <div class="award-banner-paragraph">
               {props.paragraph}
               <div class="learn-more">
-                <a target="_blank" rel="noopener" href={props.learnMore}>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={props.learnMore}
+                >
                   Learn More
                 </a>
               </div>
@@ -40,7 +44,10 @@ function AwardBanner(props) {
                 : "award-banner-image border"
             }
           >
-            <img src={props.img} />
+            <img
+              src={props.img}
+              alt="SACNAS UH at the NDISTEM 2023 conference"
+            />
           </div>
         </div>
       </div>

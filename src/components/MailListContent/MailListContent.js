@@ -52,8 +52,8 @@ function MailListContent() {
     fetch(
       "https://api.allorigins.win/get?url=" +
         encodeURIComponent(
-          "https://us3.campaign-archive.com/home/?u=9725fd8683bb429d5d3d28d33&id=1c72884554",
-        ),
+          "https://us3.campaign-archive.com/home/?u=9725fd8683bb429d5d3d28d33&id=1c72884554"
+        )
     )
       .then(function (response) {
         //console.log(response);
@@ -62,7 +62,7 @@ function MailListContent() {
       .then(function (data) {
         //console.log(data.contents);
         let theURL = data.contents.match(
-          /<li class="campaign">\d*\/\d*\/\d* - <a href="(.*?)"/,
+          /<li class="campaign">\d*\/\d*\/\d* - <a href="(.*?)"/
         )[1]; /* Pull string matching this regex to extract URL */
         //console.log(theURL);
 
@@ -84,6 +84,7 @@ function MailListContent() {
       <div class="mail-list">
         <div class="gform-wrapper">
           <iframe
+            title="Mail List Form"
             class="gform"
             src="https://docs.google.com/forms/d/e/1FAIpQLScaahgIdex5tTTZnRiWNXglj62eJ4t9Ut505KCtjWuo55IqTw/viewform?embedded=true"
             // width="700"
@@ -102,6 +103,7 @@ function MailListContent() {
             <Spinner />
           ) : (
             <iframe
+              title="Newsletter Preview"
               class="mail-list-embed"
               src={previewURL}
               height={previewHeight}

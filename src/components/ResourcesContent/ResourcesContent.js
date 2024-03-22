@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./ResourcesContent.css";
 import VideoCard from "./VideoCard";
 import ArticleCard from "./ArticleCard";
@@ -30,8 +30,7 @@ function ResourcesContent() {
                 link={`/article/${article.id}`}
                 img={
                   thumbnails.find(
-                    (thumbnail) =>
-                      thumbnail.name.split(".")[0] === article.name,
+                    (thumbnail) => thumbnail.name.split(".")[0] === article.name
                   )?.thumbnailLink
                 }
                 author={article.name.split(" by ")[1]}

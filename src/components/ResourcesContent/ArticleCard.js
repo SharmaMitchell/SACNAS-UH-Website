@@ -44,7 +44,7 @@ function ArticleCard(props) {
       <div class="article-card-view">
         <Link class="article-card-view-button" to={props.link}>
           Read Article
-          <img class="article-card-view-arrow" src={expand} />
+          <img class="article-card-view-arrow" src={expand} alt="view" />
         </Link>
       </div>
     </div>

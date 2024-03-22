@@ -58,7 +58,11 @@ function HomeContent() {
                 Technology, Engineering, and Math (STEM). SACNAS works to
                 support the most underrepresented in STEM. For more information,
                 please visit{" "}
-                <a target="_blank" rel="noopener" href="https://sacnas.org">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://sacnas.org"
+                >
                   sacnas.org
                 </a>
                 .
@@ -114,7 +118,7 @@ function HomeContent() {
                 Instagram{" "}
                 <a
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                   href="https://www.instagram.com/uhsacnas/"
                 >
                   @uhsacnas
@@ -122,7 +126,7 @@ function HomeContent() {
                 , Facebook at{" "}
                 <a
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                   href="https://www.facebook.com/sacnasuh"
                 >
                   University of Houston - SACNAS
@@ -130,7 +134,7 @@ function HomeContent() {
                 , and on Twitter{" "}
                 <a
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                   href="https://twitter.com/uh_sacnas"
                 >
                   @uh_sacnas
@@ -138,7 +142,7 @@ function HomeContent() {
                 . You are also welcome in our growing{" "}
                 <a
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                   href="https://discord.gg/KKq7Ygc3p4"
                 >
                   Discord

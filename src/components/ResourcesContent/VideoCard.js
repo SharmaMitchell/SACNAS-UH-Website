@@ -15,7 +15,7 @@ function VideoCard(props) {
         <a
           class="video-card-image"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           href={props.link}
         >
           <img src={props.img} alt="Video Thumbnail" />
@@ -23,7 +23,7 @@ function VideoCard(props) {
         <a
           class="video-card-title"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           href={props.link}
         >
           <h3>{props.title}</h3>
@@ -36,11 +36,11 @@ function VideoCard(props) {
         <a
           class="video-card-view-button"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           href={props.link}
         >
           View on YouTube
-          <img class="video-card-view-arrow" src={expand} />
+          <img class="video-card-view-arrow" src={expand} alt="View" />
         </a>
       </div>
     </div>

@@ -1,5 +1,4 @@
 import React, { useCallback, useState } from "react";
-import { Link } from "react-router-dom";
 import "react-medium-image-zoom/dist/styles.css";
 import "./EventCard.css";
 import expand from "../../assets/expand.png";
@@ -8,11 +7,7 @@ import maps from "../../assets/maps.png";
 import calendar from "../../assets/calendar.png";
 import linkImg from "../../assets/link.png";
 import defaultEventImg from "../../assets/DefaultEvent.png";
-
-import Zoom from "react-medium-image-zoom";
-
 import { Controlled as ControlledZoom } from "react-medium-image-zoom";
-import Spinner from "../Spinner/Spinner";
 
 function EventCard(props) {
   /* Props:
@@ -37,12 +32,15 @@ function EventCard(props) {
   /* Image zoom state */
   const [isZoomed, setIsZoomed] = useState(false);
   const [hasZoomed, setHasZoomed] = useState(false);
-  const handleZoomChange = useCallback((shouldZoom) => {
-    setIsZoomed(shouldZoom);
-    if (!hasZoomed) {
-      setHasZoomed(true);
-    }
-  }, []);
+  const handleZoomChange = useCallback(
+    (shouldZoom) => {
+      setIsZoomed(shouldZoom);
+      if (!hasZoomed) {
+        setHasZoomed(true);
+      }
+    },
+    [hasZoomed]
+  );
   const handleZoomOut = () => {
     if (isZoomed) {
       handleZoomChange();
@@ -59,31 +57,32 @@ function EventCard(props) {
   /* Setting Links and link labels, if they're passed in */
   let link1Tag = ``;
   let link2Tag = ``;
-  if (props.link1 != undefined && props.link1 != "") {
+  if (props.link1 !== undefined && props.link1 !== "") {
     link1Tag = (
-      <a target="_blank" rel="noopener" href={props.link1}>
+      <a target="_blank" rel="noopener noreferrer" href={props.link1}>
         {props.link1Label || "Event Link"}
       </a>
     );
   }
-  if (props.link2 != undefined && props.link2 != "") {
+  if (props.link2 !== undefined && props.link2 !== "") {
     link2Tag = (
-      <a target="_blank" rel="noopener" href={props.link2}>
+      <a target="_blank" rel="noopener noreferrer" href={props.link2}>
         {props.link2Label || "Event Link 2"}
       </a>
     );
   }
 
-  let rawImgURL = "";
-  if (props.img) {
-    if (props.img.indexOf("i.imgur.com") != -1) {
-      rawImgURL =
-        props.img.slice(0, props.img.lastIndexOf("l")) +
-        props.img.slice(props.img.lastIndexOf("l") + 1);
-    } else {
-      rawImgURL = props.img;
-    }
-  }
+  // let rawImgURL = "";
+  // if (props.img) {
+  //   if (props.img.indexOf("i.imgur.com") != -1) {
+  //     rawImgURL =
+  //       props.img.slice(0, props.img.lastIndexOf("l")) +
+  //       props.img.slice(props.img.lastIndexOf("l") + 1);
+  //   }
+  //   else {
+  //     rawImgURL = props.img;
+  //   }
+  // }
 
   let formattedCalDates = props.date;
   if (props.date) {
@@ -91,7 +90,9 @@ function EventCard(props) {
     let calendarDateISO = new Date(calendarDateNum);
     let day = calendarDateISO.getDate().toString();
     let month = (calendarDateISO.getMonth() + 1).toString();
-    month.length == 1 ? (month = "0" + month) : (month = month);
+    if (month.length < 2) {
+      month = "0" + month;
+    }
     let year = calendarDateISO.getFullYear().toString();
     let calendarDate = year + month + day;
 
@@ -103,7 +104,7 @@ function EventCard(props) {
     if (calendarStartTime.length < 6) {
       calendarStartTime = "0" + calendarStartTime;
     }
-    if (props.time.indexOf("PM") != -1) {
+    if (props.time.indexOf("PM") !== -1) {
       calendarStartTime = (Number(calendarStartTime) + 120000).toString();
     }
     let calendarEndTime = (Number(calendarStartTime) + 20000).toString(); // End time 2 hours after
@@ -127,11 +128,11 @@ function EventCard(props) {
             <div class="overlay-row">
               {/* <a target="_blank" rel="noopener" href={rawImgURL}><img src={zoom}/></a> */}
               <a onClick={handleZoomChange}>
-                <img src={zoom} />
+                <img src={zoom} alt="zoom" />
               </a>
-              {link1Tag != "" ? (
-                <a target="_blank" rel="noopener" href={props.link1}>
-                  <img src={linkImg} />
+              {link1Tag !== "" ? (
+                <a target="_blank" rel="noopener noreferrer" href={props.link1}>
+                  <img src={linkImg} alt={props.link1Label || "Event Link"} />
                 </a>
               ) : (
                 <></>
@@ -140,17 +141,17 @@ function EventCard(props) {
             <div class="overlay-row">
               <a
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 href={`https://www.google.com/calendar/render?action=TEMPLATE&text=${props.title}&dates=${formattedCalDates}&details=${props.description}&location=${props.location}&sf=true&output=xml`}
               >
-                <img src={calendar} />
+                <img src={calendar} alt="Add to Google Calendar" />
               </a>
               <a
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 href={`https://www.google.com/maps/search/?api=1&query=${props.location}`}
               >
-                <img src={maps} />
+                <img src={maps} alt="Directions via Google Maps" />
               </a>
             </div>
           </div>
@@ -159,6 +160,7 @@ function EventCard(props) {
               onError={handleImgError}
               class="poster"
               src={imgError || rawImgError ? defaultEventImg : props.img}
+              alt={`Event: ${props.title}`}
             />
           </ControlledZoom>
           {/* {imgError ? <Spinner /> : <></>} */}
@@ -197,6 +199,7 @@ function EventCard(props) {
                     ? "event-view-more-expand active"
                     : "event-view-more-expand"
                 }
+                alt={`View ${viewMore ? "Less" : "More"}`}
                 src={expand}
               />
             </a>

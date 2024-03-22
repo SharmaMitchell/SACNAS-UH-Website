@@ -15,7 +15,7 @@ function FloatingBanner(props) {
 
   const [showBanner, setShowBanner] = useLocalStorage(
     props.label,
-    true,
+    true
   ); /* Cookie for showing/hiding the banner */
   const closeBanner = () => {
     setShowBanner(false);
@@ -27,7 +27,7 @@ function FloatingBanner(props) {
         {...(props.bgColor ? { style: { background: props.bgColor } } : "")}
       >
         <Link to="/donate" onClick={closeBanner} class="floating-banner-img">
-          <img src={props.img} />
+          <img src={props.img} alt="Donate" />
         </Link>
         <Link
           to="/donate"
@@ -37,7 +37,7 @@ function FloatingBanner(props) {
           {props.paragraph}
         </Link>
         <div class="floating-banner-close" onClick={closeBanner}>
-          <img src={close} />
+          <img src={close} alt="Close" />
         </div>
       </div>
     </>

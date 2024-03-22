@@ -36,15 +36,19 @@ function DonateContent() {
           </div>
         </div>
         <div class="donate-image border">
-          <img src={SACNASGroup} />
+          <img src={SACNASGroup} alt="SACNAS UH Leadership" />
           <div class="donate-thanks">
             <h3>Thank You From SACNAS UH!</h3>
           </div>
         </div>
       </div>
       <div class="donate-button-container paypal">
-        <a target="_blank" rel="noopener" href="https://paypal.me/SACNASUH/">
-          <img src={paypalButton} />
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://paypal.me/SACNASUH/"
+        >
+          <img src={paypalButton} alt="Paypal" />
         </a>
         ˚
       </div>
@@ -107,8 +111,8 @@ function DonateContent() {
         </div>
       </div>
       <div class="sponsors-container">
-        <img src={ChevronLogo} />
-        <img src={AltairLogo} />
+        <img src={ChevronLogo} alt="Chevron" />
+        <img src={AltairLogo} alt="Altair" />
       </div>
     </div>
   );

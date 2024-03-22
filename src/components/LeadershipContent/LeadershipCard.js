@@ -36,13 +36,14 @@ function LeadershipCard(props) {
             <img
               class="static-pic"
               src={
-                props.img[0] == "/"
+                props.img[0] === "/"
                   ? `${process.env.PUBLIC_URL}${props.img}`
                   : props.img
               }
               onError={(e) => {
                 e.target.src = avatar;
               }}
+              alt={props.title}
             />
           </div>
         </div>
@@ -62,19 +63,23 @@ function LeadershipCard(props) {
                 {props.discordHandle && (
                   <a
                     target="_blank"
-                    rel="noopener"
+                    rel="noopener noreferrer"
                     href={
                       props.discordID
                         ? "https://discord.com/users/" + props.discordID
                         : "#"
                     }
                   >
-                    <img src={SACNASDiscord} />
+                    <img src={SACNASDiscord} alt="Discord" />
                   </a>
                 )}
                 {props.linkedin && (
-                  <a target="_blank" rel="noopener" href={props.linkedin}>
-                    <img src={SACNASLinkedIn} />
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={props.linkedin}
+                  >
+                    <img src={SACNASLinkedIn} alt="LinkedIn" />
                   </a>
                 )}
               </div>
@@ -99,7 +104,7 @@ function LeadershipCard(props) {
             {hasContact ? (
               <div class="leadership-contact">
                 <div class="contact-icons">
-                  <img class="leadership-expand" src={expand} />
+                  <img class="leadership-expand" src={expand} alt="Expand" />
                   <div class="leadership-expand-label">Contact</div>
                   <div
                     class="leadership-close-wrapper"
@@ -107,14 +112,14 @@ function LeadershipCard(props) {
                       setExpandedContact(false);
                     }}
                   >
-                    <img class="leadership-close" src={close} />
+                    <img class="leadership-close" src={close} alt="Close" />
                   </div>
                 </div>
                 <div class="contact-info">
                   {props.email ? (
                     <div class="leadership-social">
                       <a href={"mailto:" + props.email}>
-                        <img src={SACNASEmail} />
+                        <img src={SACNASEmail} alt={`Email ${props.title}`} />
                         {props.email}
                       </a>
                     </div>
@@ -125,14 +130,14 @@ function LeadershipCard(props) {
                     <div class="leadership-social">
                       <a
                         target="_blank"
-                        rel="noopener"
+                        rel="noopener noreferrer"
                         href={
                           props.discordID
                             ? "https://discord.com/users/" + props.discordID
                             : "#"
                         }
                       >
-                        <img src={SACNASDiscord} />
+                        <img src={SACNASDiscord} alt="Discord" />
                         {props.discordHandle}
                       </a>
                     </div>
@@ -141,8 +146,12 @@ function LeadershipCard(props) {
                   )}
                   {props.linkedin ? (
                     <div class="leadership-social">
-                      <a target="_blank" rel="noopener" href={props.linkedin}>
-                        <img src={SACNASLinkedIn} />
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={props.linkedin}
+                      >
+                        <img src={SACNASLinkedIn} alt="LinkedIn" />
                         LinkedIn
                       </a>
                     </div>

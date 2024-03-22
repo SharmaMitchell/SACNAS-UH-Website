@@ -19,7 +19,7 @@ function Navbar(props) {
         <div class="navbar-container">
           <div class="nav-bar">
             <Link to="#" class="menu-bars">
-              <img src={navBarImg} onClick={showSidebar} />
+              <img src={navBarImg} onClick={showSidebar} alt="Show sidebar" />
             </Link>
             <div class="lhs">
               <div
