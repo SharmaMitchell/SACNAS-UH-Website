@@ -1,23 +1,23 @@
-.footer{
-    background-color: var(--secondary);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
+.footer {
+  background-color: var(--secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
-.footer .footer-container{
-    max-width: 1200px;
-    margin: 20px 0;
+.footer .footer-container {
+  max-width: 1200px;
+  margin: 20px 0;
 }
-.footer .brand h1{
-    margin: 0;
-    letter-spacing: 0.15rem;
-    text-transform: uppercase;
-    font-weight: 500;
+.footer .brand h1 {
+  margin: 0;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  font-weight: 500;
 }
-.footer .blurb p{
-    margin: 10px;
+.footer .blurb p {
+  margin: 10px;
 }
-.footer .blurb{
-    margin-bottom: 20px;
+.footer .blurb {
+  margin-bottom: 20px;
 }

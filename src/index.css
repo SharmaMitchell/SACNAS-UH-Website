@@ -1,30 +1,30 @@
-:root{
+:root {
   --background: white;
   --background-dark: #121212;
   --text-primary: black;
   --text-light: #222;
   --text-highlight: #c8102e;
   --primary: #c8102e;
-  --secondary: #960C22;
-  --pink: #FFA1A1;
-  --teal: #00B388;
-  --gold: #F6BE00;
+  --secondary: #960c22;
+  --pink: #ffa1a1;
+  --teal: #00b388;
+  --gold: #f6be00;
   /*--purple: #6200EE;*/
   --purple: #83f;
-  --blue: #3CA1FF;
+  --blue: #3ca1ff;
 
   --url: var(--primary);
 
-  --card-background: rgb(220,220,220);
+  --card-background: rgb(220, 220, 220);
 
   --sponsors-background: var(--card-background);
 
   scroll-behavior: smooth;
 }
-[data-theme='dark']{
+[data-theme="dark"] {
   --background: var(--background-dark);
   --text-primary: white;
-  --text-light: #DDD;
+  --text-light: #ddd;
 
   --url: var(--pink);
 
@@ -37,6 +37,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-b{
+b {
   font-weight: 500;
 }

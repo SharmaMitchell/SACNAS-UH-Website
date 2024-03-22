@@ -9,9 +9,8 @@ function getWindowSize() {
 }
 
 function MailListContent() {
-  const [windowSize, setWindowSize] = useState(
-    getWindowSize()
-  ); /* Window size State */
+  const [windowSize, setWindowSize] =
+    useState(getWindowSize()); /* Window size State */
 
   /* On window resize (and page load), set iFrame & Newsletter preview height */
   /* Mainly optimized for the Google Form, to avoid scrolling within the iFrame */
@@ -53,8 +52,8 @@ function MailListContent() {
     fetch(
       "https://api.allorigins.win/get?url=" +
         encodeURIComponent(
-          "https://us3.campaign-archive.com/home/?u=9725fd8683bb429d5d3d28d33&id=1c72884554"
-        )
+          "https://us3.campaign-archive.com/home/?u=9725fd8683bb429d5d3d28d33&id=1c72884554",
+        ),
     )
       .then(function (response) {
         //console.log(response);
@@ -63,7 +62,7 @@ function MailListContent() {
       .then(function (data) {
         //console.log(data.contents);
         let theURL = data.contents.match(
-          /<li class="campaign">\d*\/\d*\/\d* - <a href="(.*?)"/
+          /<li class="campaign">\d*\/\d*\/\d* - <a href="(.*?)"/,
         )[1]; /* Pull string matching this regex to extract URL */
         //console.log(theURL);
 

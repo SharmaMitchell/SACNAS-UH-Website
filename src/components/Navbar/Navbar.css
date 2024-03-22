@@ -1,5 +1,5 @@
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 #navbar {
   position: fixed;
@@ -30,16 +30,16 @@ a{
   /*background-color: crimson;*/
   background-color: var(--primary);
 }
-#navbar .spam{
+#navbar .spam {
   display: none;
 }
-#navbar .lhs{
+#navbar .lhs {
   display: none;
 }
-#navbar .nav-list{
+#navbar .nav-list {
   display: none;
 }
-#navbar .brand{
+#navbar .brand {
   position: absolute;
   width: min(100%, 1300px);
   pointer-events: none; /*Can click through to navlist and spam, but can't click to go home*/
@@ -48,31 +48,31 @@ a{
   font-size: 1.2rem;
   letter-spacing: 0.15rem;
 }
-#navbar .brand a{
+#navbar .brand a {
   display: inline-block;
   pointer-events: all;
 }
-#navbar .brand h1{
-    color: white;
-    text-transform: uppercase;
-    height: 8vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    font-weight: 500;
+#navbar .brand h1 {
+  color: white;
+  text-transform: uppercase;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-weight: 500;
 }
-#navbar .menu-bars{
+#navbar .menu-bars {
   margin-left: 30px;
   height: 28px;
   width: 28px;
 }
-#navbar .menu-bars img{
+#navbar .menu-bars img {
   height: 28px;
   width: 28px;
 }
 
-.dark-toggle{
+.dark-toggle {
   height: 44px;
   width: 80px;
   border-radius: 44px;
@@ -82,7 +82,7 @@ a{
   position: relative;
   cursor: pointer;
 }
-.dark-toggle .notch{
+.dark-toggle .notch {
   height: 35px;
   width: 35px;
   border-radius: 50%;
@@ -95,14 +95,16 @@ a{
   /*box-shadow: 0 0 5px white;*/
   transition: all 0.3s ease;
 }
-.dark-toggle.dark .notch{
+.dark-toggle.dark .notch {
   filter: invert(0%);
   background-image: none;
-  box-shadow: inset 12px 0px midnightblue, inset 12px 0px 1px 2px midnightblue;
+  box-shadow:
+    inset 12px 0px midnightblue,
+    inset 12px 0px 1px 2px midnightblue;
   transform: translate(30px, 0) rotate(-25deg);
 }
 
-.sidebar .nav-list{
+.sidebar .nav-list {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -133,16 +135,16 @@ a{
   color: white;
   text-transform: uppercase;
   /* Note: Padding doubled due to using both <Link> and <a> (needed <a> for class) */
-  padding: 8px 5px; 
+  padding: 8px 5px;
   display: block;
   text-align: left;
 }
-.sidebar .nav-list .cu-page{
+.sidebar .nav-list .cu-page {
   text-decoration: underline;
   text-decoration-thickness: 4px;
   text-underline-offset: 12px;
 }
-.sidebar .sidebar-dark{
+.sidebar .sidebar-dark {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -152,21 +154,21 @@ a{
   border-radius: 25px;
   width: 195px;
 }
-.sidebar-dark .dark-toggle{
+.sidebar-dark .dark-toggle {
   margin-left: 0;
 }
-.sidebar-dark .dark-label{
+.sidebar-dark .dark-label {
   font-size: 1.1rem;
-    font-weight: 400;
-    letter-spacing: 0.1rem;
-    color: white;
-    text-transform: uppercase;
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
-    margin-right: 10px;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  color: white;
+  text-transform: uppercase;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
 }
-.sidebar{
+.sidebar {
   background-color: var(--secondary);
   width: 80vw;
   min-width: min(280px, 100vw);
@@ -179,13 +181,14 @@ a{
   transition: 350ms;
   z-index: 4;
 }
-.sidebar.active{
+.sidebar.active {
   left: 0;
   transition: 350ms;
   z-index: 4;
   box-shadow: 0px 0px 10px black;
 }
-.side-blur{ /* Not really a blur but whatever */
+.side-blur {
+  /* Not really a blur but whatever */
   /* TODO: Make this work on tablet */
   background-color: transparent;
   opacity: 0;
@@ -195,17 +198,17 @@ a{
   top: 8vh;
   left: -100%;
 }
-.side-blur.active{
+.side-blur.active {
   left: 80vw;
   z-index: 4;
 }
 
 /* Tablet */
-@media only screen and (min-width: 768px){
-  #navbar .nav-bar{
+@media only screen and (min-width: 768px) {
+  #navbar .nav-bar {
     padding-top: 0;
   }
-  .sidebar{
+  .sidebar {
     /*min-width: 40vw;*/
     width: fit-content;
   }
@@ -216,35 +219,35 @@ a{
   .sidebar .nav-list ul li a {
     font-size: 1.6rem;
   }
-  .sidebar .sidebar-dark{
+  .sidebar .sidebar-dark {
     margin-left: 68px;
     margin-right: 68px;
   }
 }
 
 /* Desktop */
-@media only screen and (min-width: 1200px){
-  #navbar .nav-bar{
+@media only screen and (min-width: 1200px) {
+  #navbar .nav-bar {
     padding-top: 0;
   }
-  #navbar .menu-bars{
+  #navbar .menu-bars {
     display: none;
   }
-  #navbar .brand{
+  #navbar .brand {
     font-size: 1.2rem;
   }
-  #navbar .lhs{
+  #navbar .lhs {
     display: flex;
   }
-  #navbar .spam{
+  #navbar .spam {
     display: flex;
   }
-  #navbar .nav-list{
+  #navbar .nav-list {
     display: flex;
   }
 
-  #navbar .spam{
-      color: white;
+  #navbar .spam {
+    color: white;
   }
   #navbar .nav-list ul {
     list-style: none;
@@ -298,13 +301,13 @@ a{
     transform: scaleX(1);
     transform-origin: bottom left;
   }
-  #navbar .nav-list .cu-page:after{
+  #navbar .nav-list .cu-page:after {
     transform: scaleX(1);
   }
-  .sidebar{
+  .sidebar {
     left: -100%;
   }
-  .sidebar.active{
+  .sidebar.active {
     left: -100%;
   }
 }

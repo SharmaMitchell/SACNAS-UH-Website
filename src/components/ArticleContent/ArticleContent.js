@@ -49,7 +49,7 @@ function ArticleContent() {
       if (!leadershipDataLoading && !articleMetadataLoading) {
         const flattenedData = leadershipData.flatMap((entry) => entry.values);
         let author = flattenedData.find(
-          (entry) => entry[0] === articleMetadata.author
+          (entry) => entry[0] === articleMetadata.author,
         );
         // If author name ends in ", PhD", set entry[3] to entry[2] and remove entry[2]
         if (author && author[0].endsWith(", PhD")) {
@@ -73,7 +73,7 @@ function ArticleContent() {
   useEffect(() => {
     if (!articleDataLoading) {
       const headings = document.querySelectorAll(
-        'h1[id^="h."], h2[id^="h."], h3[id^="h."], h4[id^="h."]'
+        'h1[id^="h."], h2[id^="h."], h3[id^="h."], h4[id^="h."]',
       );
       const labeledHeadings = Array.from(headings).map((heading) => {
         const headingLabel = heading.querySelector("span").textContent;
@@ -90,8 +90,8 @@ function ArticleContent() {
     if (!articlesLoading) {
       setFilteredArticles(
         articles.filter(
-          (article) => article.name.split(" by ")[0] !== articleMetadata?.title
-        )
+          (article) => article.name.split(" by ")[0] !== articleMetadata?.title,
+        ),
       );
     }
   }, [articlesLoading, articles, articleMetadata]);
@@ -194,7 +194,7 @@ function ArticleContent() {
                   img={
                     thumbnails.find(
                       (thumbnail) =>
-                        thumbnail.name.split(".")[0] === article.name
+                        thumbnail.name.split(".")[0] === article.name,
                     )?.thumbnailLink
                   }
                   author={article.name.split(" by ")[1]}

@@ -1,15 +1,16 @@
-import React, { useEffect } from 'react'
-import ResourcesContent from '../components/ResourcesContent/ResourcesContent'
+import React, { useEffect } from "react";
+import ResourcesContent from "../components/ResourcesContent/ResourcesContent";
 
 function Resources() {
   useEffect(() => {
-    document.title = "Resources - SACNAS UH | Celebrating Scientific Research and Diversity in STEM";
+    document.title =
+      "Resources - SACNAS UH | Celebrating Scientific Research and Diversity in STEM";
   }, []);
   return (
     <>
-        <ResourcesContent />
+      <ResourcesContent />
     </>
-  )
+  );
 }
 
-export default Resources
+export default Resources;

@@ -1,16 +1,17 @@
-import React, { useEffect } from 'react'
-import LeadershipContent from '../components/LeadershipContent/LeadershipContent'
+import React, { useEffect } from "react";
+import LeadershipContent from "../components/LeadershipContent/LeadershipContent";
 
 function Leadership() {
   useEffect(() => {
-    document.title = "Leadership - SACNAS UH | Celebrating Scientific Research and Diversity in STEM";
+    document.title =
+      "Leadership - SACNAS UH | Celebrating Scientific Research and Diversity in STEM";
   }, []);
 
   return (
     <>
-        <LeadershipContent />
+      <LeadershipContent />
     </>
-  )
+  );
 }
 
-export default Leadership
+export default Leadership;

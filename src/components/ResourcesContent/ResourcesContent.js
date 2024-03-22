@@ -30,7 +30,8 @@ function ResourcesContent() {
                 link={`/article/${article.id}`}
                 img={
                   thumbnails.find(
-                    (thumbnail) => thumbnail.name.split(".")[0] === article.name
+                    (thumbnail) =>
+                      thumbnail.name.split(".")[0] === article.name,
                   )?.thumbnailLink
                 }
                 author={article.name.split(" by ")[1]}

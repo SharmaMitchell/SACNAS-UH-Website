@@ -19,15 +19,15 @@ export function useArticlesData() {
       setArticlesLoading(false);
     } else {
       fetch(
-        `https://www.googleapis.com/drive/v3/files?q="${ARTICLES_FOLDER_ID}"+in+parents&fields=${fields}&key=${API_KEY}`
+        `https://www.googleapis.com/drive/v3/files?q="${ARTICLES_FOLDER_ID}"+in+parents&fields=${fields}&key=${API_KEY}`,
       )
         .then((response) => response.json())
         .then((data) => {
           const articles = data.files.filter(
-            (file) => file.mimeType === "application/vnd.google-apps.document"
+            (file) => file.mimeType === "application/vnd.google-apps.document",
           );
           const thumbnails = data.files.filter(
-            (file) => file.mimeType !== "application/vnd.google-apps.document"
+            (file) => file.mimeType !== "application/vnd.google-apps.document",
           );
 
           //sort articles by date

@@ -1,159 +1,159 @@
-#banner{
-    background-image: url(../../assets/UH-Skyline-Shot.jpg);
-	background-size: cover;
-	background-position-y: top;
-	background-position-x: 35%;
-	position: relative;
-	z-index: 1;
+#banner {
+  background-image: url(../../assets/UH-Skyline-Shot.jpg);
+  background-size: cover;
+  background-position-y: top;
+  background-position-x: 35%;
+  position: relative;
+  z-index: 1;
 }
-#banner::after{
-	content: '';
-	background-color: black;
-	opacity: .25;
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	z-index: -1;
+#banner::after {
+  content: "";
+  background-color: black;
+  opacity: 0.25;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
 }
-#banner .banner-container{
-	padding: 0 10px;
-    padding-top: calc(8vh + 40px);
-    padding-bottom: 50px;
-    display: flex;
-    flex-direction: column-reverse;
-    max-width: 1200px;
-	margin: 0 auto;
-	justify-content: center;
-	align-items: center;
+#banner .banner-container {
+  padding: 0 10px;
+  padding-top: calc(8vh + 40px);
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column-reverse;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
 }
-#banner .banner-container.home{
-	min-height: 84vh;
-	padding: 0 10px;
-    padding-top: calc(8vh + 40px);
-    padding-bottom: 50px;
-	display: flex;
-	flex-direction: column-reverse;
-	max-width: 1200px;
-	margin: 0 auto;
-	justify-content: flex-end;
+#banner .banner-container.home {
+  min-height: 84vh;
+  padding: 0 10px;
+  padding-top: calc(8vh + 40px);
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column-reverse;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: flex-end;
 }
-#banner .banner-logo{
-	max-width: 400px;
-    margin-bottom: 20px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+#banner .banner-logo {
+  max-width: 400px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-#banner .banner-container.home .banner-logo{
-	padding-top: 40px;
-	margin-bottom: 20px;
+#banner .banner-container.home .banner-logo {
+  padding-top: 40px;
+  margin-bottom: 20px;
 }
-#banner .banner-logo img{
-	/*display: none; /* hidden on mobile for now, maybe fix with flex-dir later */
-    max-width: max(220px, 60vw);
+#banner .banner-logo img {
+  /*display: none; /* hidden on mobile for now, maybe fix with flex-dir later */
+  max-width: max(220px, 60vw);
 }
-#banner .banner-container.home .banner-logo img{
-	width: 400px;
-	max-width: 70vw;
+#banner .banner-container.home .banner-logo img {
+  width: 400px;
+  max-width: 70vw;
 }
-#banner .banner-text{
-	color: white;
-	font-size: 1.6rem;
-  	letter-spacing: 0.15rem;
-	text-transform: uppercase;
-	text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+#banner .banner-text {
+  color: white;
+  font-size: 1.6rem;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-#banner .banner-container.home .banner-text{
-	color: white;
-	font-size: 1.6rem;
-  	letter-spacing: 0.15rem;
-	text-transform: uppercase;
-	text-align: center;
-	display: flex;
-	align-items: center;
+#banner .banner-container.home .banner-text {
+  color: white;
+  font-size: 1.6rem;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  align-items: center;
 }
-#banner .banner-text h1{
-	text-shadow: 6px 6px 4px rgb(0, 0, 0, 0.75);
-	font-size: 2rem;
-	font-weight: 500;
-	margin-block-start: .33em;
-	margin-block-end: .33em;
+#banner .banner-text h1 {
+  text-shadow: 6px 6px 4px rgb(0, 0, 0, 0.75);
+  font-size: 2rem;
+  font-weight: 500;
+  margin-block-start: 0.33em;
+  margin-block-end: 0.33em;
 }
-#banner .banner-text h2{
-	text-shadow: 6px 6px 4px rgb(0, 0, 0, 0.75);
-	font-size: 1rem;
-	font-weight: 500;
-	margin-block-start: 0;
-	margin-block-end: .33em;
+#banner .banner-text h2 {
+  text-shadow: 6px 6px 4px rgb(0, 0, 0, 0.75);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-block-start: 0;
+  margin-block-end: 0.33em;
 }
 
 /* Tablet */
-@media only screen and (min-width: 768px){
-	#banner .banner-container{
-        flex-direction: row;
-		padding-left: 50px;
-        padding-right: 50px;
-		justify-content: space-between;
-    }
-    #banner .banner-text{
-        max-width: 50vw;
-		text-align: left;
-    }
-	#banner .banner-container.home .banner-text{
-		max-width: 80vw;
-	}
-    #banner .banner-text h1{
-		font-size: 2.5rem;
-	}
-	#banner .banner-text h2{
-		font-size: 1.5rem;
-		width: 80%;
-	}
-	#banner .banner-container.home .banner-text h2{
-		font-size: 2rem;
-		width: 80%;
-	}
-	#banner .banner-logo{
-		justify-content: inherit;
-		margin: 0;
-	}
-	#banner .banner-container.home .banner-logo{
-		justify-content: center;
-	}
-    #banner .banner-logo img{
-        display: flex;
-		max-width: 40vw;
-    }
+@media only screen and (min-width: 768px) {
+  #banner .banner-container {
+    flex-direction: row;
+    padding-left: 50px;
+    padding-right: 50px;
+    justify-content: space-between;
+  }
+  #banner .banner-text {
+    max-width: 50vw;
+    text-align: left;
+  }
+  #banner .banner-container.home .banner-text {
+    max-width: 80vw;
+  }
+  #banner .banner-text h1 {
+    font-size: 2.5rem;
+  }
+  #banner .banner-text h2 {
+    font-size: 1.5rem;
+    width: 80%;
+  }
+  #banner .banner-container.home .banner-text h2 {
+    font-size: 2rem;
+    width: 80%;
+  }
+  #banner .banner-logo {
+    justify-content: inherit;
+    margin: 0;
+  }
+  #banner .banner-container.home .banner-logo {
+    justify-content: center;
+  }
+  #banner .banner-logo img {
+    display: flex;
+    max-width: 40vw;
+  }
 }
 /* Desktop */
-@media only screen and (min-width: 1200px){
-	#banner{
-        background-position-y: 55%;
-    }
-	.banner.home{
-		background-position: top center !important;
-	}
-    #banner .banner-logo img{
-		width: 400px;
-	}
-	#banner .banner-container.home .banner-logo img{
-		width: 500px;
-	}
-	#banner .banner-text h1{
-		font-size: 3.5rem;
-	}
-	#banner .banner-container.home .banner-text h1{
-		font-size: 4.5rem;
-	}
-	#banner .banner-text h2{
-		font-size: 2rem;
-	}
-	#banner .banner-container.home .banner-text h2{
-		font-size: 2.5rem;
-	}
+@media only screen and (min-width: 1200px) {
+  #banner {
+    background-position-y: 55%;
+  }
+  .banner.home {
+    background-position: top center !important;
+  }
+  #banner .banner-logo img {
+    width: 400px;
+  }
+  #banner .banner-container.home .banner-logo img {
+    width: 500px;
+  }
+  #banner .banner-text h1 {
+    font-size: 3.5rem;
+  }
+  #banner .banner-container.home .banner-text h1 {
+    font-size: 4.5rem;
+  }
+  #banner .banner-text h2 {
+    font-size: 2rem;
+  }
+  #banner .banner-container.home .banner-text h2 {
+    font-size: 2.5rem;
+  }
 }

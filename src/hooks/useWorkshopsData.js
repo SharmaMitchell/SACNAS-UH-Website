@@ -85,7 +85,7 @@ export function useWorkshopsData() {
       setVideosLoading(false);
     } else {
       fetch(
-        `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${SACNAS_UH_YT_ID}&maxResults=${NUM_VIDEOS}&order=date&type=video&key=${API_KEY}&hqdefault=true`
+        `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${SACNAS_UH_YT_ID}&maxResults=${NUM_VIDEOS}&order=date&type=video&key=${API_KEY}&hqdefault=true`,
       )
         .then((response) => response.json())
         .then((data) => {
@@ -95,7 +95,7 @@ export function useWorkshopsData() {
             setVideos(data.items);
             sessionStorage.setItem(
               "workshopVideos",
-              JSON.stringify(data.items)
+              JSON.stringify(data.items),
             );
           }
           setVideosLoading(false);

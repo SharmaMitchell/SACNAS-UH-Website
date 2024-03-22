@@ -1,5 +1,5 @@
-import React from 'react'
-import './Row.css'
+import React from "react";
+import "./Row.css";
 
 function Row(props) {
   /* 
@@ -9,21 +9,17 @@ function Row(props) {
         img: row image (img)
         imgborder: border on image ('yes'/'no')
   */
-    return (
+  return (
     <div class="row">
-        <div class="row-text">
-            <div class="row-title">
-                {props.title}
-            </div>
-            <div class="row-paragraph">
-                {props.paragraph}
-            </div>
-        </div>
-        <div class= {!props.imgborder ? "row-image" : "row-image border"}>
-            <img src={props.img}/>
-        </div>
+      <div class="row-text">
+        <div class="row-title">{props.title}</div>
+        <div class="row-paragraph">{props.paragraph}</div>
+      </div>
+      <div class={!props.imgborder ? "row-image" : "row-image border"}>
+        <img src={props.img} />
+      </div>
     </div>
-  )
+  );
 }
 
-export default Row
+export default Row;

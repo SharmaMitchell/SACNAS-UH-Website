@@ -1,18 +1,18 @@
-import React, { useCallback, useState } from 'react'
-import { Link }from 'react-router-dom'
-import 'react-medium-image-zoom/dist/styles.css'
-import './EventCard.css'
-import expand from '../../assets/expand.png'
-import zoom from '../../assets/zoom.png'
-import maps from '../../assets/maps.png'
-import calendar from '../../assets/calendar.png'
-import linkImg from '../../assets/link.png'
-import defaultEventImg from '../../assets/DefaultEvent.png'
+import React, { useCallback, useState } from "react";
+import { Link } from "react-router-dom";
+import "react-medium-image-zoom/dist/styles.css";
+import "./EventCard.css";
+import expand from "../../assets/expand.png";
+import zoom from "../../assets/zoom.png";
+import maps from "../../assets/maps.png";
+import calendar from "../../assets/calendar.png";
+import linkImg from "../../assets/link.png";
+import defaultEventImg from "../../assets/DefaultEvent.png";
 
-import Zoom from 'react-medium-image-zoom'
+import Zoom from "react-medium-image-zoom";
 
-import { Controlled as ControlledZoom } from 'react-medium-image-zoom'
-import Spinner from '../Spinner/Spinner'
+import { Controlled as ControlledZoom } from "react-medium-image-zoom";
+import Spinner from "../Spinner/Spinner";
 
 function EventCard(props) {
   /* Props:
@@ -29,73 +29,94 @@ function EventCard(props) {
   */
   // console.log(props);
 
-  const [viewMore, setViewMore] = useState(false); /* State for card expansion */
-  const toggleViewMore = () => setViewMore(!viewMore); /* Function to toggle card expansion */
+  const [viewMore, setViewMore] =
+    useState(false); /* State for card expansion */
+  const toggleViewMore = () =>
+    setViewMore(!viewMore); /* Function to toggle card expansion */
 
   /* Image zoom state */
-  const [isZoomed, setIsZoomed] = useState(false)
-  const [hasZoomed, setHasZoomed] = useState(false)
-  const handleZoomChange = useCallback(shouldZoom => {
-    setIsZoomed(shouldZoom)
-    if(!hasZoomed){
-      setHasZoomed(true)
+  const [isZoomed, setIsZoomed] = useState(false);
+  const [hasZoomed, setHasZoomed] = useState(false);
+  const handleZoomChange = useCallback((shouldZoom) => {
+    setIsZoomed(shouldZoom);
+    if (!hasZoomed) {
+      setHasZoomed(true);
     }
-  }, [])
+  }, []);
   const handleZoomOut = () => {
-    if(isZoomed){
-      handleZoomChange()
+    if (isZoomed) {
+      handleZoomChange();
     }
-  }
+  };
 
   /* Handle img loading, errors */
-  const [imgError, setImgError] = useState(false)
-  const [rawImgError, setRawImgError] = useState(false)
+  const [imgError, setImgError] = useState(false);
+  const [rawImgError, setRawImgError] = useState(false);
   const handleImgError = () => {
-    isZoomed ? setRawImgError(true) : setImgError(true)
-  }
+    isZoomed ? setRawImgError(true) : setImgError(true);
+  };
 
   /* Setting Links and link labels, if they're passed in */
   let link1Tag = ``;
   let link2Tag = ``;
-  if (props.link1 != undefined && props.link1 != ""){
-  link1Tag = (<a target="_blank" rel="noopener" href={props.link1}>{props.link1Label || "Event Link"}</a>);
- }
- if (props.link2 != undefined && props.link2 != ""){
-  link2Tag = (<a target="_blank" rel="noopener" href={props.link2}>{props.link2Label || "Event Link 2"}</a>);
- }
+  if (props.link1 != undefined && props.link1 != "") {
+    link1Tag = (
+      <a target="_blank" rel="noopener" href={props.link1}>
+        {props.link1Label || "Event Link"}
+      </a>
+    );
+  }
+  if (props.link2 != undefined && props.link2 != "") {
+    link2Tag = (
+      <a target="_blank" rel="noopener" href={props.link2}>
+        {props.link2Label || "Event Link 2"}
+      </a>
+    );
+  }
 
-  let rawImgURL = ""
-  if(props.img){
-    if(props.img.indexOf("i.imgur.com") != -1){
-      rawImgURL = props.img.slice(0,props.img.lastIndexOf('l')) + props.img.slice(props.img.lastIndexOf('l') + 1)
-    }
-    else{
-      rawImgURL = props.img
+  let rawImgURL = "";
+  if (props.img) {
+    if (props.img.indexOf("i.imgur.com") != -1) {
+      rawImgURL =
+        props.img.slice(0, props.img.lastIndexOf("l")) +
+        props.img.slice(props.img.lastIndexOf("l") + 1);
+    } else {
+      rawImgURL = props.img;
     }
   }
 
-  let formattedCalDates = props.date
-  if(props.date){
-    let calendarDateNum = Date.parse(props.date)
-    let calendarDateISO = new Date(calendarDateNum)
-    let day = calendarDateISO.getDate().toString()
-    let month = (calendarDateISO.getMonth()+1).toString()
-    month.length == 1 ? month = '0' + month : month = month
-    let year = calendarDateISO.getFullYear().toString()
-    let calendarDate = year + month + day
+  let formattedCalDates = props.date;
+  if (props.date) {
+    let calendarDateNum = Date.parse(props.date);
+    let calendarDateISO = new Date(calendarDateNum);
+    let day = calendarDateISO.getDate().toString();
+    let month = (calendarDateISO.getMonth() + 1).toString();
+    month.length == 1 ? (month = "0" + month) : (month = month);
+    let year = calendarDateISO.getFullYear().toString();
+    let calendarDate = year + month + day;
 
-    let calendarStartTime = props.time.replace(":","").replace(/(AM|PM)/, "").replace(" ", "") + "00"
-    if(calendarStartTime.length < 6){
-      calendarStartTime = '0' + calendarStartTime
+    let calendarStartTime =
+      props.time
+        .replace(":", "")
+        .replace(/(AM|PM)/, "")
+        .replace(" ", "") + "00";
+    if (calendarStartTime.length < 6) {
+      calendarStartTime = "0" + calendarStartTime;
     }
-    if(props.time.indexOf("PM") != -1){
-      calendarStartTime = (Number(calendarStartTime) + 120000).toString()
+    if (props.time.indexOf("PM") != -1) {
+      calendarStartTime = (Number(calendarStartTime) + 120000).toString();
     }
-    let calendarEndTime = (Number(calendarStartTime) + 20000).toString() // End time 2 hours after
+    let calendarEndTime = (Number(calendarStartTime) + 20000).toString(); // End time 2 hours after
 
-    formattedCalDates = calendarDate + "T" + calendarStartTime + "/" + calendarDate + "T" + calendarEndTime
+    formattedCalDates =
+      calendarDate +
+      "T" +
+      calendarStartTime +
+      "/" +
+      calendarDate +
+      "T" +
+      calendarEndTime;
   }
-  
 
   return (
     <div class="event-card">
@@ -141,10 +162,10 @@ function EventCard(props) {
                 imgError && !rawImgError
                   ? rawImgURL
                   : imgError && rawImgError
-                  ? defaultEventImg
-                  : hasZoomed && !rawImgError
-                  ? rawImgURL
-                  : props.img
+                    ? defaultEventImg
+                    : hasZoomed && !rawImgError
+                      ? rawImgURL
+                      : props.img
               }
             />
           </ControlledZoom>
@@ -195,4 +216,4 @@ function EventCard(props) {
   );
 }
 
-export default EventCard
+export default EventCard;

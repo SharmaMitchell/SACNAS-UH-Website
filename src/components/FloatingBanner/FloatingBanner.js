@@ -1,7 +1,7 @@
-import useLocalStorage from 'use-local-storage'
-import { Link } from 'react-router-dom'
-import close from '../../assets/close.png'
-import './FloatingBanner.css'
+import useLocalStorage from "use-local-storage";
+import { Link } from "react-router-dom";
+import close from "../../assets/close.png";
+import "./FloatingBanner.css";
 
 function FloatingBanner(props) {
   /* props: 
@@ -13,28 +13,35 @@ function FloatingBanner(props) {
         - Must be unique, or subsequent banners won't display for users who already closed the previous one
   */
 
-  const [showBanner, setShowBanner] = useLocalStorage(props.label, true); /* Cookie for showing/hiding the banner */
+  const [showBanner, setShowBanner] = useLocalStorage(
+    props.label,
+    true,
+  ); /* Cookie for showing/hiding the banner */
   const closeBanner = () => {
     setShowBanner(false);
   };
   return (
     <>
       <div
-        class={showBanner ? "floating-banner"  : "floating-banner hide" }
-        {...props.bgColor ? {style:{background: props.bgColor}} : ""} 
-        >
+        class={showBanner ? "floating-banner" : "floating-banner hide"}
+        {...(props.bgColor ? { style: { background: props.bgColor } } : "")}
+      >
         <Link to="/donate" onClick={closeBanner} class="floating-banner-img">
-            <img src={props.img} />
+          <img src={props.img} />
         </Link>
-        <Link to="/donate" onClick={closeBanner} class="floating-banner-paragraph">
-            {props.paragraph}
+        <Link
+          to="/donate"
+          onClick={closeBanner}
+          class="floating-banner-paragraph"
+        >
+          {props.paragraph}
         </Link>
         <div class="floating-banner-close" onClick={closeBanner}>
-            <img src={close} />
+          <img src={close} />
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default FloatingBanner
+export default FloatingBanner;

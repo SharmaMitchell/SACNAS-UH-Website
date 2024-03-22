@@ -87,8 +87,8 @@ function LeadershipCard(props) {
               expandedContact
                 ? "leadership-card-red expanded"
                 : hasContact
-                ? "leadership-card-red"
-                : "leadership-card-red nocontact"
+                  ? "leadership-card-red"
+                  : "leadership-card-red nocontact"
             }
             onClick={() => {
               if (!expandedContact) {

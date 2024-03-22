@@ -1,16 +1,17 @@
-import React, { useEffect } from 'react'
-import EventsContent from '../components/EventsContent/EventsContent'
+import React, { useEffect } from "react";
+import EventsContent from "../components/EventsContent/EventsContent";
 
 function Events() {
   useEffect(() => {
-    document.title = "Events - SACNAS UH | Celebrating Scientific Research and Diversity in STEM";
+    document.title =
+      "Events - SACNAS UH | Celebrating Scientific Research and Diversity in STEM";
   }, []);
-  
+
   return (
     <>
-        <EventsContent />
+      <EventsContent />
     </>
-  )
+  );
 }
 
-export default Events
+export default Events;
