@@ -158,15 +158,7 @@ function EventCard(props) {
             <img
               onError={handleImgError}
               class="poster"
-              src={
-                imgError && !rawImgError
-                  ? rawImgURL
-                  : imgError && rawImgError
-                    ? defaultEventImg
-                    : hasZoomed && !rawImgError
-                      ? rawImgURL
-                      : props.img
-              }
+              src={imgError || rawImgError ? defaultEventImg : props.img}
             />
           </ControlledZoom>
           {/* {imgError ? <Spinner /> : <></>} */}
