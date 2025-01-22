@@ -21,25 +21,6 @@ function Navbar(props) {
             <Link to="#" class="menu-bars">
               <img src={navBarImg} onClick={showSidebar} alt="Show sidebar" />
             </Link>
-            <div class="lhs">
-              <div
-                onClick={props.dark}
-                className={`dark-toggle${
-                  props.theme === "dark" ? " dark" : ""
-                }`}
-              >
-                <div class="notch"></div>
-              </div>
-              <div class="spam">
-                <MailAndMoney location={location} />
-              </div>
-            </div>
-
-            <div class="brand">
-              <Link to="/">
-                <h1>SACNAS UH</h1>
-              </Link>
-            </div>
             <div class="nav-list">
               <ul>
                 <li>
@@ -58,6 +39,11 @@ function Navbar(props) {
                   </a>
                 </li>
                 <li>
+                  <a class={location === "/eras" ? "cu-page" : ""}>
+                    <Link to="/eras">Eras</Link>
+                  </a>
+                </li>
+                <li>
                   <a class={location === "/leadership" ? "cu-page" : ""}>
                     <Link to="/leadership">Leadership</Link>
                   </a>
@@ -68,6 +54,26 @@ function Navbar(props) {
                   </a>
                 </li>
               </ul>
+            </div>
+
+            <div class="brand">
+              <Link to="/">
+                <h1>SACNAS UH</h1>
+              </Link>
+            </div>
+
+            <div class="lhs">
+              <div class="spam">
+                <MailAndMoney location={location} />
+              </div>
+              <div
+                onClick={props.dark}
+                className={`dark-toggle${
+                  props.theme === "dark" ? " dark" : ""
+                }`}
+              >
+                <div class="notch"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -88,6 +94,11 @@ function Navbar(props) {
             <li>
               <a class={location === "/research" ? "cu-page" : ""}>
                 <Link to="/research">Research</Link>
+              </a>
+            </li>
+            <li>
+              <a class={location === "/eras" ? "cu-page" : ""}>
+                <Link to="/eras">Eras</Link>
               </a>
             </li>
             <li>

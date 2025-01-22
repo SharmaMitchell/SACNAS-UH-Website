@@ -21,8 +21,7 @@ a {
   /*padding: 0 10px;*/
 }
 #navbar .navbar-container {
-  height: 8vh;
-  max-height: 80px;
+  height: 60px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -45,7 +44,7 @@ a {
   pointer-events: none; /*Can click through to navlist and spam, but can't click to go home*/
 
   /*font-family: 'Roboto';*/
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   letter-spacing: 0.15rem;
 }
 #navbar .brand a {
@@ -55,7 +54,7 @@ a {
 #navbar .brand h1 {
   color: white;
   text-transform: uppercase;
-  height: 8vh;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -172,11 +171,11 @@ a {
   background-color: var(--secondary);
   width: 80vw;
   min-width: min(280px, 100vw);
-  height: max(92vh, 100vh - 80px);
+  height: calc(100vh - 60px);
   display: flex;
   justify-content: flex-start;
   position: fixed;
-  top: min(8vh, 80px);
+  top: 60px;
   left: -100%;
   transition: 350ms;
   z-index: 4;
@@ -195,7 +194,7 @@ a {
   width: 20vw;
   height: 92vh;
   position: fixed;
-  top: 8vh;
+  top: 60px;
   left: -100%;
 }
 .side-blur.active {
@@ -205,11 +204,16 @@ a {
 
 /* Tablet */
 @media only screen and (min-width: 768px) {
+  #navbar .navbar-container {
+    height: 80px;
+  }
   #navbar .nav-bar {
     padding-top: 0;
   }
   .sidebar {
     /*min-width: 40vw;*/
+    height: calc(100vh - 80px);
+    top: 80px;
     width: fit-content;
   }
   .sidebar .nav-list ul {
@@ -234,7 +238,7 @@ a {
     display: none;
   }
   #navbar .brand {
-    font-size: 1.2rem;
+    display: none;
   }
   #navbar .lhs {
     display: flex;
@@ -309,5 +313,25 @@ a {
   }
   .sidebar.active {
     left: -100%;
+  }
+
+  .dark-toggle {
+    height: 34px;
+    width: 60px;
+    border-radius: 34px;
+    border: 2px solid white;
+    margin: 0px;
+  }
+
+  .dark-toggle .notch {
+    height: 25px;
+    width: 25px;
+  }
+
+  .dark-toggle.dark .notch {
+    box-shadow:
+      inset 8px 0px midnightblue,
+      inset 8px 0px 1px 2px midnightblue;
+    transform: translate(20px, 0) rotate(-25deg);
   }
 }
