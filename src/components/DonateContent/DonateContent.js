@@ -46,7 +46,7 @@ function DonateContent() {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://paypal.me/SACNASUH/"
+          href="https://paypal.me/UHSACNAS/"
         >
           <img src={paypalButton} alt="Paypal" />
         </a>

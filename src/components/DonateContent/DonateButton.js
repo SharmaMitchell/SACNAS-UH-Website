@@ -6,7 +6,7 @@ function DonateButton(props) {
   /* Props: 
     amount: amount of donation (if applicable), to pre-fill in URL and label
   */
-  let link = "https://paypal.me/SACNASUH/";
+  let link = "https://paypal.me/UHSACNAS/";
   let label = "Other";
   if (props.amount !== undefined && props.amount !== "") {
     link += props.amount;
