@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import ErasContent from "../components/ErasContent/ErasContent";
 
-function Resources() {
+function Eras() {
   useEffect(() => {
     document.title =
       "Resources - SACNAS UH | Celebrating Scientific Research and Diversity in STEM";
@@ -13,4 +13,4 @@ function Resources() {
   );
 }
 
-export default Resources;
+export default Eras;
