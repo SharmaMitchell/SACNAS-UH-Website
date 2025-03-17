@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.53a535ba.css",
-    "main.js": "/static/js/main.53444ad4.js",
+    "main.js": "/static/js/main.f5122938.js",
     "static/media/UH-Skyline-Shot.jpg": "/static/media/UH-Skyline-Shot.63f101264f5826f3bab6.jpg",
-    "static/media/COTY-Award.webp": "/static/media/COTY-Award.c4e9c45a1d511cf82d1b.webp",
+    "static/media/leadership_award.webp": "/static/media/leadership_award.f6ade61c4a620f307c8b.webp",
     "static/media/houaztec.jpg": "/static/media/houaztec.725f21d433e16c7af502.jpg",
     "static/media/SACNASUH-Crop.png": "/static/media/SACNASUH-Crop.a58dd6cd6659aedd659a.png",
     "static/media/outreach_navarro.jpg": "/static/media/outreach_navarro.051ccf1b49291ae326db.jpg",
@@ -18,10 +18,10 @@
     "static/media/Altair-logo.png": "/static/media/Altair-logo.c1f1140a9056d086fd10.png",
     "index.html": "/index.html",
     "main.53a535ba.css.map": "/static/css/main.53a535ba.css.map",
-    "main.53444ad4.js.map": "/static/js/main.53444ad4.js.map"
+    "main.f5122938.js.map": "/static/js/main.f5122938.js.map"
   },
   "entrypoints": [
     "static/css/main.53a535ba.css",
-    "static/js/main.53444ad4.js"
+    "static/js/main.f5122938.js"
   ]
 }
