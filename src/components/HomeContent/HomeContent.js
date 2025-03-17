@@ -15,20 +15,19 @@ function HomeContent() {
         <AwardBanner
           title={
             <h2>
-              SACNAS UH: <br /> 2023 Graduate and Professional Chapter of the
-              Year
+              SACNAS UH: <br /> 2024 Outstanding Chapter for Leadership in
+              Science
             </h2>
           }
           paragraph={
             <p>
               "I am extremely proud of our UH SACNAS team, and the work we’ve
-              put in these past couple of years. We are a very young chapter,
-              and we were just recognized as an official National chapter in
-              January 2022, so to be almost immediately recognized as a role
-              model chapter is phenomenal! We’ve definitely had our ups and
-              downs, but this is a testament to the ambition and perseverance of
-              the amazing students here in our organization. Congratulations UH
-              SACNISTAS! This award was well deserved!"
+              put in these past couple of years. We have been able to maintain
+              an unrivaled standard of excellence as a chapter, and are so proud
+              to bring home this third award in a row! We’ve definitely had our
+              ups and downs, but this is a testament to the ambition and
+              perseverance of the amazing students here in our organization.
+              Congratulations UH SACNISTAS! We'll be out there again next year!"
             </p>
           }
           img={coty_award}
@@ -39,7 +38,7 @@ function HomeContent() {
               Lorissa Saiz <br /> President, SACNAS UH <br /> 2018-Present
             </h3>
           }
-          learnMore="https://www.uh.edu/nsm/news-events/stories/2023/1030-sacnas-honored.php"
+          learnMore="https://www.uh.edu/nsm/news-events/stories/2025/0128-sacnas-award.php"
         />
         <div class="home-container">
           <Row
