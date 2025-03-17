@@ -4,7 +4,7 @@ import ErasContent from "../components/ErasContent/ErasContent";
 function Eras() {
   useEffect(() => {
     document.title =
-      "Resources - SACNAS UH | Celebrating Scientific Research and Diversity in STEM";
+      "ERAS - SACNAS UH | Celebrating Scientific Research and Diversity in STEM";
   }, []);
   return (
     <>
