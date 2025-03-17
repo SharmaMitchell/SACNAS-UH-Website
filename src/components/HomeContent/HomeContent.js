@@ -5,7 +5,7 @@ import "./HomeContent.css";
 import SACNASGroup from "../../assets/SACNAS-Group.jpg";
 import outreach_navarro from "../../assets/outreach_navarro.jpg";
 import houaztec from "../../assets/houaztec.jpg";
-import coty_award from "../../assets/COTY-Award.webp";
+import leadership_award from "../../assets/leadership_award.webp";
 import lorissa from "../../assets/lorissa-crop.jpg";
 
 function HomeContent() {
@@ -30,7 +30,7 @@ function HomeContent() {
               Congratulations UH SACNISTAS! We'll be out there again next year!"
             </p>
           }
-          img={coty_award}
+          img={leadership_award}
           imgborder="y"
           quoteImg={lorissa}
           quoteLabel={
