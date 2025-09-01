@@ -36,7 +36,7 @@ function LeadershipCard(props) {
             <img
               class="static-pic"
               src={
-                props.img[0] === "/"
+                props.img && props.img[0] === "/"
                   ? `${process.env.PUBLIC_URL}${props.img}`
                   : props.img
               }
