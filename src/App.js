@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import useLocalStorage from "use-local-storage";
 import Navbar from "./components/Navbar/Navbar";
@@ -20,13 +20,38 @@ function App() {
   const defaultDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
   const [theme, setTheme] = useLocalStorage(
     "theme",
-    defaultDark ? "dark" : "light",
+    defaultDark ? "dark" : "light"
   );
 
   const switchTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
   };
+
+  useEffect(() => {
+    const clearStorageOnRefresh = () => {
+      // Clear specific sessionStorage keys
+      const sessionKeys = [
+        "leadershipData",
+        "upcomingEventsData",
+        "previousEventsData",
+        "articlesData",
+        "workshopVideos",
+      ];
+      sessionKeys.forEach((key) => sessionStorage.removeItem(key));
+      // Remove all articleData- and articleMetadata- keys
+      Object.keys(sessionStorage).forEach((key) => {
+        if (
+          key.startsWith("articleData-") ||
+          key.startsWith("articleMetadata-")
+        ) {
+          sessionStorage.removeItem(key);
+        }
+      });
+    };
+    window.addEventListener("unload", clearStorageOnRefresh);
+    return () => window.removeEventListener("unload", clearStorageOnRefresh);
+  }, []);
 
   return (
     <div className="App" data-theme={theme}>
