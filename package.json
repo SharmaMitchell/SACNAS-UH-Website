@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "sacnas-uh-website",
   "version": "0.1.0",
   "homepage": "https://sacnas-uh.org",
   "private": true,
@@ -43,7 +43,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^4.0.0",
+    "gh-pages": "^6.3.0",
     "prettier": "^3.2.5"
   }
 }
