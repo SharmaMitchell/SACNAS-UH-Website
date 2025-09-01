@@ -11,11 +11,11 @@ function LeadershipContent() {
     /* Sections for leadership cards (besides alumni) */
     {
       title: "Faculty Advisors",
-      category: "leadership-faculty",
+      category: "leadership-founders",
     },
     {
       title: "Faculty Co-Advisors",
-      category: "leadership-faculty",
+      category: "leadership-founders",
     },
     {
       title: "Officers",
@@ -30,8 +30,8 @@ function LeadershipContent() {
       category: "leadership-officers",
     },
     {
-      title: "Founding Chapter Faculty Advisor (2018-2019)",
-      category: "leadership-faculty",
+      title: "Founders",
+      category: "leadership-founders",
     },
   ];
   return (
@@ -50,7 +50,7 @@ function LeadershipContent() {
                     <Spinner />
                   ) : (
                     leadershipData[index]?.values?.map((entry) => {
-                      let fac = section.category === "leadership-faculty";
+                      let fac = section.category === "leadership-founders";
                       return (
                         <LeadershipCard
                           title={fac ? entry[0] : entry[0] + ": " + entry[1]}

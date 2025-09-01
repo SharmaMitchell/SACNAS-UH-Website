@@ -17,7 +17,7 @@ export function useLeadershipData() {
     "Officers!A2:H20",
     "Mentors and Support Officers!A2:H20",
     "Alumni Advisors!A2:D10",
-    "Founding Faculty!A2:C2",
+    "Founders!A2:C2",
     "Alumni List!A1:J20",
   ];
   let RANGES = sheetRanges[0];
