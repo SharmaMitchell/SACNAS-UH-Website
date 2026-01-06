@@ -38,11 +38,11 @@ function Navbar(props) {
                     <Link to="/research">Research</Link>
                   </a>
                 </li>
-                <li>
+                {/* <li>
                   <a class={location === "/eras" ? "cu-page" : ""}>
                     <Link to="/eras">Eras</Link>
                   </a>
-                </li>
+                </li> */}
                 <li>
                   <a class={location === "/leadership" ? "cu-page" : ""}>
                     <Link to="/leadership">Leadership</Link>
