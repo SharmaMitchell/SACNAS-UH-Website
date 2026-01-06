@@ -196,7 +196,8 @@
   }
   .award-banner .quote-label {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
+    height: 169px;
     border-radius: 20px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
