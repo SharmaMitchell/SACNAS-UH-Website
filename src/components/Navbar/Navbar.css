@@ -103,6 +103,7 @@ a {
   flex-direction: column;
   justify-content: space-around;
   margin-bottom: 36px;
+  overflow: auto;
 }
 .sidebar .nav-list ul {
   list-style: none;
