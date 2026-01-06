@@ -2,11 +2,11 @@ import React from "react";
 import Row from "./Row";
 import AwardBanner from "./AwardBanner";
 import "./HomeContent.css";
-import SACNASGroup from "../../assets/SACNAS-Group.jpg";
-import outreach_navarro from "../../assets/outreach_navarro.jpg";
-import houaztec from "../../assets/houaztec.jpg";
 import leadership_award from "../../assets/leadership_award.webp";
 import lorissa from "../../assets/lorissa-crop.jpg";
+import whatIsSacnas from "../../assets/what-is-sacnas.webp";
+import ourMission from "../../assets/our-mission.webp";
+import chapterActivities from "../../assets/chapter-activities.webp";
 
 function HomeContent() {
   return (
@@ -15,19 +15,19 @@ function HomeContent() {
         <AwardBanner
           title={
             <h2>
-              SACNAS UH: <br /> 2024 Outstanding Chapter for Leadership in
+              SACNAS UH: <br /> 2025 Outstanding Chapter for Leadership in
               Science
             </h2>
           }
           paragraph={
             <p>
-              "I am extremely proud of our UH SACNAS team, and the work we’ve
-              put in these past couple of years. We have been able to maintain
-              an unrivaled standard of excellence as a chapter, and are so proud
-              to bring home this third award in a row! We’ve definitely had our
-              ups and downs, but this is a testament to the ambition and
-              perseverance of the amazing students here in our organization.
-              Congratulations UH SACNISTAS! We'll be out there again next year!"
+              "2025 is the fourth year in a row that UH SACNAS has been
+              recognized with a chapter award, and the second year that we have
+              been recognized as a Chapter of the Year. This is a testament to
+              the chapter’s leadership and consistent commitment to excellence.
+              I could not be more proud of the leaders and members of this
+              chapter. We are leading SACNAS forward from right here at home in
+              Houston, Texas!"
             </p>
           }
           img={leadership_award}
@@ -38,7 +38,7 @@ function HomeContent() {
               Lorissa Saiz <br /> President, SACNAS UH <br /> 2018-Present
             </h3>
           }
-          learnMore="https://www.uh.edu/nsm/news-events/stories/2025/0128-sacnas-award.php"
+          learnMore="https://www.uh.edu/nsm/news-events/stories/2025/1113-sacnas-recognition.php"
         />
         <div class="home-container">
           <Row
@@ -67,7 +67,7 @@ function HomeContent() {
                 .
               </p>
             }
-            img={SACNASGroup}
+            img={whatIsSacnas}
             imgborder="y"
           />
           <Row
@@ -81,7 +81,7 @@ function HomeContent() {
                 during their time at UH. Please browse our website!
               </p>
             }
-            img={outreach_navarro}
+            img={ourMission}
             imgborder="y"
           />
           <Row
@@ -97,7 +97,7 @@ function HomeContent() {
                 students in the sciences throughout the greater Houston area
               </p>
             }
-            img={houaztec}
+            img={chapterActivities}
             imgborder="y"
           />
           <Row
