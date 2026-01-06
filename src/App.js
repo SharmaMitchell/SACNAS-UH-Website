@@ -6,6 +6,7 @@ import Banner from "./components/Banner/Banner";
 import Home from "./pages/Home";
 import Events from "./pages/Events";
 import Research from "./pages/Research";
+import Eras from "./pages/Eras";
 import Leadership from "./pages/Leadership";
 import Resources from "./pages/Resources";
 import Article from "./pages/Article";
@@ -63,6 +64,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/events" element={<Events />} />
           <Route path="/research" element={<Research />} />
+          <Route path="/eras" element={<Eras />} />
           <Route path="/leadership" element={<Leadership />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/article/:articleId" element={<Article />} />
