@@ -77,7 +77,9 @@ function ArticleUi(props) {
             <p>
               {articleMetadataLoading
                 ? "Loading..."
-                : `${articleMetadata.author} | ${articleMetadata.createdTime}`}
+                : articleMetadata.author
+                  ? `${articleMetadata.author} | ${articleMetadata.createdTime}`
+                  : articleMetadata.createdTime}
             </p>
             {articleSections.length > 0 && (
               <button
