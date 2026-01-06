@@ -3,7 +3,7 @@ import { useState, useEffect, useMemo } from "react";
 export function useWorkshopsData() {
   const API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
   const SACNAS_UH_YT_ID = "UC2X1nE_E-cpXlSXWKvaRCtQ";
-  const NUM_VIDEOS = 6;
+  const NUM_VIDEOS = 12;
 
   const [videos, setVideos] = useState([]);
   const [videosLoading, setVideosLoading] = useState(true);
